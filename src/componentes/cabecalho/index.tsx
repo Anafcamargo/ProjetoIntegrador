@@ -13,8 +13,8 @@ function Cabecalho(){
         <div className="container">
          
            <div className="ComoFunciona">Como Funciona</div> 
-            <div className="Ranking">Sobre Nós</div>
-            <div className="QuemSomos">Contato</div>
+            <div className="Ranking">Ranking</div>
+            <div className="QuemSomos">Quem Somos</div>
             <div className="Cadastro">Cadastre-se</div>
             
          </div>   
