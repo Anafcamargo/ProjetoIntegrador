@@ -1,16 +1,14 @@
 import Cabecalho from "../componentes/cabecalho";
 
-
-function Login(){
+function Tela_Usuario(){
     return(
         <div>
 
     <Cabecalho />
-        AQUI É A TELA DE LOGIN 
-        
+        AQUI É A TELA DO USUARIO
 
         </div>
     )
 }
 
-export default Login; 
+export default Tela_Usuario; 

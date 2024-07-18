@@ -1,11 +1,18 @@
 function Cabecalho(){
-   
+
  
     return(
     <div className="cabecalho">
-        <div className="NomeEmpresa"><strong>CHAMAKI</strong></div>
+            <img src="logo2.png" alt=""
+            width= '60px' height='60px' /> 
+                
+         <div className="NomeEmpresa"> CHAMAKI  Tecnology   </div> 
+            
+          
+         
         <div className="container">
-            <div className="ComoFunciona">Como Funciona</div>
+         
+           <div className="ComoFunciona">Como Funciona</div> 
             <div className="Ranking">Sobre Nós</div>
             <div className="QuemSomos">Contato</div>
             <div className="Cadastro">Cadastre-se</div>

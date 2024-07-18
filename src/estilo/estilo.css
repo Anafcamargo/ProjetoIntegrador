@@ -45,7 +45,7 @@ color: #ffffff;
 padding: 5px 60px 5px 60px;
 border-radius: 6px;
 font-size: 20px;  /* TAMANHO DA FONTE DO BOTÃO DE LOGIN */
-transition:none 0.3s ease; /* TRANSIÇÃO DO EFEITO DE SOMBRA NO BOTÃO DE LOGIN */
+transition:color 0.3s ease; /* TRANSIÇÃO DO EFEITO DE SOMBRA NO BOTÃO DE LOGIN */
 
 }
 
@@ -63,9 +63,9 @@ transition:none 0.3s ease; /* TRANSIÇÃO DO EFEITO DE SOMBRA NO BOTÃO DE LOGIN
     font-size: 20px;
     letter-spacing: 1px;
     border-radius: 4px;
-   
-   
 }
+
+
 /*--------Apresentação Inicial--------*/
 
 .container-inicio{
@@ -137,6 +137,8 @@ padding: 8px;
     align-items: center;
     width: 100%;
     height: 180px;
+    margin: 30px;
+    padding: 0px;
    
 }
 
@@ -159,6 +161,8 @@ padding: 8px;
     align-items: center;
     width: 100%;
     height: 80px;
+    margin: 30px;
+    padding: 0px;
 }
 
 .opcao_3{
