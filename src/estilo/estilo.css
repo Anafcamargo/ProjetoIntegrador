@@ -213,3 +213,54 @@ padding: 5px;
     text-align: center;
     font-size: 200%;
 }
+
+/*-----------CADASTRO----------*/
+
+.vocadastro{
+    background-color: aliceblue ;
+}
+
+.paicadastro{
+    display: flex;
+    flex-direction: row;
+    background-color: aliceblue;  
+    height: 100%;
+    width: 100%;
+}
+
+.CadUsuario, .CadVoluntario{
+    border: 1px  
+}
+
+.CadUsuario{
+    align-items: flex-start;
+    text-align: start;
+    flex: 1;
+}
+
+.CadVoluntario{
+    align-items: flex-end;
+    text-align: start;
+    flex: 1;
+}
+
+.logocadastro{
+    
+    height: 100%;
+    flex: 2;
+    width: 100%;
+    
+}
+
+.CadBio{
+    height: 75px;
+    width: 250px;
+}
+
+.caixadeselecao{
+    align-items: flex-end;
+    text-align: end;
+    margin-left: 780px;
+    margin-right: 25px;
+
+}
