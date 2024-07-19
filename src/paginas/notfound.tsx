@@ -4,10 +4,12 @@ function Notfound(){
     return(
         <div>
 
-      
-     <h1>OOOPS! NÃO ENCONTREI ESSA PÁGINA</h1>
-
-
+      <div className="notfound-container">
+<img src="notfound.png" />
+</div>
+    <div className="divbutton">
+    <button className="button_notfound">Voltar</button>
+    </div>
 
         </div>
     )
