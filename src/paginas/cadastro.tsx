@@ -13,7 +13,7 @@ function Cadastro() {
       </div>
       <div className='paicadastro'>
 
-        <div><img src="https://cdn-icons-png.flaticon.com/512/675/675523.png" alt="" className='logocadastro' /></div>
+        <div><img src="logo2.png" alt="" className='logocadastro' /></div>
         
         <div className='CadUsuario'>
           CADASTRO DE USUÁRIO <br />
