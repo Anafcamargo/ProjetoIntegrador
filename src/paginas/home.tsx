@@ -1,12 +1,12 @@
 import Cabecalho from "../componentes/cabecalho";
-
+import Logo from "./LogoRobo.png";
 
 
 
 function Home(){
     return(
         <div>
-
+ 
                 <Cabecalho />
                 {/*--------Tela inicial--------*/}
             <div className="container-inicio">
@@ -20,6 +20,7 @@ function Home(){
                         </div>
 
                         <div className="imagem-apresentacao">
+                            
 
                             <img src="https://img.freepik.com/free-photo/grand-parent-learning-use-digital-divice_23-2149214555.jpg?t=st=1720306984~exp=1720310584~hmac=bb90fcda9af546d28ea2bba2c630514b0ff57a0d78f2866029437943fcc75b6f&w=740" alt=""/> 
                          </div>
@@ -32,20 +33,20 @@ function Home(){
 
                     {/*--------Tela Como Funciona--------*/}
             <div className="como_funciona1"> 
-                    <h1 className="titulo_cf"> Como Funciona? </h1>
+                   <h1 className="titulo_cf"> Como Funciona? </h1> 
 
                     <p className="paragrafo_cf"> Conectamos voluntários de todo o país com pessoas que precisam de assistência tecnológica, oferecendo um suporte <br/> ágil e eficaz. 
                     Nossa plataforma é desenhada para ser simples e intuitiva, garantindo uma ótima experiência para todos.</p>
-                    <br/>
+                    
 
 
-                <div className="opcoes_cf1"> <br /> 
-                        
-                    <div className="opcao_1"> 1. <strong>Cadastro de Voluntários:</strong> Pessoas com conhecimentos em tecnologia se inscrevem em nossa plataforma,
+                <div className="opcoes_cf1"> 
+                    
+                    <div className="opcao_1"> 1.<strong> Cadastro de Voluntários:</strong> Pessoas com conhecimentos em tecnologia se inscrevem em nossa plataforma,
                           prontas para compartilhar suas habilidades e fazer a diferença. </div>
                           <br/>
-                    <div className="opcao_2"> 2.<strong> Solicitação de Assistência:</strong> Usuários que precisam de suporte tecnológico descrevem suas necessidades em nossa plataforma, seja para solucionar problemas com dispositivos,
-                           aprender a usar novos softwares ou configurar equipamentos.</div>
+                    <div className="opcao_2"> 2.<strong> Solicitação de Assistência:</strong> Usuários que precisam de suporte tecnológico descrevem suas necessidades em nossa plataforma, seja para solucionar problemas,
+                           ou configurar equipamentos.</div>
                            <br/>
 
                 </div>
@@ -57,7 +58,7 @@ function Home(){
                            garantindo um atendimento personalizado e eficaz.</div>      
                            <br/>
 
-                    <div className="opcao_4"> 4. <strong>Acompanhamento e Feedback:</strong> Após o atendimento, os usuários têm a oportunidade de avaliar a experiência e deixar feedback, 
+                    <div className="opcao_4"> 4.<strong> Acompanhamento e Feedback:</strong> Após o atendimento, os usuários têm a oportunidade de avaliar a experiência e deixar feedback, 
                            ajudando-nos a manter a alta qualidade do serviço e a reconhecer os esforços dos voluntários.</div> 
                            <br/>   
                            

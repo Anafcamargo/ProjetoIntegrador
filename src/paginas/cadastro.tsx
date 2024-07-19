@@ -1,11 +1,12 @@
 import '../estilo/estilo.css'
+import '../componentes/cabecalho'
 import Cabecalho from '../componentes/cabecalho';
-import Rodape2 from '../componentes/rodape';
+import Rodape from '../componentes/rodape';
 
 function Cadastro() {
   return (
     <div className='vocadastro'>
-      <Cabecalho />
+      <Cabecalho/>
       <div className='paicaixa'>
         <div className='caixadeselecao'> CADASTRO DE USÚARIO <input type="radio" name="usuario/voluntario" /></div>
         <div className='caixadeselecao2'> CADASTRO DE VOLUNTÁRIO <input type="radio" name="usuario/voluntario" /></div>
@@ -36,10 +37,11 @@ function Cadastro() {
           BIOGRAFIA: <input type="text" placeholder="Escreva um ouco sobre você" className='CadBio'/>
           <input type="submit" ></input>
         </div>
-        <Rodape2 />
+        <Rodape/>
       </div>
     </div>
   )
 }
 
 export default Cadastro;
+

@@ -17,6 +17,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/Login' element={<Login />} />
+        <Route path='/Login/Cadastro' element={<Cadastro/>}/>
         <Route path='*' element={<Notfound/>} />
         <Route path='/cadastro' element={<Cadastro/>}/>
       </Routes>
