@@ -12,6 +12,7 @@
     border-radius: 1px;
     flex-direction: row;
     color: rgb(88, 88, 88);
+    text-decoration: none;
 }
 
 .container{
@@ -22,19 +23,29 @@ width: 100%;
  
 } 
 
+a{
+    text-decoration: none;    
+    color: inherit;
+}
+
+a:visited{
+    color: inherit;
+}
+
 .ComoFunciona, .Ranking, .QuemSomos, .Login, .Cadastro, .buttoncadastro, .buttoncadastro2, .button_notfound{
    
     display: inline-block;
     font-size: 18px;
     transition: color 0.5s ease, transform 0.3s ease; /* EFEITO DE HOVER NO TEXTO E DELAY PARA TEXTO TRANSFORMAR */
     margin: 0 10px;
-
+    text-decoration: none;
 }
 
 
 .ComoFunciona:hover, .Ranking:hover, .QuemSomos:hover, .Cadastro:hover, .Login:hover, .cadastro:hover, .buttoncadastro:hover, .buttoncadastro2:hover, .button_notfound:hover{
     color: rgb(255, 174, 0);
     transform: scale(1.1);
+    
 }
 
 .Login{
@@ -46,7 +57,7 @@ padding: 5px 60px 5px 60px;
 border-radius: 6px;
 font-size: 20px;  /* TAMANHO DA FONTE DO BOTÃO DE LOGIN */
 transition:color 0.3s ease; /* TRANSIÇÃO DO EFEITO DE SOMBRA NO BOTÃO DE LOGIN */
-
+text-decoration-color: none;
 }
 
 .Login:hover .buttoncadastro:hover, .buttoncadastro2:hover{
@@ -63,6 +74,7 @@ transition:color 0.3s ease; /* TRANSIÇÃO DO EFEITO DE SOMBRA NO BOTÃO DE LOGI
     font-size: 20px;
     letter-spacing: 1px;
     border-radius: 4px;
+    text-decoration-color: none;
 }
 
 
@@ -238,4 +250,59 @@ font-size: medium;
 display: flex;
 align-items: center;
 justify-content: center;
+}
+
+/* ------------CADASTRO---------*/
+
+.vocadastro{
+    background-color: #6750A4
+}
+
+.paicadastro{
+    display: flex;
+    flex-direction: row;
+    background-color: #6750A4;  
+    height: 100%;
+    width: 100%;
+}
+
+.CadUsuario, .CadVoluntario{
+    border: 1px  
+}
+
+.CadUsuario{
+    align-items: center;
+    text-align: center;
+    flex: 1;
+}
+
+.CadVoluntario{
+    align-items: flex-end;
+    text-align: start;
+    flex: 1;
+}
+
+.logocadastro{
+    
+    height: 100%;
+    flex: 2;
+    width: 100%;
+    
+}
+
+.CadBio{
+    height: 75px;
+    width: 250px;
+}
+
+.paicaixa{
+    display: flex;
+    flex-direction: row;
+    margin-left: 650px;
+}
+
+/*---------Rodape-----------*/
+
+.Rodape{
+    text-align: start;
 }

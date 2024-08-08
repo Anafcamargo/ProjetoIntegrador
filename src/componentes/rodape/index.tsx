@@ -1,8 +1,18 @@
 function Rodape(){
     return(
-        <div className="foot">
-
-
+        <div className="Rodape">
+            <label>
+                <ul> 
+                    <li>link aqui</li>
+                    
+                </ul>
+                <ul>
+                    <li>Link aqui</li>
+                </ul>
+                <ul>
+                    <li>Link aqui</li>
+                </ul>
+            </label>
 
 
         </div>

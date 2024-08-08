@@ -1,6 +1,6 @@
 import Cabecalho from "../componentes/cabecalho";
 import Logo from "./LogoRobo.png";
-
+import Rodape from "../componentes/rodape";
 
 
 function Home(){
@@ -118,6 +118,7 @@ function Home(){
 
                     </div>
 
+            <Rodape/>
         </div>
     )
 }
