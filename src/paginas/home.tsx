@@ -32,6 +32,8 @@ function Home(){
            <br/>
 
                     {/*--------Tela Como Funciona--------*/}
+
+            <section id="comofunciona">
             <div className="como_funciona1"> 
                    <h1 className="titulo_cf"> Como Funciona? </h1> 
 
@@ -69,8 +71,11 @@ function Home(){
                             
                                 <br />
             </div>  
+            </section>
 
                          {/*--------Tela Ranking--------*/}
+
+            <section id="ranking">
                     <br />
             <div className="ranking1">
                 <h1 className="titulo_rk"> Ranking de Voluntários </h1>
@@ -96,8 +101,11 @@ function Home(){
 
                
             </div>
+            </section>
 
                     {/*--------Tela Quem Somos--------*/}
+
+                    <section id="quemsomos">
                     <div className="quemsomos1">
                             <h1 className="titulo_qs"> Quem Somos </h1>
                             <p className="texto_qs">Somos um grupo de estudantes de desenvolvimento de software do Senac, unidos pela paixão por tecnologia e pelo desejo de fazer a diferença na comunidade.
@@ -107,6 +115,7 @@ function Home(){
                            <br /> Estamos comprometidos em continuar aprimorando nossa iniciativa, sempre atentos às necessidades dos nossos usuários e voluntários. Acreditamos que,
                              juntos, podemos construir um mundo mais conectado e inclusivo, onde a tecnologia é uma aliada para todos.</p><br />
                     </div>
+                    </section>
                         <br />
                          {/*--------Tela Faça seu Cadastro--------*/}
 

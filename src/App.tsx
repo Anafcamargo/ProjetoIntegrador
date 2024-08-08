@@ -5,26 +5,25 @@ import {Routes, Route} from 'react-router-dom';
 import Login from './paginas/Login';
 import Notfound from './paginas/notfound';
 import Cadastro from './paginas/cadastro';
-
+import Tela_Usuario from './paginas/tela+usuario';
+import Tela_Voluntario from './paginas/tela_voluntario';
 
 function App() {
  
   return(
     <div>
-     
-     
-      
+       
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/Login' element={<Login />} />
         <Route path='/Login/Cadastro' element={<Cadastro/>}/>
         <Route path='*' element={<Notfound/>} />
-        <Route path='/cadastro' element={<Cadastro/>}/>
+        <Route path='/Cadastro' element={<Cadastro/>}/>
+        <Route path='/Usuario' element={<Tela_Usuario/>}/>
+        <Route path='/Voluntario' element={<Tela_Voluntario/>}/>
       </Routes>
- 
-     
-      
-     </div> 
+  
+    </div> 
    )
  
   
