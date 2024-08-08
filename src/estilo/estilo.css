@@ -186,6 +186,27 @@ padding: 8px;
 
 
 /*--------RANKING--------*/
+.ranking1{
+    flex: 2;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.ranking2{
+    flex:1;
+   
+}
+.ranking3{
+    flex:1;
+    
+}
+
+.ranking4{
+    flex: 1;
+}
+
 .titulo_rk{
     text-align: center;
     font-size: 200%;

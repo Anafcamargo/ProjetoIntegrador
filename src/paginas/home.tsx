@@ -75,14 +75,26 @@ function Home(){
             <div className="ranking1">
                 <h1 className="titulo_rk"> Ranking de Voluntários </h1>
                 <br />
-                Melhores avaliados <br />
                 
-                <br /><div> Voluntario 1 </div>
-                <div> Voluntario 2</div>
-                <div> Voluntario 3 </div>
-                <div> Voluntario 4 </div>
-                <div> Voluntario 5 </div> <br />
-                <br />
+                {/* <img src="./melhora.png" width="450px" height="450px"/>
+                <img src="./Frame4528.png" width="250px" height="250px"/>
+                <img src="./Frame4529.png" width="250px" height="250px"/> */}
+                <div> 
+                            <h2>Melhores avaliados</h2>
+                    <h3 > Isabela Silveira </h3>
+                    <h4> 343 atendimentos realizados </h4>
+                       
+                    <h3 > Jonas Souza </h3>
+                    <h4> 310 atendimentos realizados </h4>
+
+                    <h3 > Diego Curumin</h3>
+                    <h4> 293 atendimentos realizados </h4>
+
+                    <h3 > Paulo Silva </h3>
+                    <h4> 243 atendimentos realizados </h4>
+                 </div>
+
+               
             </div>
 
                     {/*--------Tela Quem Somos--------*/}
