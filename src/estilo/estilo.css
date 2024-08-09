@@ -225,21 +225,143 @@ padding: 8px;
 }
 
 /*--------Quem Somos --------*/
-.quemsomos1{
-margin: 10px;
-padding: 5px;
-}
 
 .titulo_qs{
     text-align: center;
     font-size: 200%;
 }
+.quemsomos0{
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    flex-direction: row;
+    background-color:#F4F4F4;
+    padding: 100px;
+ 
+}
 
-.texto_qs{
+.quemsomos1{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
     text-align: center;
-    font-size: 40px;
+    padding-right:15%;
+
+}
+
+.quemsomos2{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    text-align: center;
+    
     
 }
+
+
+.opcao1_qs{
+    display: flex;
+    flex: 1;
+    padding-bottom: 5%;
+    justify-content: space-between;
+    align-items:first baseline;
+     
+    
+
+}
+.giovane{
+    align-items: center;
+    text-align:center;
+    justify-content: left;
+    align-items: flex-start; 
+    letter-spacing: 1px; 
+}
+
+
+.opcao2_qs{
+    display: flex;
+    flex: 1;
+    padding-bottom: 5%;
+    justify-content: space-between;
+    align-items:first baseline;
+
+}
+.dablouan{
+    align-items: center;
+    text-align:center;
+    justify-content: left;
+    align-items: flex-start; 
+    letter-spacing: 1px; 
+}
+    
+
+
+.opcao3_qs{
+    display: flex;
+    flex: 1;
+    padding-bottom: 5%;
+    justify-content: space-between;
+    align-items:first baseline;
+
+}
+
+
+.ana{
+    align-items: center;
+    text-align:center;
+    justify-content: left;
+    align-items: flex-start; 
+    letter-spacing: 1px; 
+}
+
+.opcao4_qs{
+    display: flex;
+    flex: 1;
+    padding-bottom: 5%;
+    justify-content: space-between;
+    align-items:first baseline;
+
+}
+.vinicius{
+    align-items: center;
+    text-align:center;
+    justify-content: left;
+    align-items: flex-start; 
+    letter-spacing: 1px; 
+}
+
+.opcao5_qs{
+    display: flex;
+    flex: 1;
+    padding-bottom: 5%;
+    justify-content: space-between;
+    align-items:first baseline;
+
+}
+.nicolas{
+    align-items: center;
+    text-align:center;
+    justify-content: left;
+    align-items: flex-start; 
+    letter-spacing: 1px; 
+}
+
+.opcao6_qs{
+    display: flex;
+    flex: 1;
+    padding-bottom: 5%;
+    justify-content: space-between;
+    align-items:first baseline;
+
+}
+.gabriel{
+    align-items: center;
+    text-align:center;
+    justify-content: left;
+    align-items: flex-start; 
+    letter-spacing: 1px; 
+}
+
 
 /*--------Faça cadastro --------*/
 .titulo_cd{

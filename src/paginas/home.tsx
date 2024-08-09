@@ -20,8 +20,6 @@ function Home(){
                         </div>
 
                         <div className="imagem-apresentacao">
-                            
-
                             <img src="https://img.freepik.com/free-photo/grand-parent-learning-use-digital-divice_23-2149214555.jpg?t=st=1720306984~exp=1720310584~hmac=bb90fcda9af546d28ea2bba2c630514b0ff57a0d78f2866029437943fcc75b6f&w=740" alt=""/> 
                          </div>
                         
@@ -34,7 +32,7 @@ function Home(){
                     {/*--------Tela Como Funciona--------*/}
 
             <section id="comofunciona">
-            <div className="como_funciona1"> 
+                <div className="como_funciona1"> 
                    <h1 className="titulo_cf"> Como Funciona? </h1> 
 
                     <p className="paragrafo_cf"> Conectamos voluntários de todo o país com pessoas que precisam de assistência tecnológica, oferecendo um suporte <br/> ágil e eficaz. 
@@ -42,81 +40,142 @@ function Home(){
                     
 
 
-                <div className="opcoes_cf1"> 
+                    <div className="opcoes_cf1"> 
                     
-                    <div className="opcao_1"> 1.<strong> Cadastro de Voluntários:</strong> Pessoas com conhecimentos em tecnologia se inscrevem em nossa plataforma,
+                        <div className="opcao_1"> 1.<strong> Cadastro de Voluntários:</strong> Pessoas com conhecimentos em tecnologia se inscrevem em nossa plataforma,
                           prontas para compartilhar suas habilidades e fazer a diferença. </div>
                           <br/>
-                    <div className="opcao_2"> 2.<strong> Solicitação de Assistência:</strong> Usuários que precisam de suporte tecnológico descrevem suas necessidades em nossa plataforma, seja para solucionar problemas,
+                        <div className="opcao_2"> 2.<strong> Solicitação de Assistência:</strong> Usuários que precisam de suporte tecnológico descrevem suas necessidades em nossa plataforma, seja para solucionar problemas,
                            ou configurar equipamentos.</div>
                            <br/>
 
-                </div>
+                    </div>
 
                         <br />
 
-        <br />  <div className="opcoes_cf2">
-                     <div className="opcao_3"> 3.<strong> Match Inteligente: </strong>Utilizamos um sistema de pareamento que conecta os usuários aos voluntários mais qualificados e disponíveis, 
-                           garantindo um atendimento personalizado e eficaz.</div>      
-                           <br/>
+                    <div className="opcoes_cf2">
+                        <div className="opcao_3"> 3.<strong> Match Inteligente: </strong>Utilizamos um sistema de pareamento que conecta os usuários aos voluntários mais qualificados e disponíveis, 
+                            garantindo um atendimento personalizado e eficaz.</div>      
+                             <br/>
 
-                    <div className="opcao_4"> 4.<strong> Acompanhamento e Feedback:</strong> Após o atendimento, os usuários têm a oportunidade de avaliar a experiência e deixar feedback, 
-                           ajudando-nos a manter a alta qualidade do serviço e a reconhecer os esforços dos voluntários.</div> 
-                           <br/>   
+                        <div className="opcao_4"> 4.<strong> Acompanhamento e Feedback:</strong> Após o atendimento, os usuários têm a oportunidade de avaliar a experiência e deixar feedback, 
+                            ajudando-nos a manter a alta qualidade do serviço e a reconhecer os esforços dos voluntários.</div> 
+                            <br/>   
                            
-                </div>
+                    </div>
                             <br />
 
                             <br /><br /><div className="botao_cad2"> <button className="buttoncadastro"> Cadastre-se </button>  </div>
                             
                                 <br />
-            </div>  
+                 </div>  
             </section>
 
                          {/*--------Tela Ranking--------*/}
 
             <section id="ranking">
                     <br />
-            <div className="ranking1">
-                <h1 className="titulo_rk"> Ranking de Voluntários </h1>
-                <br />
-                
-                {/* <img src="./melhora.png" width="450px" height="450px"/>
-                <img src="./Frame4528.png" width="250px" height="250px"/>
-                <img src="./Frame4529.png" width="250px" height="250px"/> */}
-                <div> 
-                            <h2>Melhores avaliados</h2>
-                    <h3 > Isabela Silveira </h3>
-                    <h4> 343 atendimentos realizados </h4>
-                       
-                    <h3 > Jonas Souza </h3>
-                    <h4> 310 atendimentos realizados </h4>
-
-                    <h3 > Diego Curumin</h3>
-                    <h4> 293 atendimentos realizados </h4>
-
-                    <h3 > Paulo Silva </h3>
-                    <h4> 243 atendimentos realizados </h4>
-                 </div>
-
-               
-            </div>
+                <div className="ranking1">
+                    <h1 className="titulo_rk"> Ranking de Voluntários </h1>
+                </div>
+                  
             </section>
 
                     {/*--------Tela Quem Somos--------*/}
 
-                    <section id="quemsomos">
-                    <div className="quemsomos1">
-                            <h1 className="titulo_qs"> Quem Somos </h1>
-                            <p className="texto_qs">Somos um grupo de estudantes de desenvolvimento de software do Senac, unidos pela paixão por tecnologia e pelo desejo de fazer a diferença na comunidade.
-                             <br />Durante nossas aulas, tivemos a ideia de criar um projeto que pudesse ir além da sala de aula e trazer benefícios reais para as pessoas.
-                           <br /> A cada passo do nosso projeto, buscamos aprender, crescer e contribuir positivamente para a sociedade. Com o apoio de nossos professores e colegas, 
-                             desenvolvemos esta plataforma para promover a inclusão digital e facilitar a vida de quem precisa de suporte tecnológico.
-                           <br /> Estamos comprometidos em continuar aprimorando nossa iniciativa, sempre atentos às necessidades dos nossos usuários e voluntários. Acreditamos que,
-                             juntos, podemos construir um mundo mais conectado e inclusivo, onde a tecnologia é uma aliada para todos.</p><br />
+                <section id="quemsomos">
+                    <h1 className="titulo_qs"> Quem Somos </h1>
+                    
+                    <div className="quemsomos0">
+
+                                            {/*--------Esquerda--------*/}
+                        <div className="quemsomos1">
+
+                            <div className="opcao1_qs">  
+                                <img src="./avatarm.png" alt="tyy" width="30px" height="30px"/>
+
+                                <div className="giovane">
+                                    <h3> Giovane Paulino Cintra </h3>
+                                    <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia molestiae placeat, 
+                                        harum commodi maiores, deleniti laudantium possimus perspiciatis eos fugit earum esse 
+                                        voluptas necessitatibus nam sapiente quo odit! Atque, rem. </p>
+                                </div>
+                            
+                            </div>
+
+                            <div className="opcao2_qs">  
+                                <img src="./avatarm.png" alt="tyy" width="30px" height="30px"/>
+
+                                <div className="dablouan">
+                                    <h3>Dablouan Silvio Gonçalves</h3>
+                                    <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia molestiae placeat, 
+                                        harum commodi maiores, deleniti laudantium possimus perspiciatis eos fugit earum esse 
+                                        voluptas necessitatibus nam sapiente quo odit! Atque, rem. </p>
+                                </div>
+                            
+                            </div>
+
+                            <div className="opcao3_qs">  
+                                 <img src="./ana.png" alt="tyy" width="60px" height="60px" /> 
+
+                                <div className="ana">
+                                    <h3>Ana Flávia Camargo</h3> 
+                                    <p> Aos 25 anos começou a estudar no Senac no curso de Desenvolvedor Full-Stack,
+                                        iniciando enfim o caminho para aprender sobre TI, 
+                                        que levou a criação e desenvolvimento desse projeto. </p>
+                                </div>
+                            
+                            </div>
+                        </div>
+
+                                                     {/*--------Direita--------*/}
+                        <div className="quemsomos2">
+                            <div className="opcao4_qs">  
+                                <img src="./avatarm.png" alt="tyy" width="30px" height="30px"/>
+
+                                <div className="vinicius">
+                                    <h3>Vinicius A S. Del Ciello</h3>
+                                    <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia molestiae placeat, 
+                                        harum commodi maiores, deleniti laudantium possimus perspiciatis eos fugit earum esse 
+                                        voluptas necessitatibus nam sapiente quo odit! Atque, rem. </p>
+                                </div>
+                            
+                            </div>
+
+                            <div className="opcao5_qs">  
+                                <img src="./avatarm.png" alt="tyy" width="30px" height="30px"/>
+
+                                <div className="nicolas">
+                                    <h3>Nickolas da Silva Maciel</h3>
+                                    <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia molestiae placeat, 
+                                        harum commodi maiores, deleniti laudantium possimus perspiciatis eos fugit earum esse 
+                                        voluptas necessitatibus nam sapiente quo odit! Atque, rem. </p>
+                                </div>
+                            
+                            </div>
+
+                            <div className="opcao6_qs">  
+                                <img src="./avatarm.png" alt="tyy" width="30px" height="30px"/>
+
+                                <div className="gabriel">
+                                    <h3>Gabriel dos Santos Silva</h3>
+                                    <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia molestiae placeat, 
+                                        harum commodi maiores, deleniti laudantium possimus perspiciatis eos fugit earum esse 
+                                        voluptas necessitatibus nam sapiente quo odit! Atque, rem. </p>
+                                </div>
+                            
+                            </div>
+
+                        </div>
+
                     </div>
-                    </section>
+                            
+                    
+                </section>
                         <br />
+
+
+
                          {/*--------Tela Faça seu Cadastro--------*/}
 
                      <div>
