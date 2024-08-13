@@ -32,7 +32,7 @@ a:visited{
     color: inherit;
 }
 
-.ComoFunciona, .Ranking, .QuemSomos, .Login, .Cadastro, .buttoncadastro, .buttoncadastro2, .button_notfound{
+.ComoFunciona, .Ranking, .QuemSomos, .Login, .Cadastro, .buttoncadastro, .buttoncadastro2, .button_notfound,.botao_cad2{
    
     display: inline-block;
     font-size: 18px;
@@ -42,7 +42,7 @@ a:visited{
 }
 
 
-.ComoFunciona:hover, .Ranking:hover, .QuemSomos:hover, .Cadastro:hover, .Login:hover, .cadastro:hover, .buttoncadastro:hover, .buttoncadastro2:hover, .button_notfound:hover{
+.ComoFunciona:hover, .Ranking:hover, .QuemSomos:hover, .Cadastro:hover, .Login:hover, .cadastro:hover, .buttoncadastro:hover,.botao_cad2:hover, .buttoncadastro2:hover, .button_notfound:hover{
     color: rgb(255, 174, 0);
     transform: scale(1.1);
     
@@ -60,7 +60,7 @@ transition:color 0.3s ease; /* TRANSIÇÃO DO EFEITO DE SOMBRA NO BOTÃO DE LOGI
 text-decoration-color: none;
 }
 
-.Login:hover .buttoncadastro:hover, .buttoncadastro2:hover{
+.Login:hover .buttoncadastro:hover, .buttoncadastro2:hover,.botao_cad2:hover{
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);  /* EFEITO DE SOMBRA NO BOTÃO DE LOGIN */ 
 }
 
@@ -189,10 +189,17 @@ padding: 8px;
     font-style:oblique ;
 }
 
+.botao2cad{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 50px;
+}
  .botao_cad2{
-     display: flex;
-     justify-content: center;
-     height:50px; 
+    background-color: black;
+    border-radius: 5px;
+    color: white;
+    padding: 10px;
      
 } 
 

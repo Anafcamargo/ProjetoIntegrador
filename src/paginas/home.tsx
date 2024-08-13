@@ -1,6 +1,7 @@
 import Cabecalho from "../componentes/cabecalho";
 import Logo from "./LogoRobo.png";
 import Rodape from "../componentes/rodape";
+import { Link } from "react-router-dom";
 
 
 function Home(){
@@ -16,7 +17,8 @@ function Home(){
                             <h1 className="Titulo-apresentacao">Tecnologia Simplificada para Todos</h1>
                             <p> Um clique para um mundo de possibilidades: idosos conectados, voluntários engajados.  </p>                
                             <br />
-                            <button className="buttoncadastro">Cadastre-se</button> 
+                             <button className="buttoncadastro">   <Link to='/Cadastro'>Cadastre-se</Link>  </button> 
+                          
                         </div>
 
                         <div className="imagem-apresentacao">
@@ -65,9 +67,10 @@ function Home(){
                     </div>
                             <br />
 
-                            <br /><br /><div className="botao_cad2"> <button className="buttoncadastro"> Cadastre-se </button>  </div>
+                           <div className="botao2cad"> <button className="botao_cad2">   <Link to='/Cadastro'>Cadastre-se</Link>  </button> </div>
+                           
                             
-                                <br />
+                            <br />
                  </div>  
             </section>
 
@@ -126,7 +129,10 @@ function Home(){
                                 </div>
                             
                             </div>
+                           
+                            <button className="botao_cad2">   <Link to='/Cadastro'>Cadastre-se</Link>  </button> 
                         </div>
+                        
 
                                                      {/*--------Direita--------*/}
                         <div className="quemsomos2">

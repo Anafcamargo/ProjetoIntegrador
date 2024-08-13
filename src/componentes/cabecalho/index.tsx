@@ -13,7 +13,7 @@ function Cabecalho(){
             
           
          
-        <div className="container">
+        <div className="container"> 
          
            <div className="ComoFunciona"> <a href="#comofunciona">Como Funciona</a> </div> 
             <div className="Ranking"> <a href="#ranking">Ranking</a> </div>
