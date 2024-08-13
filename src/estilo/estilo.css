@@ -447,5 +447,13 @@ justify-content: center;
 /*---------Rodape-----------*/
 
 .Rodape{
-    text-align: start;
+    display: flex;
+    justify-content: center;
+    border: 1px solid black;
+    
 }
+
+.conecte-se{
+    margin-left: 300px;
+}
+
