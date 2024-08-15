@@ -21,7 +21,7 @@ function Cabecalho(){
             <div className="Cadastro"> <Link to='/Cadastro'>Cadastre-se</Link> </div>
             
          </div>   
-         <button className="Login"> <Link to='/Login'>Login</Link> </button>
+         <Link to='/Login'><button className="Login"> Login </button></Link>
         
     
  

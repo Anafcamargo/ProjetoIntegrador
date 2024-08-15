@@ -17,7 +17,7 @@ function Home(){
                             <h1 className="Titulo-apresentacao">Tecnologia Simplificada para Todos</h1>
                             <p> Um clique para um mundo de possibilidades: idosos conectados, voluntários engajados.  </p>                
                             <br />
-                             <button className="buttoncadastro">   <Link to='/Cadastro'>Cadastre-se</Link>  </button> 
+                            <Link to='/Cadastro'> <button className="buttoncadastro">   Cadastre-se </button> </Link> 
                           
                         </div>
 
@@ -67,7 +67,7 @@ function Home(){
                     </div>
                             <br />
 
-                           <div className="botao2cad"> <button className="botao_cad2">   <Link to='/Cadastro'>Cadastre-se</Link>  </button> </div>
+                            <Link to='/Cadastro'> <div className="botao2cad"> <button className="botao_cad2">   Cadastre-se  </button> </div></Link>
                            
                             
                             <br />
@@ -93,27 +93,31 @@ function Home(){
 
                                             {/*--------Esquerda--------*/}
                         <div className="quemsomos1">
-
+                        
                             <div className="opcao1_qs">  
-                                <img src="./avatarm.png" alt="tyy" width="30px" height="30px"/>
+                             
+                            <img src="./Giovane.png" alt="tyy" width="60px" height="60px"/>
 
                                 <div className="giovane">
+                                
                                     <h3> Giovane Paulino Cintra </h3>
-                                    <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia molestiae placeat, 
-                                        harum commodi maiores, deleniti laudantium possimus perspiciatis eos fugit earum esse 
-                                        voluptas necessitatibus nam sapiente quo odit! Atque, rem. </p>
+                                    
+                                    <p> Gosta de explorar novas experiências no mundo dos games. 
+                                        A música é outra de suas grandes paixões, sempre em busca de novas descobertas e sonoridades. No campo da tecnologia, 
+                                        se mantém atualizado e engajado com as inovações mais recentes. Essa combinação de interesses molda sua vida, refletindo 
+                                        sua busca constante por aprendizado e evolução. </p>
                                 </div>
                             
                             </div>
 
-                            <div className="opcao2_qs">  
-                                <img src="./avatarm.png" alt="tyy" width="30px" height="30px"/>
+                            <div className="opcao2_qs"> 
+                                <img src="./Dablouan.png" alt="tyy" width="60px" height="60px"/>
 
                                 <div className="dablouan">
                                     <h3>Dablouan Silvio Gonçalves</h3>
-                                    <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia molestiae placeat, 
-                                        harum commodi maiores, deleniti laudantium possimus perspiciatis eos fugit earum esse 
-                                        voluptas necessitatibus nam sapiente quo odit! Atque, rem. </p>
+                                    <p> Aos 23 anos, iniciou no curso de Desenvolver Full-Stack no Senac na cidade de Bauru, 
+                                        com o intuito de entrar na carreira de T.I,
+                                         onde participou na criação dese projeto para auxiliar pobremas na área de TI para idosos e outros.</p>
                                 </div>
                             
                             </div>
@@ -123,58 +127,56 @@ function Home(){
 
                                 <div className="ana">
                                     <h3>Ana Flávia Camargo</h3> 
-                                    <p> Aos 25 anos começou a estudar no Senac no curso de Desenvolvedor Full-Stack,
-                                        iniciando enfim o caminho para aprender sobre TI, 
-                                        que levou a criação e desenvolvimento desse projeto. </p>
+                                    <p> Com uma paixão por livros, musica e tecnologia, aos 25 anos iniciou o curso no Senac, 
+                                        seguindo finalmente o caminho para aprender sobre T.I, que levou a criação e desenvolvimento desse projeto. </p>
                                 </div>
                             
                             </div>
-                           
-                            <button className="botao_cad2">   <Link to='/Cadastro'>Cadastre-se</Link>  </button> 
+                            {/* <Link to='/Cadastro'> <button className="botao_cad2">   Cadastre-se </button> </Link>
+                            */}
                         </div>
                         
 
                                                      {/*--------Direita--------*/}
                         <div className="quemsomos2">
                             <div className="opcao4_qs">  
-                                <img src="./avatarm.png" alt="tyy" width="30px" height="30px"/>
+                                <img src="./Vini.png" alt="tyy" width="60px" height="60px"/>
 
                                 <div className="vinicius">
                                     <h3>Vinicius A S. Del Ciello</h3>
-                                    <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia molestiae placeat, 
-                                        harum commodi maiores, deleniti laudantium possimus perspiciatis eos fugit earum esse 
-                                        voluptas necessitatibus nam sapiente quo odit! Atque, rem. </p>
+                                    <p> Aos 28 anos, tem uma paixão por viagens e 
+                                        dedica parte do seu tempo como voluntário em projetos de proteção animal. </p>
                                 </div>
                             
                             </div>
 
                             <div className="opcao5_qs">  
-                                <img src="./avatarm.png" alt="tyy" width="30px" height="30px"/>
+                                <img src="./Nicolas.png" alt="tyy" width="60px" height="60px"/>
 
                                 <div className="nicolas">
                                     <h3>Nickolas da Silva Maciel</h3>
-                                    <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia molestiae placeat, 
-                                        harum commodi maiores, deleniti laudantium possimus perspiciatis eos fugit earum esse 
-                                        voluptas necessitatibus nam sapiente quo odit! Atque, rem. </p>
+                                    <p> Desde pequeno sempre se identificou com a área de T.I, mais tarde se interessou por programação, 
+                                        então aos 19 anos iniciou no curso do Senac em Bauru, com o intuito de 
+                                        desenvolver suas habilidades de programação e ingressar nessa carreira de programador. Durante o curso, participou de projetos e
+                                         atividades em grupo que agregaram ao seu conhecimento. </p>
                                 </div>
                             
                             </div>
 
                             <div className="opcao6_qs">  
-                                <img src="./avatarm.png" alt="tyy" width="30px" height="30px"/>
+                                <img src="./Gabriel.png" alt="tyy" width="60px" height="60px"/>
 
                                 <div className="gabriel">
                                     <h3>Gabriel dos Santos Silva</h3>
-                                    <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia molestiae placeat, 
-                                        harum commodi maiores, deleniti laudantium possimus perspiciatis eos fugit earum esse 
-                                        voluptas necessitatibus nam sapiente quo odit! Atque, rem. </p>
+                                    <p> Aos 19 anos  decidiu seguir carreira na área de Tecnologia da Informação e se matriculou no curso oferecido pelo Senac em Bauru. Durante o curso, se envolveu em um projeto que tinha como foco auxiliar idosos e
+                                         outras pessoas a solucionarem problemas relacionados à tecnologia. </p>
                                 </div>
                             
                             </div>
 
                         </div>
-
-                    </div>
+                        
+                    </div> 
                             
                     
                 </section>
