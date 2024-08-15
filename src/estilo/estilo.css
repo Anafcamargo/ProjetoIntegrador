@@ -104,7 +104,7 @@ background-color: #F4F4F4;
 .imagem-apresentacao{  
 display: flex;
 flex:1;
-background-color: aqua;
+
 }
 
 
@@ -196,6 +196,9 @@ padding: 8px;
     padding: 50px;
 }
  .botao_cad2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: black;
     border-radius: 5px;
     color: white;
@@ -268,35 +271,34 @@ padding: 8px;
 
 .opcao1_qs{
     display: flex;
-    flex: 1;
-    padding-bottom: 5%;
-    justify-content: space-between;
-    align-items:first baseline;
+    justify-content: start;
+    align-items:start;
+    padding-bottom: 10px;
      
     
 
 }
 .giovane{
-    align-items: center;
-    text-align:center;
-    justify-content: left;
+    align-items: start;
+    text-align:flex-start;
+    padding-left: 30px;
     align-items: flex-start; 
     letter-spacing: 1px; 
 }
 
 
+
 .opcao2_qs{
     display: flex;
-    flex: 1;
-    padding-bottom: 5%;
-    justify-content: space-between;
-    align-items:first baseline;
+    justify-content: start;
+    align-items:start;
+    padding-bottom: 10px;
 
 }
 .dablouan{
-    align-items: center;
-    text-align:center;
-    justify-content: left;
+    align-items: start;
+    text-align:flex-start;
+    padding-left: 30px;
     align-items: flex-start; 
     letter-spacing: 1px; 
 }
@@ -305,68 +307,60 @@ padding: 8px;
 
 .opcao3_qs{
     display: flex;
-    flex: 1;
-    padding-bottom: 5%;
-    justify-content: space-between;
-    align-items:first baseline;
-
+    justify-content: start;
+    align-items:start;
+    padding-bottom: 10px;
 }
 
 
 .ana{
-    align-items: center;
-    text-align:center;
-    justify-content: left;
+    align-items: start;
+    text-align:flex-start;
+    padding-left: 30px;
     align-items: flex-start; 
     letter-spacing: 1px; 
 }
 
 .opcao4_qs{
     display: flex;
-    flex: 1;
-    padding-bottom: 5%;
-    justify-content: space-between;
-    align-items:first baseline;
-
+    justify-content: start;
+    align-items:start;
+    padding-bottom: 10px;
 }
 .vinicius{
-    align-items: center;
-    text-align:center;
-    justify-content: left;
+    align-items: start;
+    text-align:flex-start;
+    padding-left: 30px;
     align-items: flex-start; 
     letter-spacing: 1px; 
 }
 
 .opcao5_qs{
     display: flex;
-    flex: 1;
-    padding-bottom: 5%;
-    justify-content: space-between;
-    align-items:first baseline;
-
+    justify-content: start;
+    align-items:start;
+    padding-bottom: 10px;
 }
 .nicolas{
-    align-items: center;
-    text-align:center;
-    justify-content: left;
+    align-items: start;
+    text-align:flex-start;
+    padding-left: 30px;
     align-items: flex-start; 
     letter-spacing: 1px; 
 }
 
 .opcao6_qs{
     display: flex;
-    flex: 1;
-    padding-bottom: 5%;
-    justify-content: space-between;
-    align-items:first baseline;
-
+    justify-content: start;
+    align-items:start;
+    padding-bottom: 10px;
 }
 .gabriel{
-    align-items: center;
-    text-align:center;
-    justify-content: left;
+    align-items: start;
+    text-align:flex-start;
+    padding-left: 30px;
     align-items: flex-start; 
-    letter-spacing: 1px; 
+    letter-spacing: 1px;  
 }
 
 
