@@ -522,7 +522,7 @@ justify-content: center;
     .login-footer .register-link {
     color: #6C42D9;
     text-decoration: none;
-    font-weight:lighter; /* Deixar o texto em negrito */
+    font-weight:lighter; 
       }
       
     .login-footer .register-link:hover {
