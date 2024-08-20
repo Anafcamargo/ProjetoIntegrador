@@ -1,0 +1,71 @@
+Documentação do Sistema CHAMAKI
+
+Visão Geral
+Um Website desenvolvido para conectar pessoas que precisam de ajuda tecnológica, com pessoas capacitadas e disponiveis para ajudar.
+
+Funcionalidades:
+Tela inicial
+- Apresentação inicial
+- Ranking com as melhores avaliações
+- Informações de como funciona
+- Informações sobre projeto 
+- Cadastro 
+- Login
+- Cadastro de chamado
+
+Como usar:
+Cliente:
+- Ao acessar a página temos as principais informações na tela inicial, depois para realizar um chamado será necessário fazer um cadastro no site para cliente.
+- Efetuar Login
+- Cadastrar chamado na página, descrevendo o problema e aguardar algum voluntário ajudar.
+
+Voluntário:
+- Cadastro para voluntários que queiram ajudar
+- Efetuar Login
+- Visualizar chamados em aberto e atender quais forem possíveis.
+
+
+Requisitos Funcionais do Projeto:
+
+Tela Inicial
+Logo
+Botão Inicio
+Botão "Quem somos?"
+Botão Login
+Feedbacks
+Raking(melhores avaliados)
+
+
+Tela de Login:
+Campo de Foto
+Campo de usuário
+Campo de cadastro
+Redefinição de senha
+Entrar
+
+Tela de Redefinição:
+Campo de Email
+Botão enviar
+Botão retorno para Login
+
+Tela Cadastro:
+Campo de usuário 
+Campo de coloborador
+Campo Foto
+Campo de dados pessoais cliente (Nome, CPF, data de nascimento, endereço e email, termos de uso e LGPD)
+Campo de dados pessoais colaborador ( Nome, CPF, data de nascimento, endereço, email, qualificação,Bio, termos de uso e LGPD)
+Botão cadastrar
+
+Tela depois do Login:
+Logo
+Campo Perfil com foto
+Menu 
+Botão solicitações
+Botão Histórico
+
+Tela de Solicitações:
+Aba de categoria de serviços
+Campo de Descrição
+
+
+
