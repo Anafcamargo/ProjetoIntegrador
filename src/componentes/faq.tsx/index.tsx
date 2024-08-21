@@ -44,11 +44,11 @@ const FAQ: React.FC = () => {
     },
     {
       question: "Como posso reportar um problema técnico após receber assistência?",
-      answer: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley",
+      answer: "Você pode entrar em contato diretamente com o voluntário através da nossa plataforma ou, se preferir, reportar qualquer problema à nossa equipe de suporte diretamente pela plataforma do usuário",
     },
     {
       question: "Quanto tempo leva para um voluntário responder à minha solicitação?",
-      answer: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley",
+      answer: "O tempo de resposta de um voluntário pode variar dependendo da disponibilidade e da demanda. Em geral, tentamos garantir que um voluntário entre em contato com você o mais rápido possível. Se não receber uma resposta dentro de um prazo razoável, sinta-se à vontade para nos informar, e faremos o possível para ajudar a resolver a situação.",
     },
   ];
 
