@@ -2,6 +2,8 @@ import Cabecalho from "../componentes/cabecalho";
 import Logo from "./LogoRobo.png";
 import Rodape from "../componentes/rodape";
 import { Link } from "react-router-dom";
+import FAQ from "../componentes/faq.tsx";
+
 
 
 function Home(){
@@ -187,7 +189,7 @@ function Home(){
                          {/*--------Tela Faça seu Cadastro--------*/}
 
                      <div>
-                        <h1 className="titulo_cd">Faça seu Cadastro </h1>
+                        {/*<h1 className="titulo_cd">Faça seu Cadastro </h1>*/}
                         
 
 
@@ -197,7 +199,20 @@ function Home(){
 
                     </div>
 
-            <Rodape/>
+                    {/*--------FAQ--------*/}
+
+                <div className="container-faq"> 
+                   
+                   <div className="girlquestion">
+                    <img src="girlquestion.png" className="img-girlquestion"></img>
+                   </div>
+                   
+                      <FAQ />
+                   
+                </div>
+
+
+            
         </div>
     )
 }
