@@ -329,52 +329,78 @@ justify-content: center;
 
 /* ------------CADASTRO---------*/
 
-.vocadastro{
-    background-color: #6750A4
+.bodyCadastro{
+    background-color: #5a37b3;
+    inherits: 100%;
+    
 }
 
-.paicadastro{
-    display: flex;
-    flex-direction: row;
-    background-color: #6750A4;  
-    height: 100%;
-    width: 100%;
-}
-
-.CadUsuario, .CadVoluntario{
-    border: 1px  
-}
-
-.CadUsuario{
-    align-items: center;
+.containerCadastro {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    width: 350px;
+    margin: 50px auto;
+    color: black;
+    font-family: 'Arial', sans-serif;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .title {
     text-align: center;
-    flex: 1;
-}
-
-.CadVoluntario{
-    align-items: flex-end;
-    text-align: start;
-    flex: 1;
-}
-
-.logocadastro{
-    
-    height: 100%;
-    flex: 2;
-    width: 100%;
-    
-}
-
-.CadBio{
-    height: 75px;
-    width: 250px;
-}
-
-.paicaixa{
+    margin-bottom: 20px;
+    font-size: 24px;
+  }
+  
+  .radioGroup {
     display: flex;
-    flex-direction: row;
-    margin-left: 650px;
-}
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .radioLabel {
+    margin-right: 10px;
+    font-size: 16px;
+  }
+  
+  .radioInput {
+    margin-right: 5px;
+  }
+  
+  .formContainer {
+    margin-bottom: 20px;
+  }
+  
+  .formGroup {
+    margin-bottom: 15px;
+  }
+  
+  .label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+  }
+  
+  .input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+  }
+  
+  .button {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #6a4aa1;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
 
 /*---------Rodape-----------*/
 

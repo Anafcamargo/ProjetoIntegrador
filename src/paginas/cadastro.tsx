@@ -1,45 +1,106 @@
-import '../estilo/estilo.css'
-import '../componentes/cabecalho'
-import Cabecalho from '../componentes/cabecalho';
-import Rodape from '../componentes/rodape';
+import React, { useState } from "react";
+import "../estilo/estilo.css"
 
 function Cadastro() {
+  const [tipoCadastro, setTipoCadastro] = useState("usuario");
+
+  const handleTipoChange = (event: { target: { value: React.SetStateAction<string>; }; }) => {
+    setTipoCadastro(event.target.value);
+  };
+
   return (
-    <div className='vocadastro'>
-      <Cabecalho/>
-      <div className='paicaixa'>
-        <div className='caixadeselecao'> CADASTRO DE USÚARIO <input type="radio" name="usuario/voluntario" /></div>
-        <div className='caixadeselecao2'> CADASTRO DE VOLUNTÁRIO <input type="radio" name="usuario/voluntario" /></div>
-      </div>
-      <div className='paicadastro'>
+    <body className=" bodyCadastro">
+      
+    
+    <div className="containerCadastro">
+      <h2 className="title">Cadastre-se</h2>
 
-        <div><img src="logo2.png" alt="" className='logocadastro' /></div>
-        
-        <div className='CadUsuario'>
-          CADASTRO DE USUÁRIO <br />
-          Nome Completo: <br /> <input type="text" placeholder="Insira seu nome" /> <br />
-          DATA DE NASCIMENTO: <br /> <input type="date" name="data" /> <br />
-          TELEFONE: <input type="tel" id='telefone' placeholder="(xx) xxxxx-xxxx" /> <br />
-          <input type="submit" ></input>
-        </div>
-
-        <div className='CadVoluntario'>
-          CADASTRO DE VOLUNTÁRIO <br />
-          Nome Completo: <input type="text" placeholder="Insira seu nome" /> <br />
-          CPF: <input type="number" placeholder="Insira seu CPF" /> <br />
-          DATA DE NASCIMENTO: <input type="date" name="data" /> <br />
-          EMAIL: <input type="email" placeholder="usuario@email.com" /> <br />
-          TELEFONE: <input type="tel" id='telefone' placeholder="(xx) xxxxx-xxxx" /> <br />
-          ENDEREÇO:  <input type="text" placeholder="Insira seu endereço" /> <br />
-          BIOGRAFIA: <br /> <input type="text" placeholder="Escreva um ouco sobre você" className='CadBio'/> <br />
-          <input type="submit" ></input>
-        </div>
-        
-        <Rodape/>
+      <div className="radioGroup">
+        <label className="radioLabel">
+          <input
+            type="radio"
+            value="usuario"
+            checked={tipoCadastro === "usuario"}
+            onChange={handleTipoChange}
+            className="radioInput"
+          />
+          Usuário
+        </label>
+        <label className="radioLabel">
+          <input
+            type="radio"
+            value="voluntario"
+            checked={tipoCadastro === "voluntario"}
+            onChange={handleTipoChange}
+            className="radioInput"
+          />
+          Voluntário
+        </label>
       </div>
+
+      {tipoCadastro === "usuario" && (
+        <div className="formContainer">
+          <form>
+            <div className="formGroup">
+              <label className="label">Nome Completo</label>
+              <input type="text" placeholder="Digite seu nome completo" className="input" />
+            </div>
+            <div className="formGroup">
+              <label className="label">Telefone</label>
+              <input type="text" placeholder="Digite seu número de WhatsApp" className="input" />
+            </div>
+            <button type="submit" className="button">
+              Criar conta
+            </button>
+          </form>
+        </div>
+      )}
+
+      {tipoCadastro === "voluntario" && (
+        <div className="formContainer">
+          <form>
+            <div className="formGroup">
+              <label className="label">Nome Completo</label>
+              <input type="text" placeholder="Digite seu nome completo" className="input" />
+            </div>
+            <div className="formGroup">
+              <label className="label">CPF</label>
+              <input type="text" placeholder="Digite seu CPF" className="input" />
+            </div>
+            <div className="formGroup">
+              <label className="label">Data de nascimento</label>
+              <input type="date" className="input" />
+            </div>
+            <div className="formGroup">
+              <label className="label">E-mail</label>
+              <input type="email" placeholder="Digite seu e-mail" className="input" />
+            </div>
+            <div className="formGroup">
+              <label className="label">Telefone</label>
+              <input type="text" placeholder="Digite seu telefone" className="input" />
+            </div>
+            <div className="formGroup">
+              <label className="label">Endereço</label>
+              <input type="text" placeholder="Digite seu endereço" className="input" />
+            </div>
+            <div className="formGroup">
+              <label className="label">Número</label>
+              <input type="text" placeholder="Número" className="input" />
+            </div>
+            <div className="formGroup">
+              <label className="label">Bairro</label>
+              <input type="text" placeholder="Digite seu bairro" className="input" />
+            </div>
+            <button type="submit" className="button">
+              Criar conta
+            </button>
+          </form>
+        </div>
+      )}
     </div>
-  )
+
+    </body>
+  );
 }
 
 export default Cadastro;
-
