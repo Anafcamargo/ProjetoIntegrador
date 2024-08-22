@@ -33,47 +33,17 @@ function Home(){
 
            <br/>
 
-                    {/*--------Tela Como Funciona--------*/}
-
+                                {/*--------Tela Como Funciona--------*/}
+ 
             <section id="comofunciona">
-                <div className="como_funciona1"> 
-                   <h1 className="titulo_cf"> Como Funciona? </h1> 
-
-                    <p className="paragrafo_cf"> Conectamos voluntários de todo o país com pessoas que precisam de assistência tecnológica, oferecendo um suporte <br/> ágil e eficaz. 
-                    Nossa plataforma é desenhada para ser simples e intuitiva, garantindo uma ótima experiência para todos.</p>
-                    
-
-
-                    <div className="opcoes_cf1"> 
-                    
-                        <div className="opcao_1"> 1.<strong> Cadastro de Voluntários:</strong> Pessoas com conhecimentos em tecnologia se inscrevem em nossa plataforma,
-                          prontas para compartilhar suas habilidades e fazer a diferença. </div>
-                          <br/>
-                        <div className="opcao_2"> 2.<strong> Solicitação de Assistência:</strong> Usuários que precisam de suporte tecnológico descrevem suas necessidades em nossa plataforma, seja para solucionar problemas,
-                           ou configurar equipamentos.</div>
-                           <br/>
-
-                    </div>
-
-                        <br />
-
-                    <div className="opcoes_cf2">
-                        <div className="opcao_3"> 3.<strong> Match Inteligente: </strong>Utilizamos um sistema de pareamento que conecta os usuários aos voluntários mais qualificados e disponíveis, 
-                            garantindo um atendimento personalizado e eficaz.</div>      
-                             <br/>
-
-                        <div className="opcao_4"> 4.<strong> Acompanhamento e Feedback:</strong> Após o atendimento, os usuários têm a oportunidade de avaliar a experiência e deixar feedback, 
-                            ajudando-nos a manter a alta qualidade do serviço e a reconhecer os esforços dos voluntários.</div> 
-                            <br/>   
-                           
-                    </div>
-                            <br />
-
-                            <Link to='/Cadastro'> <div className="botao2cad"> <button className="botao_cad2">   Cadastre-se  </button> </div></Link>
-                           
-                            
-                            <br />
-                 </div>  
+                <div className="como_funciona1">
+                   <h1 className="titulo_cf"> Como Funciona? </h1> <br />
+ 
+                  {/* Adicionando o Painel de Vídeo */}
+                     <div className="video-panel">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/AvGWUBcqYkY?si=ND6B-HJYB70s5Csf" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+        </div>
+    </div>
             </section>
 
                          {/*--------Tela Ranking--------*/}
