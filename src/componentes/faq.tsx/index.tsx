@@ -44,7 +44,7 @@ const FAQ: React.FC = () => {
     },
     {
       question: "Como posso reportar um problema técnico após receber assistência?",
-      answer: "Você pode entrar em contato diretamente com o voluntário através da nossa plataforma ou, se preferir, reportar qualquer problema à nossa equipe de suporte diretamente pela plataforma do usuário",
+      answer: "Você pode entrar em contato diretamente com o voluntário através da nossa plataforma ou, se preferir, reportar qualquer problema à nossa equipe de suporte diretamente pela plataforma do usuário.",
     },
     {
       question: "Quanto tempo leva para um voluntário responder à minha solicitação?",
