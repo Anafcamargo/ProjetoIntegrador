@@ -7,6 +7,7 @@ import Notfound from './paginas/notfound';
 import Cadastro from './paginas/cadastro';
 import Tela_Usuario from './paginas/tela+usuario';
 import Tela_Voluntario from './paginas/tela_voluntario';
+import Esqueci_a_Senha from './paginas/esquecisenha';
 
 function App() {
  
@@ -21,6 +22,7 @@ function App() {
         <Route path='/Cadastro' element={<Cadastro/>}/>
         <Route path='/Usuario' element={<Tela_Usuario/>}/>
         <Route path='/Voluntario' element={<Tela_Voluntario/>}/>
+        <Route path='/EsqueciaSenha' element={<Esqueci_a_Senha/>}/>
       </Routes>
   
     </div> 
