@@ -3,7 +3,7 @@ import React from 'react';
 
 const EsqueciSenha: React.FC = () => {
     return (
-        
+     <div className='paies'>
         <div className="esqueciasenha">
             <h1>Esqueci a Senha</h1>
             <p>Para recuperar sua senha, insira seu e-mail abaixo e clique em "Enviar".</p>
@@ -13,6 +13,7 @@ const EsqueciSenha: React.FC = () => {
                 <input type="submit" value="Enviar" />
             </form>
         </div>
+    </div>
     );
 }
 
