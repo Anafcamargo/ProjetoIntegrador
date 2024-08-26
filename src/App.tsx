@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-pascal-case */
 import React from "react";
 import "./estilo/estilo.css";
 import Home from "./paginas/home";
@@ -13,6 +14,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
+import EsqueciSenha from "./paginas/esquecisenha";
 
 register();
 
@@ -27,6 +29,7 @@ function App() {
         <Route path="/Cadastro" element={<Cadastro />} />
         <Route path="/Usuario" element={<Tela_Usuario />} />
         <Route path="/Voluntario" element={<Tela_Voluntario />} />
+        < Route path = '/EsqueciaSenha' element={ < EsqueciSenha /> } />
       </Routes>
     </div>
   );
