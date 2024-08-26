@@ -30,7 +30,7 @@ function Login(){
       </form>
 
           <div className="login-footer">
-          <a href="#" className="forgot-password">Esqueci minha senha</a>
+          <a href = " Esqueciasenha " className = "forgot-password" > Esqueci minha senha </ a>
           <p>Não tem uma conta? <Link to='/Cadastro' className="register-link">Cadastre-se</Link></p>
           </div>     
          

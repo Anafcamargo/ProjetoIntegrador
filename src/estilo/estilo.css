@@ -171,6 +171,90 @@ code {
     monospace;
 }
 
+/*--------Ranking --------*/
+
+.titulo_rk{
+  text-align: center;
+  font-size: 200%;
+}
+
+
+.container-ranking-box{
+  background-color: white;
+    border-radius: 20px; /* Bordas arredondadas */
+    padding: 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 400px;
+    height: 60vh;
+
+}
+
+
+
+.starmelhoresav{
+  color: orange;
+  font-size: 25px;
+  padding-right: 20px;
+  position: relative;
+  bottom: 3px;
+
+}
+
+.starranking{
+  color: orange;
+  font-size: 30px;
+  padding-right: 20px;
+  padding-left: 20px;
+  position: relative;
+  bottom: 3px;
+}
+
+
+.milavaliações{
+  font-size: 20px;
+  border-radius: 10px;
+  border: 1px solid gray;
+  color: gray;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 10px;
+  align-items: center;
+  background-color: #f6fafb;
+
+
+}
+
+.voluntario{
+  font-size: 25px;
+  display: flex;
+  flex-direction: row;
+  justify-content:flex-start;
+  padding-right: 10px;
+  align-items: center;
+
+
+}
+
+.qdavaliações{
+ padding-right: 190px;
+ position: relative;
+  top: 5px;
+
+}
+
+.voluntariosimg{
+  width: 50px;
+  height: 50px;
+  border-radius: 100px;
+  border: solid 1px ;
+  position: relative;
+  right: 4px;
+
+}
+
+
 /*--------Quem Somos --------*/
 
 .titulo_qs {
@@ -461,7 +545,7 @@ code {
 .container-login-box {
   background-color: white;
   border-radius: 20px; /* Bordas arredondadas */
-  padding: 40px;
+  padding: 50px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   text-align: center;
   width: 400px;
@@ -489,12 +573,12 @@ code {
 .login-button {
   background-color: #6c42d9;
   color: white;
-  padding: 10px 20px;
+  padding: 10px 10px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  width: 90%;
-  margin-bottom: 15px;
+  width: 80%;
+  margin-bottom: 5px;
 }
 
 .login-button:hover {
@@ -647,9 +731,25 @@ border-radius: 10px;
 box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
+.div-slide {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  width: 100%;
+}
+
+.slide-item {
+  height: 350px;
+}
+
+.titulo_fd {
+  text-align: center;
+  font-size: 200%;
+}
+
+
 /* EsqueciSenha */
-
-
 
 .paies{
   display: flex;
@@ -674,116 +774,45 @@ box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   margin: 0;
   justify-content: center;
 }
-
-.container-faq {
-  display: flex;
-  background-color: #f7f7f7;
-  width: 100vw;
-  height: auto;
-  align-items: center;
-  padding: 0% 10% 0% 10%;
+h1 {
+  font-size: 26px;
+  color: #000000; 
+  margin-bottom: 20px;
 }
 
-.container.faq-container {
-  max-width: 500px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: white;
-  border-radius: 10px;
-  position: absolute;
-  left: 60%;
-
+p {
+  color: #000000; 
+  margin-bottom: 20px;
 }
 
-.titlex.center {
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-.titulo-faq {
-  color: #333;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.question-faq {
-  color: #555;
-  font-size: 15px;
-}
-
-.card {
-  margin-bottom: 15px;
-  border: 1px solid #ddd;
-  border-radius: 15px;
-  background-color: #fff;
-  overflow: hidden;
-}
-
-.card-header {
-  background-color: #fff;
-  padding: 15px;
-  cursor: pointer;
-  border-bottom: 1px solid #ddd;
-  display: flex;
-
-  align-items: center;
-}
-
-.card-header h4 {
-  margin: 0;
-}
-
-.card-header.active {
-  background-color: #f0f0f0;
-}
-
-.card-body {
-  padding: 15px;
-  color: #333;
-}
-
-.collapse.show {
+label {
   display: block;
-}
-
-.btn-link {
-  background: none;
-  border: none;
-  text-align: left;
-  width: 100%;
-  padding: 0;
-  font-size: 16px;
+  margin-bottom: 8px;
   font-weight: bold;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: inherit;
+  color: #000000; 
 }
 
-.btn-link span {
-  font-size: 24px;
-  margin-left: 10px;
-  font-weight: normal;
+input[type="email"] {
+  width: calc(100% - 22px);
+  padding: 10px;
+  border: 1px solid #6750A4; 
+  border-radius: 4px;
+  margin-bottom: 20px;
+  box-sizing: border-box; 
 }
 
-.img-girlquestion {
-  border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+input[type="submit"] {
+  background-color: #6750A4; 
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 18px;
+  width: 30%; 
+  transition: background-color 0.3s; 
 }
 
-.div-slide {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-
-  width: 100%;
-}
-
-.slide-item {
-  height: 350px;
-}
-
-.titulo_fd {
-  text-align: center;
-  font-size: 200%;
+input[type="submit"]:hover {
+  background-color: #388e3c; 
 }

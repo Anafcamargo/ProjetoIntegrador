@@ -77,13 +77,35 @@ function Home() {
       </section>
 
       {/*--------Tela Ranking--------*/}
+      <div className="caixa-de-classificação-do-container">
+                <h1 className="melhoresav">Melhores avaliadas</h1>       
+                <div className="milavaliações"><div className="starmelhoresav">★★★★★</div> 1000+ avaliações
+                </div>
+                <hr />
+                <div className="classificação" >
+                <div className="voluntário" >
+                <img className="voluntariosimg" src="https://th.bing.com/th/id/R.73642446d599ad06a8ec035cb6566d64?rik=lCjBmAQEpZo64Q&pid=ImgRaw&r=0" /> Voluntário 1 <div className="starranking">★★★★★</div>
+                </div>
+                <div className="qdavaliações">343 atendimentos realizados</div>
+                    <hr />
+                <div className="voluntário">
+                <img className="voluntariosimg" src="https://i.pinimg.com/originals/84/3b/56/843b5634140876e32fc53a35eae4b7c9.jpg" /> Voluntário 2 <div className="starranking">★★★★☆</div>
+                </div>
+                <div className="qdavaliações">267 atendimentos realizados</div>
+                    <hr />
+                    <div className="voluntário">
+                <img className="voluntariosimg" src="https://i.pinimg.com/originals/b3/2c/93/b32c93fe5e06e9ba9ebeddc13925fae7.jpg" /> Voluntário 3 <div className="starranking">★★★★☆</div>
+                </div>
+                <div className="qdavaliações">210 atendimentos realizados</div>
+                <hr />
+                <div className="voluntário">
+                <img className="voluntariosimg" src="https://i.pinimg.com/736x/03/99/d1/0399d102e16757736b9c5fe1d7370141.jpg" /> Voluntário 4 <div className="starranking">★★★☆☆</div>
+                </div>
+                <div className="qdavaliações">190 atendimentos realizados</div>
+                </div>
 
-      <section id="ranking">
-        <br />
-        <div className="ranking1">
-          <h1 className="titulo_rk"> Ranking de Voluntários </h1>
-        </div>
-      </section>
+                </div>
+ 
 
       {/*--------Tela Quem Somos--------*/}
 
