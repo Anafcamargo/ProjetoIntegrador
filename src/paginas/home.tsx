@@ -78,7 +78,7 @@ function Home() {
 
       {/*--------Tela Ranking--------*/}
       <div className="caixa-de-classificação-do-container">
-                <h1 className="melhoresav">Melhores avaliadas</h1>       
+                <h1 className="melhoresav">Melhores avaliados</h1>       
                 <div className="milavaliações"><div className="starmelhoresav">★★★★★</div> 1000+ avaliações
                 </div>
                 <hr />
