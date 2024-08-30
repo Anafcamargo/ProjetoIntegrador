@@ -1,7 +1,11 @@
 import React, { useState } from "react";
 import "../estilo/estilo.css"
 
+  
+
 function Cadastro() {
+
+  
   const [tipoCadastro, setTipoCadastro] = useState("usuario");
 
   const handleTipoChange = (event: { target: { value: React.SetStateAction<string>; }; }) => {
@@ -102,5 +106,4 @@ function Cadastro() {
     </body>
   );
 }
-
 export default Cadastro;

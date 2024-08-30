@@ -331,8 +331,7 @@ justify-content: center;
 
 .bodyCadastro{
     background-color: #5a37b3;
-    inherits: 100%;
-    
+    width: 100%;
 }
 
 .containerCadastro {
