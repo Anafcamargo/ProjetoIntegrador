@@ -816,3 +816,65 @@ input[type="submit"] {
 input[type="submit"]:hover {
   background-color: #388e3c; 
 }
+
+/*--------Faça cadastro --------*/
+.titulo_cd{
+  text-align: center;
+  font-size: 200%;
+  font-weight: bold;
+  
+
+}
+.Facaseucadastro{
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  background-color: #F8F8F8;
+  justify-content: center;
+  
+  
+  
+}
+
+.form{
+  background-color:#F8F8F8;
+  padding-top:10px;
+  padding-bottom: 10px;
+}
+
+.Qrservoluntario{
+  margin-right: 50PX;
+  margin-left:80px ;
+  text-align: center; 
+   
+}
+
+.Obtajuda{
+  margin-left: 60PX;
+  margin-right: 50PX;
+  text-align: center;
+ 
+}
+
+.paragrafo_cd{
+  font-size: 20px;
+  
+}
+
+.button-cad{
+background-color: black;
+border-radius: 5px;
+color: white;
+text-align: center;
+padding: 8px;
+cursor: pointer;
+  }  
+
+.texto-top-cadastro{
+text-align: center;
+display: flex;
+align-items: center;
+justify-content: center;
+right: 60%;
+position: absolute;
+}

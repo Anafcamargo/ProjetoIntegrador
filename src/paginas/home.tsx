@@ -218,14 +218,27 @@ function Home() {
       </section>
       <br />
 
-      {/*--------Tela Faça seu Cadastro--------*/}
+    <div className="form">
+    <h2 className="titulo_cd">Faça seu Cadastro</h2>
+    <div className="Facaseucadastro">   
+            <div className="Qrservoluntario">
+                <h2>Quero ser Voluntário</h2>
+                <img src="volunter.png" />
+                <p className="paragrafo_cd">Compartilhe seu conhecimento tecnologico <br />
+                    para fazer a diferença na comunidade.</p>
+                    <Link to='/Cadastro'><button className="button-cad">Clique aqui</button></Link>
+        </div>
+        <div className="Obtajuda">
+            <h2>Solicitar ajuda</h2>
+            <img src="old.png" />
+            <p className="paragrafo_cd">Obtenha suporte tecnológico personalizado <br />
+                e gratuito para suas necessidades.</p>
 
-      {/* <div><h1 className="titulo_cd">Faça seu Cadastro </h1></div>
-      <br />
-      <div className="feedback1">
-        <h1 className="titulo_fd"> Feedbacks dos serviços prestados </h1>
-        <br />
-      </div> */}
+
+            <Link to='/Cadastro'><button className="button-cad">Clique aqui</button></Link>
+        </div>
+    </div> 
+</div>    
       <div className="Feedback">
         <br></br>
         <br></br>
