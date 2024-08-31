@@ -14,11 +14,11 @@ function Home() {
     { id: "2", image: "ava2.png" },
     {
       id: "3",
-      image: "ava1.png",
+      image: "ava3.png",
     },
     {
       id: "4",
-      image: "ava2.png",
+      image: "ava4.png",
     },
   ];
 
@@ -247,7 +247,7 @@ function Home() {
         <br />
         <br />
 
-        <Swiper slidesPerView={1} pagination={{ clickable: true }} navigation>
+        <Swiper slidesPerView={2} pagination={{ clickable: true }} navigation>
           {data.map((item) => (
             <SwiperSlide key={item.id}>
               <div className="div-slide">

@@ -732,6 +732,9 @@ border-radius: 10px;
 box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
+
+/* FEEDBACK SLIDE */
+
 .div-slide {
   display: flex;
   flex-direction: row;
@@ -741,7 +744,7 @@ box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .slide-item {
-  height: 350px;
+  height: 225px;
 }
 
 .titulo_fd {
