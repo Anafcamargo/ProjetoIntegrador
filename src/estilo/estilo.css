@@ -54,7 +54,8 @@ a:visited {
 .buttoncadastro:hover,
 .botao_cad2:hover,
 .buttoncadastro2:hover,
-.button_notfound:hover {
+.button_notfound:hover,
+.button-cad:hover {
   color: rgb(255, 174, 0);
   transform: scale(1.1);
 }
