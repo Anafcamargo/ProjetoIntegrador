@@ -4,6 +4,7 @@ import Rodape from "../componentes/rodape";
 import { Link } from "react-router-dom";
 import FAQ from "../componentes/faq.tsx";
 import { Swiper, SwiperSlide } from "swiper/react";
+import BackToTopButton from '../componentes/botaotopo/BackToTopButton';
 
 function Home() {
   const data = [
@@ -24,6 +25,7 @@ function Home() {
 
   return (
     <div>
+       <BackToTopButton />
       <Cabecalho />
       {/*--------Tela inicial--------*/}
       <div className="container-inicio">
