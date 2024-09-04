@@ -67,7 +67,7 @@ function Home() {
             <iframe
               width="560"
               height="315"
-              src="https://www.youtube.com/embed/AvGWUBcqYkY?si=ND6B-HJYB70s5Csf"
+              src="https://www.youtube.com/embed/ygLM6jZ4pFY?si=_bG41fjANQOnBIzo"
               title="YouTube video player"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -225,7 +225,7 @@ function Home() {
     <div className="Facaseucadastro">   
             <div className="Qrservoluntario">
                 <h2>Quero ser Voluntário</h2>
-                <img src="volunter.png" />
+                <img src="volunter.png"/>
                 <p className="paragrafo_cd">Compartilhe seu conhecimento tecnologico <br />
                     para fazer a diferença na comunidade.</p>
                     <Link to='/Cadastro'><button className="button-cad">Clique aqui</button></Link>
