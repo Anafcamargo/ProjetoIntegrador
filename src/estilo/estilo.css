@@ -803,7 +803,7 @@ label {
 input[type="email"] {
   width: calc(100% - 22px);
   padding: 10px;
-  border: 1px solid #6750A4; 
+  border: 1px solid; 
   border-radius: 4px;
   margin-bottom: 20px;
   box-sizing: border-box; 
