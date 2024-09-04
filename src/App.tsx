@@ -15,7 +15,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import EsqueciSenha from "./paginas/esquecisenha";
-import BackToTopButton from './componentes/botaotopo/BackToTopButton';
+
 
 register();
 
@@ -33,7 +33,7 @@ function App() {
         <Route path="/Voluntario" element={<Tela_Voluntario />} />
         < Route path = '/EsqueciaSenha' element={ < EsqueciSenha /> } />
       </Routes>
-      <BackToTopButton />
+   
     </div>
   );
 }

@@ -54,7 +54,8 @@ a:visited {
 .buttoncadastro:hover,
 .botao_cad2:hover,
 .buttoncadastro2:hover,
-.button_notfound:hover {
+.button_notfound:hover,
+.button-cad:hover {
   color: rgb(255, 174, 0);
   transform: scale(1.1);
 }
@@ -266,7 +267,7 @@ code {
   align-items: baseline;
   justify-content: space-between;
   flex-direction: row;
-  background-color: #f4f4f4;
+  background-color: #ffffff;
   padding: 100px;
 }
 
@@ -543,7 +544,7 @@ code {
 
 .container-login {
   display: flex;
-  background-color: #6750a4;
+  background-color: #F4F4F4;
   justify-content: center;
   align-items: center;
   height: 100vh;
@@ -553,7 +554,7 @@ code {
   background-color: white;
   border-radius: 20px; /* Bordas arredondadas */
   padding: 50px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
   text-align: center;
   width: 400px;
   height: 40vh;
@@ -562,12 +563,14 @@ code {
 .input-group {
   margin-bottom: 20px; /* Espaço entre os campos */
   text-align: left;
+  
 }
 
 .input-group label {
   display: block;
   font-size: 14px;
   margin-bottom: 5px;
+  
 }
 
 .input-group input {
@@ -578,7 +581,7 @@ code {
 }
 
 .login-button {
-  background-color: #6c42d9;
+  background-color: #034EA3;
   color: white;
   padding: 10px 10px;
   border: none;
@@ -586,24 +589,26 @@ code {
   cursor: pointer;
   width: 80%;
   margin-bottom: 5px;
+  
 }
 
 .login-button:hover {
-  background-color: #5a37b3;
+  background-color: #013066;
 }
 
 .login-footer {
   margin-bottom: 15px;
 }
 
-.login-footer .forgot-password,
-.login-footer .register-link {
-  color: #6c42d9;
+.forgot-password,
+.login-footer, 
+.register-link {
+  color: #034EA3;
   text-decoration: none;
   font-weight: lighter;
 }
 
-.login-footer .register-link:hover {
+.forgot-password:hover, .login-footer .register-link:hover {
   text-decoration: underline; /* Adicionar sublinhado ao passar o mouse */
 }
 
@@ -620,7 +625,7 @@ code {
   cursor: pointer;
   font-weight: bold;
   font-size: medium;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
   margin-top: 20px;
   align-self: center; /* Adiciona essa linha para centralizar o botão */
   position: absolute;
@@ -738,6 +743,9 @@ border-radius: 10px;
 box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
+
+/* FEEDBACK SLIDE */
+
 .div-slide {
   display: flex;
   flex-direction: row;
@@ -747,7 +755,7 @@ box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .slide-item {
-  height: 350px;
+  height: 195px;
 }
 
 .titulo_fd {
@@ -802,7 +810,7 @@ label {
 input[type="email"] {
   width: calc(100% - 22px);
   padding: 10px;
-  border: 1px solid #6750A4; 
+  border: 1px solid; 
   border-radius: 4px;
   margin-bottom: 20px;
   box-sizing: border-box; 
@@ -822,4 +830,81 @@ input[type="submit"] {
 
 input[type="submit"]:hover {
   background-color: #388e3c; 
+}
+
+
+.botaotopo{
+  border-radius: 5px;
+  position: fixed;
+  bottom: 20px;
+  right: 10px;
+  /* padding: 10px 20px; */
+  border: none;
+  /* background-color: hsl(0, 0%, 100%); */
+  /* color: #fff; */
+  cursor: pointer;
+  /* font-size: 16px; */
+}
+/*--------Faça cadastro --------*/
+.titulo_cd{
+  text-align: center;
+  font-size: 200%;
+  font-weight: bold;
+  
+}
+.Facaseucadastro{
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  background-color: #F8F8F8;
+  justify-content: center;
+  
+  
+  
+}
+
+.form{
+  background-color:#F8F8F8;
+  padding-top:10px;
+  padding-bottom: 10px;
+}
+
+.Qrservoluntario{
+  margin-right: 50PX;
+  margin-left:80px ;
+  text-align: center; 
+   
+}
+
+
+
+.Obtajuda{
+  margin-left: 60PX;
+  margin-right: 50PX;
+  text-align: center;
+ 
+}
+
+.paragrafo_cd{
+  font-size: 20px;
+  
+}
+
+.button-cad{
+background-color: black;
+border-radius: 5px;
+color: white;
+text-align: center;
+padding: 8px;
+cursor: pointer;
+  }  
+
+.texto-top-cadastro{
+text-align: center;
+display: flex;
+align-items: center;
+justify-content: center;
+right: 60%;
+position: absolute;
+
 }

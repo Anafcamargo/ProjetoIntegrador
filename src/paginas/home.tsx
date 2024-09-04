@@ -4,6 +4,7 @@ import Rodape from "../componentes/rodape";
 import { Link } from "react-router-dom";
 import FAQ from "../componentes/faq.tsx";
 import { Swiper, SwiperSlide } from "swiper/react";
+import BackToTopButton from '../componentes/botaotopo/BackToTopButton';
 
 function Home() {
   const data = [
@@ -14,16 +15,17 @@ function Home() {
     { id: "2", image: "ava2.png" },
     {
       id: "3",
-      image: "ava1.png",
+      image: "ava3.png",
     },
     {
       id: "4",
-      image: "ava2.png",
+      image: "ava4.png",
     },
   ];
 
   return (
     <div>
+       <BackToTopButton />
       <Cabecalho />
       {/*--------Tela inicial--------*/}
       <div className="container-inicio">
@@ -65,7 +67,7 @@ function Home() {
             <iframe
               width="560"
               height="315"
-              src="https://www.youtube.com/embed/AvGWUBcqYkY?si=ND6B-HJYB70s5Csf"
+              src="https://www.youtube.com/embed/ygLM6jZ4pFY?si=_bG41fjANQOnBIzo"
               title="YouTube video player"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -218,14 +220,27 @@ function Home() {
       </section>
       <br />
 
-      {/*--------Tela Faça seu Cadastro--------*/}
+    <div className="form">
+    <h2 className="titulo_cd">Faça seu Cadastro</h2>
+    <div className="Facaseucadastro">   
+            <div className="Qrservoluntario">
+                <h2>Quero ser Voluntário</h2>
+                <img src="volunter.png"/>
+                <p className="paragrafo_cd">Compartilhe seu conhecimento tecnologico <br />
+                    para fazer a diferença na comunidade.</p>
+                    <Link to='/Cadastro'><button className="button-cad">Clique aqui</button></Link>
+        </div>
+        <div className="Obtajuda">
+            <h2>Solicitar ajuda</h2>
+            <img src="old.png" />
+            <p className="paragrafo_cd">Obtenha suporte tecnológico personalizado <br />
+                e gratuito para suas necessidades.</p>
 
-      {/* <div><h1 className="titulo_cd">Faça seu Cadastro </h1></div>
-      <br />
-      <div className="feedback1">
-        <h1 className="titulo_fd"> Feedbacks dos serviços prestados </h1>
-        <br />
-      </div> */}
+
+            <Link to='/Cadastro'><button className="button-cad">Clique aqui</button></Link>
+        </div>
+    </div> 
+</div>    
       <div className="Feedback">
         <br></br>
         <br></br>
@@ -234,7 +249,7 @@ function Home() {
         <br />
         <br />
 
-        <Swiper slidesPerView={1} pagination={{ clickable: true }} navigation>
+        <Swiper slidesPerView={2} pagination={{ clickable: true }} navigation>
           {data.map((item) => (
             <SwiperSlide key={item.id}>
               <div className="div-slide">
