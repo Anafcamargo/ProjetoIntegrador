@@ -16,7 +16,6 @@ function Cabecalho(){
         <div className="container"> 
          
            <div className="ComoFunciona"> <a href="#comofunciona">Como Funciona</a> </div> 
-            <div className="Ranking"> <a href="#ranking">Ranking</a> </div>
             <div className="QuemSomos"> <a href="#quemsomos">Quem Somos</a> </div>
             <div className="Cadastro"> <Link to='/Cadastro'>Cadastre-se</Link> </div>
             
