@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Rodape from "../componentes/rodape";
 import "../estilo/estilo.css"
 
   
@@ -30,7 +31,7 @@ function Cadastro() {
           />
           Usuário
         </label>
-        <label className="radioLabel">
+        <label className="radioLabelUsuario">
           <input
             type="radio"
             value="voluntario"
@@ -43,7 +44,7 @@ function Cadastro() {
       </div>
 
       {tipoCadastro === "usuario" && (
-        <div className="formContainer">
+        <div className="formContainerUsuario">
           <form>
             <div className="formGroup">
               <label className="label">Nome Completo</label>
@@ -101,8 +102,9 @@ function Cadastro() {
           </form>
         </div>
       )}
-    </div>
 
+    </div>
+        <Rodape/>
     </body>
   );
 }
