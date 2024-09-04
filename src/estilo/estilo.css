@@ -267,7 +267,7 @@ code {
   align-items: baseline;
   justify-content: space-between;
   flex-direction: row;
-  background-color: white;
+  background-color: #ffffff;
   padding: 100px;
 }
 
@@ -537,7 +537,7 @@ code {
 
 .container-login {
   display: flex;
-  background-color: #6750a4;
+  background-color: #F4F4F4;
   justify-content: center;
   align-items: center;
   height: 100vh;
@@ -547,7 +547,7 @@ code {
   background-color: white;
   border-radius: 20px; /* Bordas arredondadas */
   padding: 50px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
   text-align: center;
   width: 400px;
   height: 40vh;
@@ -556,12 +556,14 @@ code {
 .input-group {
   margin-bottom: 20px; /* Espaço entre os campos */
   text-align: left;
+  
 }
 
 .input-group label {
   display: block;
   font-size: 14px;
   margin-bottom: 5px;
+  
 }
 
 .input-group input {
@@ -572,7 +574,7 @@ code {
 }
 
 .login-button {
-  background-color: #6c42d9;
+  background-color: #034EA3;
   color: white;
   padding: 10px 10px;
   border: none;
@@ -580,24 +582,26 @@ code {
   cursor: pointer;
   width: 80%;
   margin-bottom: 5px;
+  
 }
 
 .login-button:hover {
-  background-color: #5a37b3;
+  background-color: #013066;
 }
 
 .login-footer {
   margin-bottom: 15px;
 }
 
-.login-footer .forgot-password,
-.login-footer .register-link {
-  color: #6c42d9;
+.forgot-password,
+.login-footer, 
+.register-link {
+  color: #034EA3;
   text-decoration: none;
   font-weight: lighter;
 }
 
-.login-footer .register-link:hover {
+.forgot-password:hover, .login-footer .register-link:hover {
   text-decoration: underline; /* Adicionar sublinhado ao passar o mouse */
 }
 
@@ -614,7 +618,7 @@ code {
   cursor: pointer;
   font-weight: bold;
   font-size: medium;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
   margin-top: 20px;
   align-self: center; /* Adiciona essa linha para centralizar o botão */
   position: absolute;
