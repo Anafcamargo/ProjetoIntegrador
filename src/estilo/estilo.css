@@ -137,7 +137,7 @@ a:visited {
   justify-content: center; /* Centraliza verticalmente se o conteúdo for menor que a altura do contêiner */
   padding: 2rem 0; /* Adiciona espaçamento acima e abaixo */
   width: 100%;
-  background-color: #f8f8f8; /* Cor de fundo opcional */
+  background-color: #ffffff; /* Cor de fundo opcional */
   text-align: center; /* Centraliza o texto */
 }
 
@@ -177,11 +177,15 @@ code {
 .melhoresav{ 
   text-align: center;
   font-size: 200%;
+ 
+}
+.caixa-de-classificação-do-container{
+  background-color: #f7f7f7;
 }
 
 
 .container-ranking-box{
-  background-color: white;
+  background-color: #f1f1f1;
     border-radius: 20px; /* Bordas arredondadas */
     padding: 50px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -780,7 +784,7 @@ box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   max-width: 550px;
   height: 250px;
   padding: 20px;
-  border: 2px solid #6750A4; 
+  border: 2px solid #000000; 
   border-radius: 8px;
   background-color: #ffffff; 
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); 
@@ -817,7 +821,7 @@ input[type="email"] {
 }
 
 input[type="submit"] {
-  background-color: #6750A4; 
+  background-color: #470cfa; 
   color: white;
   border: none;
   padding: 12px 20px;
@@ -829,7 +833,7 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-  background-color: #388e3c; 
+  background-color: #b8b4b4; 
 }
 
 
