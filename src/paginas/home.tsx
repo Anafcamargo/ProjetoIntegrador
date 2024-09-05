@@ -270,7 +270,11 @@ function Home() {
 
         <FAQ />
       </div>
+      <br />
+      <Rodape/>
     </div>
+
+    
   );
 }
 

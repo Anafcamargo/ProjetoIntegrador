@@ -529,20 +529,27 @@ code {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 70px;
-  background-color: #ffffff;
-  padding: 0 20px;
+  height: 50px;
+  padding: 0 10px;
   margin: 0;
   text-align: center;
   border-radius: 1px;
   flex-direction: row;
-  color: rgb(88, 88, 88);
-  text-decoration: none;
+  
+ 
 }
 
 .conecte-se {
   margin-left: 300px;
 }
+footer {
+	background-color: #f7f7f7(0, 0, 0);
+	padding: 1px 0px;
+}
+.rodapeT{
+  color: rgb(3, 3, 3);
+}
+
 
 /*---------Login-----------*/
 
@@ -581,7 +588,7 @@ code {
   width: 90%;
   padding: 10px;
   border-radius: 5px;
-  border: 1px solid #ccc;
+  border: 1px solid rgb(15, 15, 15);
 }
 
 .login-button {
@@ -821,7 +828,7 @@ input[type="email"] {
 }
 
 input[type="submit"] {
-  background-color: #470cfa; 
+  background-color: #034EA3; 
   color: white;
   border: none;
   padding: 12px 20px;
@@ -912,3 +919,7 @@ right: 60%;
 position: absolute;
 
 }
+
+  .button{
+    background-color: #034EA3;
+  }

@@ -1,11 +1,13 @@
 import { Link } from "react-router-dom";
 import Cabecalho from "../componentes/cabecalho";
+import Cabecalho2 from "../componentes/cabecalho2";
+import Rodape from "../componentes/rodape";
 
 function Login(){
     return(
 <div>
 
-
+<Cabecalho2/>
     
   <div className="container-login">
 
@@ -52,8 +54,7 @@ function Login(){
 
   
   </div>
- 
-
+ <Rodape/>
 </div>
     )
 }
