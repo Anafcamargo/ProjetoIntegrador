@@ -31,7 +31,9 @@ function App() {
         <Route path="/Cadastro" element={<Cadastro />} />
         <Route path="/Usuario" element={<Tela_Usuario />} />
         <Route path="/Voluntario" element={<Tela_Voluntario />} />
-        < Route path = '/EsqueciaSenha' element={ < EsqueciSenha /> } />
+        <Route path = '/EsqueciaSenha' element={ < EsqueciSenha /> } />
+        <Route path = '/TelaUsuario' element={ <Tela_Usuario/> } />
+        <Route path = '/TelaVoluntario' element={ <Tela_Voluntario/> } />  
       </Routes>
    
     </div>

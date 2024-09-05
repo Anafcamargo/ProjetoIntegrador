@@ -505,7 +505,7 @@ code {
   padding: 10px;
   border-radius: 5px;
   border: none;
-  background-color: #6a4aa1;
+  background-color: #034EA3;
   color: #fff;
   font-size: 16px;
   cursor: pointer;
@@ -907,4 +907,67 @@ justify-content: center;
 right: 60%;
 position: absolute;
 
+}
+
+/*-------TELA DE USUARIO-----*/
+
+.BodyUsuario {
+  font-family: Arial, sans-serif;
+  background-color: #f7f7f7;
+  color: #333;
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+}
+
+.containerTelaUsuario {
+  width: 100%; 
+  border-radius: 8px;
+  
+}
+
+h1 {
+  font-size: 2em;
+  color: #2c3e50;
+}
+
+p {
+  font-size: 1.2em;
+}
+
+label {
+  display: block;
+  font-size: 1.2em;
+  
+}
+
+input, textarea, select {
+  width: 100%;
+  padding: 12px;
+  font-size: 1.2em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  background-color: #034EA3;
+  color: white;
+  padding: 15px 20px;
+  font-size: 1.5em;
+  border: none;
+  border-radius: 4px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #034EA3;
+}
+
+.hidden {
+  display: none;
+}
+
+#confirmationMessage {
+  margin-top: 20px;
 }

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Cabecalho2 from "../componentes/cabecalho";
 import Rodape from "../componentes/rodape";
 import "../estilo/estilo.css"
 
@@ -16,6 +17,7 @@ function Cadastro() {
   return (
     <body className=" bodyCadastro">
       
+    <Cabecalho2/>
     
     <div className="containerCadastro">
       <h2 className="title">Cadastre-se</h2>
