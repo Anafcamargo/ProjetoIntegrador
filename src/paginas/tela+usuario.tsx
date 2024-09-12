@@ -2,6 +2,7 @@ import Cabecalho from "../componentes/cabecalho";
 
 import React, { useState } from 'react';
 import '../estilo/estilo.css'
+import Cabecalho2 from "../componentes/cabecalho2";
 
 function Teladeusuario() {
   const [formSubmitted, setFormSubmitted] = useState(false);
@@ -13,9 +14,9 @@ function Teladeusuario() {
 
   return (
     <body className="BodyUsuario">
-        
+        <Cabecalho2/>
     <div className="containerTelaUsuario">
-        <Cabecalho/>
+        
       {!formSubmitted ? (
         <>
           <h1 className="tesxtoinicalusuario">Bem-vindo ao Suporte Técnico</h1>
@@ -25,13 +26,13 @@ function Teladeusuario() {
             <label htmlFor="name">Nome:</label>
             <input type="text" id="name" name="name" required placeholder="Nome Completo" className="inputsUsuario" />
 
-            <label htmlFor="contact">Telefone ou Email:</label>
+            <label htmlFor="contact" className="labelUsuario">Telefone ou Email:</label>
             <input type="text" id="contact" name="contact" required placeholder="( ) 99999-9999" className="inputsUsuario"/>
 
-            <label htmlFor="issue">Descreva o Problema:</label>
+            <label htmlFor="issue" className="labelUsuario">Descreva o Problema:</label>
             <textarea id="issue" name="issue" rows= {5} required placeholder="Descreva o seu problema técnico de maneira simples e direta"></textarea>
 
-            <label htmlFor="urgency">Categorias:</label>
+            <label htmlFor="urgency" className="labelUsuario">Categorias:</label>
             <select id="urgency" name="urgency">
               <option value="baixa">Celular</option>
               <option value="media">Computador</option>
