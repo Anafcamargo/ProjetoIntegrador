@@ -20,7 +20,7 @@ function Teladeusuario() {
       {!formSubmitted ? (
         <>
           <h1 className="tesxtoinicalusuario">Bem-vindo ao Suporte Técnico</h1>
-          <p>Preencha as informações abaixo para abrir um chamado:</p>
+          <p className="ptelausuario">Preencha as informações abaixo para abrir um chamado:</p>
           
           <form onSubmit={handleSubmit}>
             <label htmlFor="name">Nome:</label>
