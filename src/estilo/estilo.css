@@ -137,7 +137,7 @@ a:visited {
   justify-content: center; /* Centraliza verticalmente se o conteúdo for menor que a altura do contêiner */
   padding: 2rem 0; /* Adiciona espaçamento acima e abaixo */
   width: 100%;
-  background-color: #f8f8f8; /* Cor de fundo opcional */
+  background-color: #ffffff; /* Cor de fundo opcional */
   text-align: center; /* Centraliza o texto */
 }
 
@@ -177,11 +177,15 @@ code {
 .melhoresav{ 
   text-align: center;
   font-size: 200%;
+ 
+}
+.caixa-de-classificação-do-container{
+  background-color: #f7f7f7;
 }
 
 
 .container-ranking-box{
-  background-color: white;
+  background-color: #f1f1f1;
     border-radius: 20px; /* Bordas arredondadas */
     padding: 50px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -525,20 +529,27 @@ code {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 70px;
-  background-color: #ffffff;
-  padding: 0 20px;
+  height: 50px;
+  padding: 0 10px;
   margin: 0;
   text-align: center;
   border-radius: 1px;
   flex-direction: row;
-  color: rgb(88, 88, 88);
-  text-decoration: none;
+  
+ 
 }
 
 .conecte-se {
   margin-left: 300px;
 }
+footer {
+	background-color: #f7f7f7(0, 0, 0);
+	padding: 1px 0px;
+}
+.rodapeT{
+  color: rgb(3, 3, 3);
+}
+
 
 /*---------Login-----------*/
 
@@ -577,7 +588,7 @@ code {
   width: 90%;
   padding: 10px;
   border-radius: 5px;
-  border: 1px solid #ccc;
+  border: 1px solid rgb(15, 15, 15);
 }
 
 .login-button {
@@ -780,7 +791,7 @@ box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   max-width: 550px;
   height: 250px;
   padding: 20px;
-  border: 2px solid #6750A4; 
+  border: 2px solid #000000; 
   border-radius: 8px;
   background-color: #ffffff; 
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); 
@@ -817,7 +828,7 @@ input[type="email"] {
 }
 
 input[type="submit"] {
-  background-color: #6750A4; 
+  background-color: #034EA3; 
   color: white;
   border: none;
   padding: 12px 20px;
@@ -829,7 +840,7 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-  background-color: #388e3c; 
+  background-color: #b8b4b4; 
 }
 
 
@@ -907,67 +918,4 @@ justify-content: center;
 right: 60%;
 position: absolute;
 
-}
-
-/*-------TELA DE USUARIO-----*/
-
-.BodyUsuario {
-  font-family: Arial, sans-serif;
-  background-color: #f7f7f7;
-  color: #333;
-  text-align: center;
-  margin: 0;
-  padding: 20px;
-}
-
-.containerTelaUsuario {
-  width: 100%; 
-  border-radius: 8px;
-  
-}
-
-h1 {
-  font-size: 2em;
-  color: #2c3e50;
-}
-
-p {
-  font-size: 1.2em;
-}
-
-label {
-  display: block;
-  font-size: 1.2em;
-  
-}
-
-input, textarea, select {
-  width: 100%;
-  padding: 12px;
-  font-size: 1.2em;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-button {
-  background-color: #034EA3;
-  color: white;
-  padding: 15px 20px;
-  font-size: 1.5em;
-  border: none;
-  border-radius: 4px;
-  margin-top: 20px;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #034EA3;
-}
-
-.hidden {
-  display: none;
-}
-
-#confirmationMessage {
-  margin-top: 20px;
 }
