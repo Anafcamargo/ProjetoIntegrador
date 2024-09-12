@@ -956,7 +956,7 @@ p {
 }
 
 .inputsUsuario, textarea, select {
-  width: 100%;
+  width: 1000px;
   padding: 12px;
   margin-top: 8px;
   font-size: 1.2em;
@@ -964,7 +964,7 @@ p {
   border-radius: 4px;
 }
 
-button {
+.botãoEnviarChamado {
   background-color: #3498db;
   color: white;
   padding: 15px 20px;
@@ -975,7 +975,7 @@ button {
   cursor: pointer;
 }
 
-button:hover {
+.botãoEnviarChamado:hover {
   background-color: #555;
 }
 

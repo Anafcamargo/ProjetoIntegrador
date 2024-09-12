@@ -26,10 +26,10 @@ function Teladeusuario() {
             <label htmlFor="name">Nome:</label>
             <input type="text" id="name" name="name" required placeholder="Nome Completo" className="inputsUsuario" />
 
-            <label htmlFor="contact" className="labelUsuario">Telefone ou Email:</label>
+            <label htmlFor="contact" className="labelUsuario">Telefone:</label>
             <input type="text" id="contact" name="contact" required placeholder="( ) 99999-9999" className="inputsUsuario"/>
 
-            <label htmlFor="issue" className="labelUsuario">Descreva o Problema:</label>
+            <label htmlFor="issue" className="labelUsuario">Descreva o seu Problema:</label>
             <textarea id="issue" name="issue" rows= {5} required placeholder="Descreva o seu problema técnico de maneira simples e direta"></textarea>
 
             <label htmlFor="urgency" className="labelUsuario">Categorias:</label>
@@ -39,8 +39,8 @@ function Teladeusuario() {
               <option value="alta">Tablet</option>
               <option value="baixa">Notebook/Laptop</option>
             </select>
-
-            <button type="submit">Enviar Chamado</button>
+            <br />
+            <button type="submit" className="botãoEnviarChamado">Enviar Chamado</button>
           </form>
         </>
       ) : (
