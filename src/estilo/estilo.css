@@ -988,3 +988,113 @@ h1 {
 #confirmationMessage {
   margin-top: 20px;
 }
+
+
+
+/*-------Tela do Voluntario-------*/
+
+/* Define o estilo geral da página */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+}
+
+.suporte-container {
+  display: flex;
+  height: 100vh; /* Ocupa toda a altura da janela */
+  width: 100vw;  /* Ocupa toda a largura da janela */
+  background-color: #f0f0f0;
+}
+
+/* Estilo da seção de perfil à esquerda */
+.profile-section {
+  width: 20%;  /* Ocupará 20% da largura da tela */
+  background-color: #3498db; /* Cor de fundo azul */
+  color: white; /* Cor do texto */
+  padding: 20px; /* Espaçamento interno */
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Sombra leve */
+}
+
+.profile-section h2 {
+  font-size: 1.8em;
+  margin-bottom: 20px;
+}
+
+.profile-details p {
+  font-size: 1.2em;
+  margin: 10px 0;
+}
+
+/* Estilo da seção de chamados */
+.tickets-section, .accepted-section {
+  flex: 1; /* Faz com que os painéis de chamados ocupem o restante do espaço igualmente */
+  padding: 20px; /* Espaçamento interno */
+  overflow-y: auto; /* Habilita o scroll quando o conteúdo for maior que a área */
+}
+
+/* Estilo dos chamados disponíveis (painel esquerdo) */
+.tickets-section {
+  background-color: #f9f9f9; /* Cor de fundo cinza claro */
+  border-right: 1px solid #ddd; /* Linha divisória */
+}
+
+/* Estilo dos chamados aceitos (painel direito) */
+.accepted-section {
+  background-color: #fff; /* Cor de fundo branco */
+}
+
+h2 {
+  font-size: 1.6em;
+  color: #2c3e50; /* Cor do título */
+}
+
+/* Estilo das "cartas" de chamados */
+.ticket-card {
+  background-color: white; /* Fundo branco */
+  padding: 15px; /* Espaçamento interno */
+  margin: 15px 0; /* Espaçamento entre as cartas */
+  border: 1px solid #ddd; /* Borda leve */
+  border-radius: 5px; /* Bordas arredondadas */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05); /* Sombra leve */
+}
+
+.ticket-card h3 {
+  margin-top: 0;
+}
+
+.ticket-card p {
+  font-size: 1.1em;
+  margin-bottom: 15px;
+}
+
+/* Estilo do botão de aceitar chamado */
+button {
+  background-color: #3498db; /* Cor de fundo azul */
+  color: white; /* Cor do texto */
+  border: none; /* Remove borda */
+  padding: 10px 15px; /* Espaçamento interno */
+  font-size: 1.1em; /* Tamanho da fonte */
+  cursor: pointer; /* Cursor muda para mãozinha */
+  border-radius: 5px; /* Bordas arredondadas */
+}
+
+button:hover {
+  background-color: #2980b9; /* Cor mais escura ao passar o mouse */
+}
+
+/* Estilo do botão de aceitar e devolver chamado */
+button {
+  background-color: #3498db; /* Cor de fundo azul */
+  color: white; /* Cor do texto */
+  border: none; /* Remove borda */
+  padding: 10px 15px; /* Espaçamento interno */
+  font-size: 1.1em; /* Tamanho da fonte */
+  cursor: pointer; /* Cursor muda para mãozinha */
+  border-radius: 5px; /* Bordas arredondadas */
+}
+
+button:hover {
+  background-color: #2980b9; /* Cor mais escura ao passar o mouse */
+}
