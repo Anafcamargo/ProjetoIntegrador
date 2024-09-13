@@ -924,67 +924,95 @@ position: absolute;
 
 /*-----Tela do Usuario-----*/
 
-.BodyUsuario {
-  font-family: Arial, sans-serif;
-  background-color: #f7f7f7;
-  color: #333;
-  text-align: center;
-  margin: 0;
-  padding: 20px;
+
+.painel-container {
+  background-color: #f4f7fb;
+  display: flex;
+  justify-content: center;
   align-items: center;
+  height: 100vh; 
+  flex-direction: column; /* Alterado para coluna para centralizar tudo verticalmente */
 }
 
-.containerTelaUsuario {
-  max-width: 100%;
-  background-color: #fff;
+.painel-header {
+  display: flex;
+  justify-content: center; /* Centraliza o cabeçalho */
+  align-items: center;
+  width: 90%; /* Ajuste para ocupar uma largura menor e centralizada */
+  margin-bottom: 20px;
+  max-width: 1200px; /* Define uma largura máxima */
+}
+
+.cartoes {
+  display: flex;
+  justify-content: center; /* Centraliza os cartões horizontalmente */
+  gap: 40px; /* Ajuste do espaçamento entre os cartões */
+  width: 90%; /* Reduzir largura para dar mais margem */
+  max-width: 1200px; /* Define uma largura máxima */
+}
+
+.cartao {
+  background-color: white;
+  border-radius: 10px;
   padding: 20px;
-  border-radius: 8px;
-  
+  width: 300px; /* Largura fixa para os cartões */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  flex: 0 0 auto; /* Impede o cartão de crescer além da largura definida */
 }
 
-h1 {
-  font-size: 2em;
-  color: #000;
+.cabecalho-cartao {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
-.ptelausuario {
-  font-size: 1.2em;
+.cabecalho-cartao h2 {
+  font-size: 18px;
+  color: #333;
 }
 
-.labelUsuario{
-  display: block;
-  font-size: 1.2em;
-  margin-top: 15px;
+.cabecalho-cartao .total {
+  font-size: 24px;
+  font-weight: bold;
+  color: #034EA3;
 }
 
-.inputsUsuario, textarea, select {
-  width: 1000px;
-  padding: 12px;
-  margin-top: 8px;
-  font-size: 1.2em;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+.lista-chamados {
+  list-style-type: none;
+  margin-bottom: 20px;
 }
 
-.botãoEnviarChamado {
-  background-color: #3498db;
-  color: white;
-  padding: 15px 20px;
-  font-size: 1.5em;
+.lista-chamados li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.lista-chamados span {
+  font-size: 14px;
+  color: #333;
+}
+
+.status, .contato {
+  padding: 5px 10px;
+  background-color: #e0e7ff;
   border: none;
-  border-radius: 4px;
-  margin-top: 20px;
+  border-radius: 5px;
   cursor: pointer;
 }
 
-.botãoEnviarChamado:hover {
-  background-color: #555;
+.ver-mais {
+  text-align: center;
 }
 
-.hidden {
-  display: none;
+.ver-mais a {
+  color: #034EA3;
+  text-decoration: none;
+  font-weight: bold;
+  text-align: center;
+  
+  
 }
 
-#confirmationMessage {
-  margin-top: 20px;
-}

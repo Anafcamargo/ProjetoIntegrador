@@ -15,6 +15,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import EsqueciSenha from "./paginas/esquecisenha";
+import Dashboard from "./paginas/dashboard";
 
 
 register();
@@ -34,6 +35,7 @@ function App() {
         <Route path = '/EsqueciaSenha' element={ < EsqueciSenha /> } />
         <Route path = '/TelaUsuario' element={ <Tela_Usuario/> } />
         <Route path = '/TelaVoluntario' element={ <Tela_Voluntario/> } />  
+        <Route path = '/Dashboard' element={ <Dashboard/> } />
       </Routes>
    
     </div>
