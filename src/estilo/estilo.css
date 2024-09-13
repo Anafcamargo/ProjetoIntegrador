@@ -176,7 +176,29 @@ code {
 
 /*--------Ranking --------*/
 
-.melhoresav{ 
+.slide-ranking{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+}
+
+.container-ranking{
+background-color: #f4f4f4;
+width: 100%; 
+height: 500px;
+}
+
+.slide-ranking{
+margin-top: 100px;
+margin-bottom: 100px;
+}
+
+
+
+/* .melhoresav{ 
   text-align: center;
   font-size: 200%;
  
@@ -188,7 +210,7 @@ code {
 
 .container-ranking-box{
   background-color: #f1f1f1;
-    border-radius: 20px; /* Bordas arredondadas */
+    border-radius: 20px; /* Bordas arredondadas 
     padding: 50px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     text-align: center;
@@ -260,7 +282,7 @@ code {
   right: 4px;
 
 }
-
+ */
 
 /*--------Quem Somos --------*/
 
@@ -763,18 +785,15 @@ box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: row;
   justify-content: center;
-
   width: 100%;
 }
 
-.slide-item {
-  height: 195px;
-}
 
 .titulo_fd {
   text-align: center;
   font-size: 200%;
-}
+} 
+*/
 
 
 /* EsqueciSenha */
@@ -922,97 +941,6 @@ position: absolute;
 
 }
 
-/*-----Tela do Usuario-----*/
 
 
-.painel-container {
-  background-color: #f4f7fb;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh; 
-  flex-direction: column; /* Alterado para coluna para centralizar tudo verticalmente */
-}
-
-.painel-header {
-  display: flex;
-  justify-content: center; /* Centraliza o cabeçalho */
-  align-items: center;
-  width: 90%; /* Ajuste para ocupar uma largura menor e centralizada */
-  margin-bottom: 20px;
-  max-width: 1200px; /* Define uma largura máxima */
-}
-
-.cartoes {
-  display: flex;
-  justify-content: center; /* Centraliza os cartões horizontalmente */
-  gap: 40px; /* Ajuste do espaçamento entre os cartões */
-  width: 90%; /* Reduzir largura para dar mais margem */
-  max-width: 1200px; /* Define uma largura máxima */
-}
-
-.cartao {
-  background-color: white;
-  border-radius: 10px;
-  padding: 20px;
-  width: 300px; /* Largura fixa para os cartões */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  flex: 0 0 auto; /* Impede o cartão de crescer além da largura definida */
-}
-
-.cabecalho-cartao {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20px;
-}
-
-.cabecalho-cartao h2 {
-  font-size: 18px;
-  color: #333;
-}
-
-.cabecalho-cartao .total {
-  font-size: 24px;
-  font-weight: bold;
-  color: #034EA3;
-}
-
-.lista-chamados {
-  list-style-type: none;
-  margin-bottom: 20px;
-}
-
-.lista-chamados li {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 10px;
-}
-
-.lista-chamados span {
-  font-size: 14px;
-  color: #333;
-}
-
-.status, .contato {
-  padding: 5px 10px;
-  background-color: #e0e7ff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.ver-mais {
-  text-align: center;
-}
-
-.ver-mais a {
-  color: #034EA3;
-  text-decoration: none;
-  font-weight: bold;
-  text-align: center;
-  
-  
-}
 
