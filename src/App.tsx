@@ -17,6 +17,7 @@ import "swiper/css/scrollbar";
 import EsqueciSenha from "./paginas/esquecisenha";
 
 
+
 register();
 
 function App() {
@@ -34,6 +35,7 @@ function App() {
         <Route path = '/EsqueciaSenha' element={ < EsqueciSenha /> } />
         <Route path = '/TelaUsuario' element={ <Tela_Usuario/> } />
         <Route path = '/TelaVoluntario' element={ <Tela_Voluntario/> } />  
+        
       </Routes>
    
     </div>
