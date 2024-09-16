@@ -21,7 +21,7 @@ function Login(){
       <form>
            <div className="input-group">
            <label htmlFor="email">E-mail</label>
-          <input type="email" id="email" placeholder="Digite seu e-mail aqui" /> 
+          <input className="imputsLogin" type="email" id="email" placeholder="Digite seu e-mail aqui" /> 
           </div>
            
            <div className="input-group">

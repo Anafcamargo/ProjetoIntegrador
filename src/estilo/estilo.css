@@ -935,6 +935,11 @@ position: absolute;
 }
 
 .containerTelaUsuario {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
   max-width: 100%;
   background-color: #fff;
   padding: 20px;
@@ -943,7 +948,6 @@ position: absolute;
 }
 
 .tesxtoinicalusuario {
-  font-size: 2em;
   color: #000;
 }
 
@@ -957,7 +961,7 @@ position: absolute;
   margin-top: 15px;
 }
 
-.inputsUsuario, textarea, select {
+.inputsUsuario, .imputsLogin, textarea, select {
   width: 1000px;
   padding: 12px;
   margin-top: 8px;
@@ -995,7 +999,7 @@ position: absolute;
 
 /* Define o estilo geral da página */
 
-.containerTelaUsuario {
+.suporte-container {
   display: flex;
   height: 100vh; /* Ocupa toda a altura da janela */
   width: 100vw;  /* Ocupa toda a largura da janela */
@@ -1040,11 +1044,11 @@ position: absolute;
 }
 
 
-/* h2 {
+ .h2voluntario {
   font-size: 1.6em;
-  color: #2c3e50; /* Cor do título
+  color: #000; /* Cor do título */
 } 
- */
+
 
 
 
