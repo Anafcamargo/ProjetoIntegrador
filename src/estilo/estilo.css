@@ -1045,10 +1045,11 @@ body {
   background-color: #fff; /* Cor de fundo branco */
 }
 
-h2 {
+/* h2 {
   font-size: 1.6em;
-  color: #2c3e50; /* Cor do título */
-}
+  color: #2c3e50; /* Cor do título
+} 
+ */
 
 /* Estilo das "cartas" de chamados */
 .ticket-card {
