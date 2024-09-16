@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Cabecalho2 from '../componentes/cabecalho2';
 import '../estilo/estilo.css';
 
 // Interface do chamado
@@ -34,6 +35,8 @@ function TelaVoluntario() {
   };
 
   return (
+    <><Cabecalho2 />
+    
     <div className="suporte-container">
       {/* Perfil do usuário à esquerda */}
       <div className="profile-section">
@@ -56,18 +59,18 @@ function TelaVoluntario() {
             </div>
           ))
         ) : (
-          <p>Sem chamados disponíveis.</p>
+          <p className="ptelausuario">Sem chamados disponíveis.</p>
         )}
       </div>
 
       {/* Chamados aceitos */}
       <div className="accepted-section">
-        <h2>Chamados Aceitos</h2>
+        <h2 className="tesxtoinicalusuario">Chamados Aceitos</h2>
         {acceptedTickets.length > 0 ? (
           acceptedTickets.map((ticket) => (
             <div key={ticket.id} className="ticket-card">
               <h3>{ticket.title}</h3>
-              <p>{ticket.description}</p>
+              <p className="ptelausuario">{ticket.description}</p>
               <button className='botãovoluntario' onClick={() => handleReturnTicket(ticket)}>Devolver Chamado</button>
             </div>
           ))
@@ -75,7 +78,7 @@ function TelaVoluntario() {
           <p>Você ainda não aceitou nenhum chamado.</p>
         )}
       </div>
-    </div>
+    </div></>
   );
 }
 
