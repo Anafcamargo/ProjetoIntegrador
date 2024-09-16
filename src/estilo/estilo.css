@@ -176,7 +176,30 @@ code {
 
 /*--------Ranking --------*/
 
-.melhoresav{ 
+.slide-ranking{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  }
+  
+
+
+
+.container-ranking{
+background-color: #f4f4f4;
+width: 100v; 
+height: 500px;
+}
+
+.slide-ranking{
+margin-top: 100px;
+margin-bottom: 100px;
+}
+
+
+/*.melhoresav{ 
   text-align: center;
   font-size: 200%;
  
@@ -188,14 +211,14 @@ code {
 
 .container-ranking-box{
   background-color: #f1f1f1;
-    border-radius: 20px; /* Bordas arredondadas */
+    border-radius: 20px; /* Bordas arredondadas
     padding: 50px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     text-align: center;
     width: 400px;
     height: 60vh;
 
-}
+}*/
 
 
 
@@ -724,7 +747,7 @@ padding: 0% 10% 0% 10%;
   
   .card-body {
     padding: 15px;
-    color: #f0f0f0;
+    color: #333;
   }
   
   .collapse.show {
@@ -763,18 +786,16 @@ box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: row;
   justify-content: center;
-
   width: 100%;
 }
 
-.slide-item {
-  height: 195px;
-}
 
 .titulo_fd {
   text-align: center;
   font-size: 200%;
-}
+} 
+*/
+
 
 
 /* EsqueciSenha */
