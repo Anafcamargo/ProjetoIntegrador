@@ -8,7 +8,7 @@ interface Ticket {
   description: string;
 }
 
-function Suporte() {
+function TelaVoluntario() {
   // Chamados disponíveis e aceitos
   const [availableTickets, setAvailableTickets] = useState<Ticket[]>([
     { id: 1, title: 'Problema com conexão', description: 'Cliente não consegue se conectar à internet.' },
@@ -52,7 +52,7 @@ function Suporte() {
             <div key={ticket.id} className="ticket-card">
               <h3>{ticket.title}</h3>
               <p>{ticket.description}</p>
-              <button onClick={() => handleAcceptTicket(ticket)}>Aceitar Chamado</button>
+              <button className='botãovoluntario' onClick={() => handleAcceptTicket(ticket)}>Aceitar Chamado</button>
             </div>
           ))
         ) : (
@@ -68,7 +68,7 @@ function Suporte() {
             <div key={ticket.id} className="ticket-card">
               <h3>{ticket.title}</h3>
               <p>{ticket.description}</p>
-              <button onClick={() => handleReturnTicket(ticket)}>Devolver Chamado</button>
+              <button className='botãovoluntario' onClick={() => handleReturnTicket(ticket)}>Devolver Chamado</button>
             </div>
           ))
         ) : (
@@ -79,4 +79,4 @@ function Suporte() {
   );
 }
 
-export default Suporte;
+export default TelaVoluntario;

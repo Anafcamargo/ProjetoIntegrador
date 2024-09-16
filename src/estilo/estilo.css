@@ -724,7 +724,7 @@ padding: 0% 10% 0% 10%;
   
   .card-body {
     padding: 15px;
-    color: #333;
+    color: #f0f0f0;
   }
   
   .collapse.show {
@@ -942,7 +942,7 @@ position: absolute;
   
 }
 
-h1 {
+.tesxtoinicalusuario {
   font-size: 2em;
   color: #000;
 }
@@ -994,14 +994,8 @@ h1 {
 /*-------Tela do Voluntario-------*/
 
 /* Define o estilo geral da página */
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f0f0f0;
-}
 
-.suporte-container {
+.containerTelaUsuario {
   display: flex;
   height: 100vh; /* Ocupa toda a altura da janela */
   width: 100vw;  /* Ocupa toda a largura da janela */
@@ -1045,11 +1039,15 @@ body {
   background-color: #fff; /* Cor de fundo branco */
 }
 
+
 /* h2 {
   font-size: 1.6em;
   color: #2c3e50; /* Cor do título
 } 
  */
+
+
+
 
 /* Estilo das "cartas" de chamados */
 .ticket-card {
@@ -1071,7 +1069,7 @@ body {
 }
 
 /* Estilo do botão de aceitar chamado */
-button {
+.botãovoluntario {
   background-color: #3498db; /* Cor de fundo azul */
   color: white; /* Cor do texto */
   border: none; /* Remove borda */
@@ -1081,12 +1079,12 @@ button {
   border-radius: 5px; /* Bordas arredondadas */
 }
 
-button:hover {
+.botãovoluntario:hover {
   background-color: #2980b9; /* Cor mais escura ao passar o mouse */
 }
 
 /* Estilo do botão de aceitar e devolver chamado */
-button {
+.botãovoluntario {
   background-color: #3498db; /* Cor de fundo azul */
   color: white; /* Cor do texto */
   border: none; /* Remove borda */
@@ -1096,6 +1094,6 @@ button {
   border-radius: 5px; /* Bordas arredondadas */
 }
 
-button:hover {
+.botãovoluntario:hover {
   background-color: #2980b9; /* Cor mais escura ao passar o mouse */
 }
