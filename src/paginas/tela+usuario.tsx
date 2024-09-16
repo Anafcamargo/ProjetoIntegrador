@@ -23,7 +23,7 @@ function Teladeusuario() {
           <p className="ptelausuario">Preencha as informações abaixo para abrir um chamado:</p>
           
           <form onSubmit={handleSubmit}>
-           <h2> <label htmlFor="name">Nome:</label> </h2>
+           <h2> <label htmlFor="name" className="labelUsuario">Nome:</label> </h2>
             <input type="text" id="name" name="name" required placeholder="Nome Completo" className="inputsUsuario" />
 
            <h2> <label htmlFor="contact" className="labelUsuario">Telefone:</label> </h2>
