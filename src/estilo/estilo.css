@@ -190,13 +190,24 @@ code {
 .container-ranking{
 background-color: #f4f4f4;
 width: 100vw; 
-height: 500px;
+height: 600px;
 
 }
 
 .slide-ranking{
 margin-top: 100px;
 margin-bottom: 100px;
+}
+
+
+.slide-ranking-item {
+  width: 80%;
+  height: auto;
+  transition: transform 0.5s ease; /* Animação suave */
+}
+
+.slide-ranking-item:hover {
+  transform: scale(1.1); /* Zoom de 10% */
 }
 
 
@@ -687,6 +698,10 @@ margin-bottom: 100px;
   color: #034EA3;
   text-decoration: none;
   font-weight: lighter;
+}
+
+.register-link:visited {
+  color: #034EA3; /* Mantém a cor original mesmo após o clique */
 }
 
 .forgot-password:hover, .login-footer .register-link:hover {
