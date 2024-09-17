@@ -36,7 +36,7 @@ function Home() {
     },
     {
       id: "4R",
-      image: "ranking1.png",
+      image: "ranking4.png",
     },
   ];
 
