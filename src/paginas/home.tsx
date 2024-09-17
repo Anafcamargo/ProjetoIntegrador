@@ -32,11 +32,11 @@ function Home() {
     { id: "2R", image: "ranking2.png" },
     {
       id: "3R",
-      image: "ranking1.png",
+      image: "ranking3.png",
     },
     {
       id: "4R",
-      image: "ranking2.png",
+      image: "ranking1.png",
     },
   ];
 
@@ -99,15 +99,21 @@ function Home() {
       <div className="container-ranking">
       
       
-      <Swiper slidesPerView={2} pagination={{ clickable: true }} navigation>
-          {ranking.map((item) => (
-            <SwiperSlide key={item.id}>
-              <div className="slide-ranking">
-                <img src={item.image} alt="slide-ranking" className="slide-ranking-item" />
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
+      <Swiper
+  slidesPerView={2}
+  pagination={{ clickable: true }}
+  navigation
+  autoplay={{ delay: 4000, disableOnInteraction: false }} // Autoplay a cada 3 segundos
+>
+  {ranking.map((item) => (
+    <SwiperSlide key={item.id}>
+      <div className="slide-ranking">
+        <img src={item.image} alt="slide-ranking" className="slide-ranking-item" />
+      </div>
+    </SwiperSlide>
+  ))}
+</Swiper>
+
          
 
 
@@ -254,15 +260,20 @@ function Home() {
         <br />
         <br />
 
-        <Swiper slidesPerView={2} pagination={{ clickable: true }} navigation>
-          {data.map((item) => (
-            <SwiperSlide key={item.id}>
-              <div className="div-slide">
-                <img src={item.image} alt="slider" className="slide-item" />
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
+        <Swiper
+  slidesPerView={2}
+  pagination={{ clickable: true }}
+  navigation
+  autoplay={{ delay: 4000, disableOnInteraction: false }} // Autoplay a cada 3 segundos
+>
+  {data.map((item) => (
+    <SwiperSlide key={item.id}>
+      <div className="div-slide">
+        <img src={item.image} alt="slider" className="slide-item" />
+      </div>
+    </SwiperSlide>
+  ))}
+</Swiper>
         <br/><br/><br/>
       </div>
       <br />

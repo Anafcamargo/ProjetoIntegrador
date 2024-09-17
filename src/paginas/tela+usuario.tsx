@@ -23,16 +23,16 @@ function Teladeusuario() {
           <p className="ptelausuario">Preencha as informações abaixo para abrir um chamado:</p>
           
           <form onSubmit={handleSubmit}>
-           <h2> <label htmlFor="name" className="labelUsuario">Nome:</label> </h2>
+           <h2 className="tesxtoinicalusuario"> <label htmlFor="name" className="labelUsuario">Nome:</label> </h2>
             <input type="text" id="name" name="name" required placeholder="Nome Completo" className="inputsUsuario" />
 
-           <h2> <label htmlFor="contact" className="labelUsuario">Telefone:</label> </h2>
+           <h2 className="tesxtoinicalusuario"> <label htmlFor="contact" className="labelUsuario">Telefone:</label> </h2>
             <input type="text" id="contact" name="contact" required placeholder="( ) 99999-9999" className="inputsUsuario"/>
 
-           <h2> <label htmlFor="issue" className="labelUsuario">Descreva o seu Problema:</label> </h2>
+           <h2 className="tesxtoinicalusuario"> <label htmlFor="issue" className="labelUsuario">Descreva o seu Problema:</label> </h2>
             <textarea id="issue" name="issue" rows= {5} required placeholder="Descreva o seu problema técnico de maneira simples e direta"></textarea>
 
-           <h2> <label htmlFor="urgency" className="labelUsuario">Categorias:</label> </h2>
+           <h2 className="tesxtoinicalusuario"> <label htmlFor="urgency" className="labelUsuario">Categorias:</label> </h2>
             <select id="urgency" name="urgency">
               <option value="baixa">Celular</option>
               <option value="media">Computador</option>
@@ -46,7 +46,7 @@ function Teladeusuario() {
       ) : (
         <div id="confirmationMessage">
           <h2>Obrigado!</h2>
-          <p>Seu chamado foi registrado com sucesso. Em breve um de nossos voluntarios entrará em contato com você.</p>
+          <p className="ptelausuario">Seu chamado foi registrado com sucesso. Em breve um de nossos voluntarios entrará em contato com você.</p>
         </div>
       )}
     </div>
