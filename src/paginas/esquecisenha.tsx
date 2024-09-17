@@ -1,6 +1,7 @@
 import React from 'react';
 import Cabecalho2 from '../componentes/cabecalho2';
 import Rodape from '../componentes/rodape';
+import '../estilo/estilo.css'
 /*import './EsqueciSenha.css';*/
 
 const EsqueciSenha: React.FC = () => {
@@ -8,6 +9,7 @@ const EsqueciSenha: React.FC = () => {
         <div>
             <Cabecalho2/>
      <div className='paies'>
+        
         <div className="esqueciasenha">
             <h1>Esqueci a Senha</h1>
             <p>Para recuperar sua senha, insira seu e-mail abaixo e clique em "Enviar".</p>
@@ -20,7 +22,7 @@ const EsqueciSenha: React.FC = () => {
         
         
     </div>
-    <Rodape/>
+   <Rodape />
     </div>
     );
 }
