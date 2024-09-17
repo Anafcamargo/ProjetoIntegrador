@@ -104,6 +104,7 @@ function Home() {
   pagination={{ clickable: true }}
   navigation
   autoplay={{ delay: 4000, disableOnInteraction: false }} // Autoplay a cada 3 segundos
+  loop={true}
 >
   {ranking.map((item) => (
     <SwiperSlide key={item.id}>
@@ -264,7 +265,8 @@ function Home() {
   slidesPerView={2}
   pagination={{ clickable: true }}
   navigation
-  autoplay={{ delay: 4000, disableOnInteraction: false }} // Autoplay a cada 3 segundos
+  autoplay={{ delay: 4000, disableOnInteraction: false }}
+  loop={true} // Ativa o loop para girar os slides infinitamente
 >
   {data.map((item) => (
     <SwiperSlide key={item.id}>
