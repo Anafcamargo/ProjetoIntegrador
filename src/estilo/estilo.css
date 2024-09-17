@@ -689,6 +689,10 @@ margin-bottom: 100px;
   font-weight: lighter;
 }
 
+.register-link:visited {
+  color: #034EA3; /* Mantém a cor original mesmo após o clique */
+}
+
 .forgot-password:hover, .login-footer .register-link:hover {
   text-decoration: underline; /* Adicionar sublinhado ao passar o mouse */
 }
