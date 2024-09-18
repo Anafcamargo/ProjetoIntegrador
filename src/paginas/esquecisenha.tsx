@@ -20,10 +20,11 @@ const EsqueciSenha: React.FC = () => {
             </form>
         </div>
         
-        
     </div>
-   <Rodape />
+    <Rodape/>
+   
     </div>
+    
     );
 }
 
