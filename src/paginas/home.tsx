@@ -96,7 +96,7 @@ function Home() {
       </section>
 
       {/*--------Tela Ranking--------*/}
-      <div className="container-ranking">
+    <div className="container-ranking">
       
       
       <Swiper
@@ -115,8 +115,6 @@ function Home() {
 </Swiper>
 
          
-
-
       </div>
  
 

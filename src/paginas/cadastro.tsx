@@ -46,7 +46,7 @@ function Cadastro() {
 
       {tipoCadastro === "usuario" && (
         <div className="formContainerUsuario">
-          <form>
+          <div>
             <div className="formGroup">
               <label className="label">Nome Completo</label>
               <input type="text" placeholder="Digite seu nome completo" className="input" />
@@ -58,13 +58,13 @@ function Cadastro() {
             <button type="submit" className="button">
               Criar conta
             </button>
-          </form>
+          </div>
         </div>
       )}
 
       {tipoCadastro === "voluntario" && (
         <div className="formContainer">
-          <form>
+          <div>
             <div className="formGroup">
               <label className="label">Nome Completo</label>
               <input type="text" placeholder="Digite seu nome completo" className="input" />
@@ -75,7 +75,7 @@ function Cadastro() {
             </div>
             <div className="formGroup">
               <label className="label">Data de nascimento</label>
-              <input type="date" className="input" />
+              <input type="text" placeholder="Digita a data de Nascimento" className="input" />
             </div>
             <div className="formGroup">
               <label className="label">E-mail</label>
@@ -100,7 +100,7 @@ function Cadastro() {
             <button type="submit" className="button">
               Criar conta
             </button>
-          </form>
+          </div>
         </div>
       )}
 
