@@ -191,7 +191,9 @@ code {
 background-color: #f4f4f4;
 width: 100vw; 
 height: 600px;
-
+text-align: center;
+font-size: 30px;
+font-weight: bold;
 }
 
 .slide-ranking{
