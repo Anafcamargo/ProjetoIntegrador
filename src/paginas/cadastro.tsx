@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { text } from "stream/consumers";
 import Cabecalho2 from "../componentes/cabecalho2";
 import Rodape from "../componentes/rodape";
 import "../estilo/estilo.css"
@@ -61,7 +62,7 @@ function Cadastro() {
 
               <div className="formGroup">
                 <label className="label">Senha</label>
-                <input type="text" placeholder="Digite sua nova senha" className="input" />
+                <input type= "text" placeholder="Digite sua nova senha" className="input" />
               </div>
 
               <button type="submit" className="button">
