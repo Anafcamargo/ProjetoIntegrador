@@ -184,16 +184,14 @@ code {
   width: 100%;
   }
   
-
-
-
 .container-ranking{
 background-color: #f4f4f4;
-width: 100vw; 
-height: 600px;
+width: 195vh; 
+height: 500px;
 text-align: center;
 font-size: 30px;
 font-weight: bold;
+
 }
 
 .slide-ranking{
@@ -211,30 +209,6 @@ margin-bottom: 100px;
 .slide-ranking-item:hover {
   transform: scale(1.1); /* Zoom de 10% */
 }
-
-
-/*.melhoresav{ 
-  text-align: center;
-  font-size: 200%;
- 
-}
-.caixa-de-classificação-do-container{
-  background-color: #f7f7f7;
-}
-
-
-.container-ranking-box{
-  background-color: #f1f1f1;
-    border-radius: 20px; /* Bordas arredondadas
-    padding: 50px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    width: 400px;
-    height: 60vh;
-
-}*/
-
-
 
 .starmelhoresav{
   color: orange;
@@ -610,7 +584,7 @@ footer {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
   text-align: center;
   width: 400px;
-  height: 40vh;
+  height: 43vh;
 }
 
 .input-group {
@@ -636,12 +610,14 @@ footer {
 .login-button {
   background-color: #034EA3;
   color: white;
-  padding: 10px 10px;
+  padding: 10px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   width: 80%;
   margin-bottom: 5px;
+  font-size: medium;
+  font-weight: bolder;
   
 }
 
@@ -821,6 +797,8 @@ box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   background-color: #000000;
 }
 
+
+
 /* EsqueciSenha */
 
 .paies{
@@ -970,7 +948,7 @@ position: absolute;
 /*-----Tela do Usuario-----*/
 
 .BodyUsuario {
-  font-family: Arial, sans-serif;
+  transition: transform 0.5s ease; /* Animação suave */
   background-color: #f7f7f7;
   color: #333;
   text-align: center;
@@ -1074,9 +1052,15 @@ position: absolute;
   margin-bottom: 20px;
 }
 
-.profile-details p {
+.profile-details{
   font-size: 1.2em;
   margin: 10px 0;
+  font-family:"Poppins-extralight";
+}
+
+.fotoperfil{
+  display: flex;
+  align-items: center;
 }
 
 /* Estilo da seção de chamados */

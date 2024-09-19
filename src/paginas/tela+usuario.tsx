@@ -3,6 +3,7 @@ import Cabecalho from "../componentes/cabecalho";
 import React, { useState } from 'react';
 import '../estilo/estilo.css'
 import Cabecalho2 from "../componentes/cabecalho2";
+import Rodape from "../componentes/rodape";
 
 function Teladeusuario() {
   const [formSubmitted, setFormSubmitted] = useState(false);
@@ -13,44 +14,45 @@ function Teladeusuario() {
   };
 
   return (
-    <body className="BodyUsuario">
-        <Cabecalho2/>
-    <div className="containerTelaUsuario">
-        
-      {!formSubmitted ? (
-        <>
-          <h1 className="tesxtoinicalusuario">Bem-vindo ao Suporte Técnico</h1>
-          <p className="ptelausuario">Preencha as informações abaixo para abrir um chamado:</p>
-          
-          <form onSubmit={handleSubmit}>
-           <h2 className="tesxtoinicalusuario"> <label htmlFor="name" className="labelUsuario">Nome:</label> </h2>
-            <input type="text" id="name" name="name" required placeholder="Nome Completo" className="inputsUsuario" />
+    <><Cabecalho2 /><body className="BodyUsuario">
 
-           <h2 className="tesxtoinicalusuario"> <label htmlFor="contact" className="labelUsuario">Telefone:</label> </h2>
-            <input type="text" id="contact" name="contact" required placeholder="( ) 99999-9999" className="inputsUsuario"/>
+      <div className="containerTelaUsuario">
 
-           <h2 className="tesxtoinicalusuario"> <label htmlFor="issue" className="labelUsuario">Descreva o seu Problema:</label> </h2>
-            <textarea id="issue" name="issue" rows= {5} required placeholder="Descreva o seu problema técnico de maneira simples e direta"></textarea>
+        {!formSubmitted ? (
+          <>
+            <h1 className="tesxtoinicalusuario">Bem-vindo ao Suporte Técnico</h1>
+            <p className="ptelausuario">Preencha as informações abaixo para abrir um chamado:</p>
 
-           <h2 className="tesxtoinicalusuario"> <label htmlFor="urgency" className="labelUsuario">Categorias:</label> </h2>
-            <select id="urgency" name="urgency">
-              <option value="baixa">Celular</option>
-              <option value="media">Computador</option>
-              <option value="alta">Tablet</option>
-              <option value="baixa">Notebook/Laptop</option>
-            </select>
-            <br />
-            <button type="submit" className="botãoEnviarChamado">Enviar Chamado</button>
-          </form>
-        </>
-      ) : (
-        <div id="confirmationMessage">
-          <h2>Obrigado!</h2>
-          <p className="ptelausuario">Seu chamado foi registrado com sucesso. Em breve um de nossos voluntarios entrará em contato com você.</p>
-        </div>
-      )}
-    </div>
-    </body>
+            <form onSubmit={handleSubmit}>
+              <h2 className="tesxtoinicalusuario"> <label htmlFor="name" className="labelUsuario">Nome:</label> </h2>
+              <input type="text" id="name" name="name" required placeholder="Nome Completo" className="inputsUsuario" />
+
+              <h2 className="tesxtoinicalusuario"> <label htmlFor="contact" className="labelUsuario">Telefone:</label> </h2>
+              <input type="text" id="contact" name="contact" required placeholder="( ) 99999-9999" className="inputsUsuario" />
+
+              <h2 className="tesxtoinicalusuario"> <label htmlFor="issue" className="labelUsuario">Descreva o seu Problema:</label> </h2>
+              <textarea id="issue" name="issue" rows={5} required placeholder="Descreva o seu problema técnico de maneira simples e direta"></textarea>
+
+              <h2 className="tesxtoinicalusuario"> <label htmlFor="urgency" className="labelUsuario">Categorias:</label> </h2>
+              <select id="urgency" name="urgency">
+                <option value="baixa">Celular</option>
+                <option value="media">Computador</option>
+                <option value="alta">Tablet</option>
+                <option value="baixa">Notebook/Laptop</option>
+              </select>
+              <br />
+              <button type="submit" className="botãoEnviarChamado">Enviar Chamado</button>
+            </form>
+          </>
+        ) : (
+          <div id="confirmationMessage">
+            <h2>Obrigado!</h2>
+            <p className="ptelausuario">Seu chamado foi registrado com sucesso. Em breve um de nossos voluntarios entrará em contato com você.</p>
+          </div>
+        )}
+      </div>
+      <Rodape />
+    </body></>
   );
 }
 
