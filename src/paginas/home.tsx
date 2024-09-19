@@ -103,7 +103,7 @@ function Home() {
   slidesPerView={2}
   pagination={{ clickable: true }}
   navigation
-  autoplay={{ delay: 4000, disableOnInteraction: false }} // Autoplay a cada 3 segundos
+  autoplay={{ delay: 4000, disableOnInteraction: false }} // Autoplay a cada 4 segundos
   loop={true}
 >
   {ranking.map((item) => (
@@ -116,8 +116,6 @@ function Home() {
 </Swiper>
 
          
-
-
       </div>
  
 
@@ -189,8 +187,8 @@ function Home() {
                 <h3>Vinicius A S. Del Ciello</h3>
                 <p>
                   {" "}
-                  Aos 28 anos, tem uma paixão por viagens e dedica parte do seu
-                  tempo como voluntário em projetos de proteção animal.{" "}
+                  Desde criança se interessa pela área de tecnologia, e desde 2014 atua na área. 
+É intusiasta de pedaladas, adora viajar, e se interessa por projetos voltados à proteção animal. {" "}
                 </p>
               </div>
             </div>

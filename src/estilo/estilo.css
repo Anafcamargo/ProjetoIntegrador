@@ -191,6 +191,7 @@ height: 500px;
 text-align: center;
 font-size: 30px;
 font-weight: bold;
+
 }
 
 .slide-ranking{
@@ -208,30 +209,6 @@ margin-bottom: 100px;
 .slide-ranking-item:hover {
   transform: scale(1.1); /* Zoom de 10% */
 }
-
-
-/*.melhoresav{ 
-  text-align: center;
-  font-size: 200%;
- 
-}
-.caixa-de-classificação-do-container{
-  background-color: #f7f7f7;
-}
-
-
-.container-ranking-box{
-  background-color: #f1f1f1;
-    border-radius: 20px; /* Bordas arredondadas
-    padding: 50px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    width: 400px;
-    height: 60vh;
-
-}*/
-
-
 
 .starmelhoresav{
   color: orange;
@@ -452,6 +429,10 @@ margin-bottom: 100px;
 }
 
 .containerCadastro {
+    display: flex;
+    justify-content: center;
+    
+    flex-direction: column;
     background-color: #fff;
     padding: 40px;
     border-radius: 10px;
@@ -814,6 +795,8 @@ box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   background-color: #000000;
 }
 
+
+
 /* EsqueciSenha */
 
 .paies{
@@ -861,8 +844,8 @@ label {
 input[type="email"] {
   width: calc(100% - 22px);
   padding: 10px;
-  border: 1px solid; 
-  border-radius: 4px;
+ /* border: 1px solid; 
+  border-radius: 4px;*/
   margin-bottom: 20px;
   box-sizing: border-box; 
 }
@@ -1000,6 +983,15 @@ position: absolute;
 }
 
 .inputsUsuario, .imputsLogin, textarea, select {
+  width: 1000px;
+  padding: 12px;
+  margin-top: 8px;
+  font-size: 1.2em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.imputloginsenha, .imputsLogin, textarea, select {
   width: 1000px;
   padding: 12px;
   margin-top: 8px;
