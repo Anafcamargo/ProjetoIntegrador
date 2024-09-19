@@ -97,7 +97,7 @@ function Home() {
 
       {/*--------Tela Ranking--------*/}
       <div className="container-ranking">
-      
+      Ranking de voluntários
       
       <Swiper
   slidesPerView={2}
