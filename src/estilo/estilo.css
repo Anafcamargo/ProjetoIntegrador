@@ -587,7 +587,7 @@ footer {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
   text-align: center;
   width: 400px;
-  height: 40vh;
+  height: 43vh;
 }
 
 .input-group {
@@ -613,12 +613,14 @@ footer {
 .login-button {
   background-color: #034EA3;
   color: white;
-  padding: 10px 10px;
+  padding: 10px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   width: 80%;
   margin-bottom: 5px;
+  font-size: medium;
+  font-weight: bolder;
   
 }
 
@@ -949,7 +951,7 @@ position: absolute;
 /*-----Tela do Usuario-----*/
 
 .BodyUsuario {
-  font-family: Arial, sans-serif;
+  transition: transform 0.5s ease; /* Animação suave */
   background-color: #f7f7f7;
   color: #333;
   text-align: center;
