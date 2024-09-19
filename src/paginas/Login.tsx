@@ -26,7 +26,7 @@ function Login(){
            
            <div className="input-group">
            <label htmlFor="password">Senha</label>
-          <input type="password" id="password" placeholder="Digite sua senha aqui" /> 
+          <input className="imputloginsenha" type="password" id="password" placeholder="Digite sua senha aqui" /> 
            </div>
 
            

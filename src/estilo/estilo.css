@@ -455,6 +455,10 @@ margin-bottom: 100px;
 }
 
 .containerCadastro {
+    display: flex;
+    justify-content: center;
+    
+    flex-direction: column;
     background-color: #fff;
     padding: 40px;
     border-radius: 10px;
@@ -864,8 +868,8 @@ label {
 input[type="email"] {
   width: calc(100% - 22px);
   padding: 10px;
-  border: 1px solid; 
-  border-radius: 4px;
+ /* border: 1px solid; 
+  border-radius: 4px;*/
   margin-bottom: 20px;
   box-sizing: border-box; 
 }
@@ -1003,6 +1007,15 @@ position: absolute;
 }
 
 .inputsUsuario, .imputsLogin, textarea, select {
+  width: 1000px;
+  padding: 12px;
+  margin-top: 8px;
+  font-size: 1.2em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.imputloginsenha, .imputsLogin, textarea, select {
   width: 1000px;
   padding: 12px;
   margin-top: 8px;
