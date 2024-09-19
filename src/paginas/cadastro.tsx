@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Cabecalho2 from "../componentes/cabecalho2";
 import Rodape from "../componentes/rodape";
 import "../estilo/estilo.css"
 
@@ -14,35 +15,35 @@ function Cadastro() {
   };
 
   return (
-    <body className=" bodyCadastro">
+    <><body className=" bodyCadastro">
+      <Cabecalho2/>
 
+      
+      <div className="containerCadastro">
+        
+        <h2 className="title">Cadastre-se</h2>
 
-    
-    <div className="containerCadastro">
-      <h2 className="title">Cadastre-se</h2>
-
-      <div className="radioGroup">
-        <label className="radioLabel">
-          <input
-            type="radio"
-            value="usuario"
-            checked={tipoCadastro === "usuario"}
-            onChange={handleTipoChange}
-            className="radioInput"
-          />
-          Usuário
-        </label>
-        <label className="radioLabelUsuario">
-          <input
-            type="radio"
-            value="voluntario"
-            checked={tipoCadastro === "voluntario"}
-            onChange={handleTipoChange}
-            className="radioInput"
-          />
-          Voluntário
-        </label>
-      </div>
+        <div className="radioGroup">
+          
+          <label className="radioLabel">
+            <input
+              type="radio"
+              value="usuario"
+              checked={tipoCadastro === "usuario"}
+              onChange={handleTipoChange}
+              className="radioInput" />
+            Usuário
+          </label>
+          <label className="radioLabelUsuario">
+            <input
+              type="radio"
+              value="voluntario"
+              checked={tipoCadastro === "voluntario"}
+              onChange={handleTipoChange}
+              className="radioInput" />
+            Voluntário
+          </label>
+        </div>
 
       {tipoCadastro === "usuario" && (
         <div className="formContainerUsuario">
@@ -104,11 +105,11 @@ function Cadastro() {
         </div>
       )}
 
-    </div> <br />
-    <br />
-        <Rodape/>
-    
-    </body>
+      </div> <br />
+      <br />
+
+
+    </body><Rodape /></>
     
     
   );

@@ -190,13 +190,26 @@ code {
 .container-ranking{
 background-color: #f4f4f4;
 width: 100vw; 
-height: 500px;
-
+height: 600px;
+text-align: center;
+font-size: 30px;
+font-weight: bold;
 }
 
 .slide-ranking{
 margin-top: 100px;
 margin-bottom: 100px;
+}
+
+
+.slide-ranking-item {
+  width: 80%;
+  height: auto;
+  transition: transform 0.5s ease; /* Animação suave */
+}
+
+.slide-ranking-item:hover {
+  transform: scale(1.1); /* Zoom de 10% */
 }
 
 
@@ -553,76 +566,31 @@ margin-bottom: 100px;
 
 /*---------Rodape-----------*/
 
-.rodape {
-  background-color: rgb(255, 255, 255);
-  color: black;
-  padding: 40px 0;
-  border-top: 1px solid black;
-}
-
-.rodape-container {
+.Rodape {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-.rodape-logo img {
-  width: 100px;
-  height: auto;
-}
-
-.rodape-info,
-.rodape-links,
-.rodape-contato {
-  flex: 1;
-  margin: 10px;
-}
-
-.rodape-info h1,
-.rodape-links h2,
-.rodape-contato h2 {
-  font-size: 1.2em;
-  margin-bottom: 10px;
-}
-
-.rodape-info p,
-.rodape-contato p {
-  margin: 5px 0;
-}
-
-.rodape-links ul {
-  list-style: none;
-  padding: 0;
-}
-
-.rodape-links ul li {
-  margin-bottom: 10px;
-}
-
-.rodape-links ul li a {
-  text-decoration: none;
-  color: black;
-  transition: color 0.3s;
-}
-
-.rodape-links ul li a:hover {
-  color: #3498db;
-}
-
-.rodape-bottom {
-  text-align: center;
-  margin-top: 20px;
-  padding-top: 10px;
-  border-top: 1px solid black;
-}
-
-.rodape-bottom p {
+  align-items: center;
+  height: 50px;
+  padding: 0 10px;
   margin: 0;
-  font-size: 0.9em;
+  text-align: center;
+  border-radius: 1px;
+  flex-direction: row;
+  
+ 
 }
+
+.conecte-se {
+  margin-left: 300px;
+}
+footer {
+	background-color: #f7f7f7(0, 0, 0);
+	padding: 1px 0px;
+}
+.rodapeT{
+  color: rgb(3, 3, 3);
+}
+
 
 
 /*---------Login-----------*/
@@ -691,6 +659,10 @@ margin-bottom: 100px;
   color: #034EA3;
   text-decoration: none;
   font-weight: lighter;
+}
+
+.register-link:visited {
+  color: #034EA3; /* Mantém a cor original mesmo após o clique */
 }
 
 .forgot-password:hover, .login-footer .register-link:hover {
@@ -845,17 +817,20 @@ box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 } 
 */
 
-
+.teste{
+  background-color: #000000;
+}
 
 /* EsqueciSenha */
 
 .paies{
   display: flex;
-  font-family: Arial, sans-serif;
-  background-color: #ffffff; 
   justify-content: center;
   align-items:center; 
+  font-family: Arial, sans-serif;
+  background-color: #ffffff; 
   height: 100vh;
+
  
 }
 .esqueciasenha {

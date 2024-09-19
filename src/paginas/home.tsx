@@ -36,7 +36,7 @@ function Home() {
     },
     {
       id: "4R",
-      image: "ranking1.png",
+      image: "ranking4.png",
     },
   ];
 
@@ -96,14 +96,15 @@ function Home() {
       </section>
 
       {/*--------Tela Ranking--------*/}
-    <div className="container-ranking">
+      <div className="container-ranking">
       
       
       <Swiper
   slidesPerView={2}
   pagination={{ clickable: true }}
   navigation
-  autoplay={{ delay: 4000, disableOnInteraction: false }} // Autoplay a cada 3 segundos
+  autoplay={{ delay: 4000, disableOnInteraction: false }} // Autoplay a cada 4 segundos
+  loop={true}
 >
   {ranking.map((item) => (
     <SwiperSlide key={item.id}>
@@ -186,8 +187,8 @@ function Home() {
                 <h3>Vinicius A S. Del Ciello</h3>
                 <p>
                   {" "}
-                  Aos 28 anos, tem uma paixão por viagens e dedica parte do seu
-                  tempo como voluntário em projetos de proteção animal.{" "}
+                  Desde criança se interessa pela área de tecnologia, e desde 2014 atua na área. 
+É intusiasta de pedaladas, adora viajar, e se interessa por projetos voltados à proteção animal. {" "}
                 </p>
               </div>
             </div>
@@ -262,7 +263,8 @@ function Home() {
   slidesPerView={2}
   pagination={{ clickable: true }}
   navigation
-  autoplay={{ delay: 4000, disableOnInteraction: false }} // Autoplay a cada 3 segundos
+  autoplay={{ delay: 4000, disableOnInteraction: false }}
+  loop={true} // Ativa o loop para girar os slides infinitamente
 >
   {data.map((item) => (
     <SwiperSlide key={item.id}>
