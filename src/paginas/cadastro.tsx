@@ -45,65 +45,65 @@ function Cadastro() {
           </label>
         </div>
 
-        {tipoCadastro === "usuario" && (
-          <div className="formContainerUsuario">
-            <form>
-              <div className="formGroup">
-                <label className="label">Nome Completo</label>
-                <input type="text" placeholder="Digite seu nome completo" className="input" />
-              </div>
-              <div className="formGroup">
-                <label className="label">Telefone</label>
-                <input type="text" placeholder="Digite seu número de WhatsApp" className="input" />
-              </div>
-              <button type="submit" className="button">
-                Criar conta
-              </button>
-            </form>
+      {tipoCadastro === "usuario" && (
+        <div className="formContainerUsuario">
+          <div>
+            <div className="formGroup">
+              <label className="label">Nome Completo</label>
+              <input type="text" placeholder="Digite seu nome completo" className="input" />
+            </div>
+            <div className="formGroup">
+              <label className="label">Telefone</label>
+              <input type="text" placeholder="Digite seu número de WhatsApp" className="input" />
+            </div>
+            <button type="submit" className="button">
+              Criar conta
+            </button>
           </div>
-        )}
+        </div>
+      )}
 
-        {tipoCadastro === "voluntario" && (
-          <div className="formContainer">
-            <form>
-              <div className="formGroup">
-                <label className="label">Nome Completo</label>
-                <input type="text" placeholder="Digite seu nome completo" className="input" />
-              </div>
-              <div className="formGroup">
-                <label className="label">CPF</label>
-                <input type="text" placeholder="Digite seu CPF" className="input" />
-              </div>
-              <div className="formGroup">
-                <label className="label">Data de nascimento</label>
-                <input type="date" className="input" />
-              </div>
-              <div className="formGroup">
-                <label className="label">E-mail</label>
-                <input type="email" placeholder="Digite seu e-mail" className="input" />
-              </div>
-              <div className="formGroup">
-                <label className="label">Telefone</label>
-                <input type="text" placeholder="Digite seu telefone" className="input" />
-              </div>
-              <div className="formGroup">
-                <label className="label">Endereço</label>
-                <input type="text" placeholder="Digite seu endereço" className="input" />
-              </div>
-              <div className="formGroup">
-                <label className="label">Número</label>
-                <input type="text" placeholder="Número" className="input" />
-              </div>
-              <div className="formGroup">
-                <label className="label">Bairro</label>
-                <input type="text" placeholder="Digite seu bairro" className="input" />
-              </div>
-              <button type="submit" className="button">
-                Criar conta
-              </button>
-            </form>
+      {tipoCadastro === "voluntario" && (
+        <div className="formContainer">
+          <div>
+            <div className="formGroup">
+              <label className="label">Nome Completo</label>
+              <input type="text" placeholder="Digite seu nome completo" className="input" />
+            </div>
+            <div className="formGroup">
+              <label className="label">CPF</label>
+              <input type="text" placeholder="Digite seu CPF" className="input" />
+            </div>
+            <div className="formGroup">
+              <label className="label">Data de nascimento</label>
+              <input type="text" placeholder="Digita a data de Nascimento" className="input" />
+            </div>
+            <div className="formGroup">
+              <label className="label">E-mail</label>
+              <input type="email" placeholder="Digite seu e-mail" className="input" />
+            </div>
+            <div className="formGroup">
+              <label className="label">Telefone</label>
+              <input type="text" placeholder="Digite seu telefone" className="input" />
+            </div>
+            <div className="formGroup">
+              <label className="label">Endereço</label>
+              <input type="text" placeholder="Digite seu endereço" className="input" />
+            </div>
+            <div className="formGroup">
+              <label className="label">Número</label>
+              <input type="text" placeholder="Número" className="input" />
+            </div>
+            <div className="formGroup">
+              <label className="label">Bairro</label>
+              <input type="text" placeholder="Digite seu bairro" className="input" />
+            </div>
+            <button type="submit" className="button">
+              Criar conta
+            </button>
           </div>
-        )}
+        </div>
+      )}
 
       </div> <br />
       <br />

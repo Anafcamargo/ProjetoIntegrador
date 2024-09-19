@@ -97,7 +97,7 @@ function Home() {
 
       {/*--------Tela Ranking--------*/}
       <div className="container-ranking">
-      Ranking de Voluntários
+      
       
       <Swiper
   slidesPerView={2}
@@ -116,8 +116,6 @@ function Home() {
 </Swiper>
 
          
-
-
       </div>
  
 
