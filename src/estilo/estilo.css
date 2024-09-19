@@ -184,13 +184,10 @@ code {
   width: 100%;
   }
   
-
-
-
 .container-ranking{
 background-color: #f4f4f4;
-width: 100vw; 
-height: 600px;
+width: 195vh; 
+height: 500px;
 text-align: center;
 font-size: 30px;
 font-weight: bold;
@@ -1055,9 +1052,15 @@ position: absolute;
   margin-bottom: 20px;
 }
 
-.profile-details p {
+.profile-details{
   font-size: 1.2em;
   margin: 10px 0;
+  font-family:"Poppins-extralight";
+}
+
+.fotoperfil{
+  display: flex;
+  align-items: center;
 }
 
 /* Estilo da seção de chamados */
