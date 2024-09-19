@@ -1015,6 +1015,15 @@ position: absolute;
   border-radius: 4px;
 }
 
+.imputloginsenha, .imputsLogin, textarea, select {
+  width: 1000px;
+  padding: 12px;
+  margin-top: 8px;
+  font-size: 1.2em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
 .botãoEnviarChamado {
   background-color: #3498db;
   color: white;
