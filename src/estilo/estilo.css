@@ -194,6 +194,7 @@ height: 600px;
 text-align: center;
 font-size: 30px;
 font-weight: bold;
+
 }
 
 .slide-ranking{
@@ -211,30 +212,6 @@ margin-bottom: 100px;
 .slide-ranking-item:hover {
   transform: scale(1.1); /* Zoom de 10% */
 }
-
-
-/*.melhoresav{ 
-  text-align: center;
-  font-size: 200%;
- 
-}
-.caixa-de-classificação-do-container{
-  background-color: #f7f7f7;
-}
-
-
-.container-ranking-box{
-  background-color: #f1f1f1;
-    border-radius: 20px; /* Bordas arredondadas
-    padding: 50px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    width: 400px;
-    height: 60vh;
-
-}*/
-
-
 
 .starmelhoresav{
   color: orange;
@@ -820,6 +797,8 @@ box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 .teste{
   background-color: #000000;
 }
+
+
 
 /* EsqueciSenha */
 
