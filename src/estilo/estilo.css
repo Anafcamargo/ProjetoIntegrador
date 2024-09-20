@@ -187,10 +187,11 @@ code {
 .container-ranking{
 background-color: #f4f4f4;
 width: 195vh; 
-height: 500px;
+height: 80vh;
 text-align: center;
 font-size: 30px;
 font-weight: bold;
+
 
 }
 
@@ -784,6 +785,7 @@ box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   flex-direction: row;
   justify-content: center;
   width: 100%;
+
 }
 
 
@@ -796,6 +798,7 @@ box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 .teste{
   background-color: #000000;
 }
+
 
 
 
@@ -865,7 +868,7 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-  background-color: #b8b4b4; 
+  background-color: #013066; 
 }
 
 

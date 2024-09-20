@@ -18,6 +18,8 @@ const EsqueciSenha: React.FC = () => {
                 <input type="email" id="email" name="email" required /> <br /> <br />
                 <input type="submit" value="Enviar" />
             </form>
+
+            
         </div>
         
     </div>
