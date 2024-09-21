@@ -6,7 +6,7 @@ import { Routes, Route } from "react-router-dom";
 import Login from "./paginas/Login";
 import Notfound from "./paginas/notfound";
 import Cadastro from "./paginas/cadastro";
-import Tela_Usuario from "./paginas/tela+usuario";
+import Tela_Usuario from "./paginas/chamado";
 import Tela_Voluntario from "./paginas/tela_voluntario";
 import { register } from "swiper/element/bundle";
 
@@ -15,6 +15,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import EsqueciSenha from "./paginas/esquecisenha";
+import Chamado from "./paginas/chamado";
 
 
 
@@ -33,7 +34,7 @@ function App() {
         <Route path="/Usuario" element={<Tela_Usuario />} />
         <Route path="/Voluntario" element={<Tela_Voluntario />} />
         <Route path = '/EsqueciaSenha' element={ < EsqueciSenha /> } />
-        <Route path = '/TelaUsuario' element={ <Tela_Usuario/> } />
+        <Route path = '/Chamado' element={ <Chamado/> } />
         <Route path = '/TelaVoluntario' element={ <Tela_Voluntario/> } />  
         
       </Routes>

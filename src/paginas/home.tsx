@@ -97,23 +97,22 @@ function Home() {
 
       {/*--------Tela Ranking--------*/}
       <div className="container-ranking">
-      Ranking de Voluntários
+              Ranking de Voluntários
       
-      <Swiper
-  slidesPerView={2}
-  pagination={{ clickable: true }}
-  navigation
-  autoplay={{ delay: 4000, disableOnInteraction: false }} // Autoplay a cada 4 segundos
-  loop={true}
->
-  {ranking.map((item) => (
-    <SwiperSlide key={item.id}>
-      <div className="slide-ranking">
-        <img src={item.image} alt="slide-ranking" className="slide-ranking-item" />
-      </div>
-    </SwiperSlide>
-  ))}
-</Swiper>
+        <Swiper
+              slidesPerView={2}
+              pagination={{ clickable: true }}
+              navigation
+              autoplay={{ delay: 4000, disableOnInteraction: false }} // Autoplay a cada 4 segundos
+              loop={true}>
+            {ranking.map((item) => (
+              <SwiperSlide key={item.id}>
+                  <div className="slide-ranking">
+                      <img src={item.image} alt="slide-ranking" className="slide-ranking-item" />
+                  </div>
+              </SwiperSlide>
+            ))}
+        </Swiper>
 
          
       </div>
@@ -188,7 +187,7 @@ function Home() {
                 <p>
                   {" "}
                   Desde criança se interessa pela área de tecnologia, e desde 2014 atua na área. 
-É intusiasta de pedaladas, adora viajar, e se interessa por projetos voltados à proteção animal. {" "}
+                  É intusiasta de pedaladas, adora viajar, e se interessa por projetos voltados à proteção animal. {" "}
                 </p>
               </div>
             </div>
@@ -230,65 +229,74 @@ function Home() {
       </section>
       <br />
 
-    <div className="form">
-    <h2 className="titulo_cd">Faça seu Cadastro</h2>
-    <div className="Facaseucadastro">   
-            <div className="Qrservoluntario">
-                <h2>Quero ser Voluntário</h2>
-                <img src="volunter.png"/>
-                <p className="paragrafo_cd">Compartilhe seu conhecimento tecnologico <br />
-                    para fazer a diferença na comunidade.</p>
-                    <Link to='/Cadastro'><button className="button-cad">Clique aqui</button></Link>
-        </div>
-        <div className="Obtajuda">
-            <h2>Solicitar ajuda</h2>
-            <img src="old.png" />
-            <p className="paragrafo_cd">Obtenha suporte tecnológico personalizado <br />
-                e gratuito para suas necessidades.</p>
+              {/*--------Faça seu Cadastro--------*/}
 
+      <div className="form">
+                    <h2 className="titulo_cd">Faça seu Cadastro</h2>
 
-            <Link to='/Cadastro'><button className="button-cad">Clique aqui</button></Link>
-        </div>
-    </div> 
-</div>    
-      <div className="Feedback">
-        <br></br>
-        <br></br>
-        <br></br>
-        <h1 className="titulo_fd"> Feedbacks dos serviços prestados </h1>
-        <br />
-        <br />
+            <div className="Facaseucadastro">   
 
-        <Swiper
-  slidesPerView={2}
-  pagination={{ clickable: true }}
-  navigation
-  autoplay={{ delay: 4000, disableOnInteraction: false }}
-  loop={true} // Ativa o loop para girar os slides infinitamente
->
-  {data.map((item) => (
-    <SwiperSlide key={item.id}>
-      <div className="div-slide">
-        <img src={item.image} alt="slider" className="slide-item" />
+                  <div className="Qrservoluntario">
+                       <h2>Quero ser Voluntário</h2>
+                         <img src="volunter.png"/>
+                          <p className="paragrafo_cd">Compartilhe seu conhecimento tecnologico <br />
+                                                       para fazer a diferença na comunidade.</p>
+                       <Link to='/Cadastro'><button className="button-cad">Clique aqui</button></Link>
+                  </div>
+
+                        <div className="Obtajuda">
+                              <h2>Solicitar ajuda</h2>
+                                <img src="old.png" />
+                                  <p className="paragrafo_cd">Obtenha suporte tecnológico personalizado <br />
+                                                              e gratuito para suas necessidades.</p>
+
+                                <Link to='/Cadastro'><button className="button-cad">Clique aqui</button></Link>
+                        </div>
+             </div> 
+       </div>    
+
+                {/*--------FeedBack--------*/}
+
+       <div className="Feedback">
+                <br></br>
+                <br></br>
+                <br></br>
+                  <h1 className="titulo_fd"> Feedbacks dos serviços prestados </h1>
+                <br />
+                <br />
+
+          <Swiper
+                slidesPerView={2}
+                pagination={{ clickable: true }}
+                navigation
+                autoplay={{ delay: 4000, disableOnInteraction: false }}
+                loop={true} // Ativa o loop para girar os slides infinitamente
+                >
+
+                  {data.map((item) => (
+                        <SwiperSlide key={item.id}>
+                              <div className="div-slide">
+                                  <img src={item.image} alt="slider" className="slide-item" />
+                              </div>
+                         </SwiperSlide>
+                   ))}
+           </Swiper>
+           <br/><br/><br/>
       </div>
-    </SwiperSlide>
-  ))}
-</Swiper>
-        <br/><br/><br/>
-      </div>
-      <br />
-      <br />
+          <br />
+          <br />
+
       {/*--------FAQ--------*/}
 
       <div className="container-faq">
-        <div className="girlquestion">
-          <img src="girlquestion.png" className="img-girlquestion"></img>
-        </div>
+             <div className="girlquestion">
+                <img src="girlquestion.png" className="img-girlquestion"></img>
+              </div>
 
-        <FAQ />
+            <FAQ />
       </div>
-      <br />
-      <Rodape/>
+          <br />
+            <Rodape/>
     </div>
 
     
