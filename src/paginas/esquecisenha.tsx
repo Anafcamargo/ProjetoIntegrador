@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Cabecalho2 from '../componentes/cabecalho2';
 import Rodape from '../componentes/rodape';
 import '../estilo/estilo.css'
@@ -19,6 +20,8 @@ const EsqueciSenha: React.FC = () => {
                 <input type="submit" value="Enviar" />
             </form>
 
+            
+            <Link to='/Login'><button className='button-back-password'>Voltar</button></Link>
             
         </div>
         
