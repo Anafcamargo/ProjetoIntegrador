@@ -97,6 +97,7 @@ function Home() {
 
       {/*--------Tela Ranking--------*/}
       <div className="container-ranking">
+        <br />
               Ranking de Voluntários
       
         <Swiper
