@@ -917,6 +917,49 @@ input[type="submit"]:hover {
   /* font-size: 16px; */
 }
 /*--------Faça cadastro --------*/
+
+/* Container que engloba as imagens */
+.image-wrapper {
+  position: relative;
+  width: 440px; /* Ajuste conforme o tamanho desejado */
+  height: auto;
+  overflow: hidden; /* Impede que a imagem saia da caixa */
+}
+
+.foreground-image {
+ 
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  cursor: pointer;
+  
+  
+}
+
+.image-wrapper:hover .foreground-image {
+  opacity: 1;
+  transform: scale(1.05); /* Aumenta um pouco o tamanho */
+  transition: transform 0.9s ease; /* Transição suave */
+  
+}
+
+.image-wrapper:hover .background-image {
+  filter: grayscale(100%) blur(2px);
+  
+}
+
+.background-image {
+  top: 0;
+  left: 0;
+  z-index: 2;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+  filter: none;
+ 
+  
+}
+
 .titulo_cd{
   text-align: center;
   font-size: 200%;

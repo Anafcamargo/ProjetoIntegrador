@@ -231,29 +231,38 @@ function Home() {
 
               {/*--------Faça seu Cadastro--------*/}
 
-      <div className="form">
-                    <h2 className="titulo_cd">Faça seu Cadastro</h2>
+              <div className="form">
+  <h2 className="titulo_cd">Faça seu Cadastro</h2>
 
-            <div className="Facaseucadastro">   
+  <div className="Facaseucadastro">   
+    <div className="Qrservoluntario">
+      <h2>Quero ser Voluntário</h2>
+      <Link to='/Cadastro'>
+      <div className="image-wrapper">
+        <img src="volunter.png" className="background-image" alt="Voluntário Fundo" />
+        <img src="volunter-fundoremovido.png" className="foreground-image" alt="Voluntário Sem Fundo" />
+        
+      </div></Link>
+      <p className="paragrafo_cd">Compartilhe seu conhecimento tecnológico <br />
+        para fazer a diferença na comunidade.
+      </p>
+      <Link to='/Cadastro'><button className="button-cad">Clique aqui</button></Link>
+    </div>
 
-                  <div className="Qrservoluntario">
-                       <h2>Quero ser Voluntário</h2>
-                         <img src="volunter.png"/>
-                          <p className="paragrafo_cd">Compartilhe seu conhecimento tecnologico <br />
-                                                       para fazer a diferença na comunidade.</p>
-                       <Link to='/Cadastro'><button className="button-cad">Clique aqui</button></Link>
-                  </div>
-
-                        <div className="Obtajuda">
-                              <h2>Solicitar ajuda</h2>
-                                <img src="old.png" />
-                                  <p className="paragrafo_cd">Obtenha suporte tecnológico personalizado <br />
-                                                              e gratuito para suas necessidades.</p>
-
-                                <Link to='/Cadastro'><button className="button-cad">Clique aqui</button></Link>
-                        </div>
-             </div> 
-       </div>    
+    <div className="Obtajuda">
+      <h2>Solicitar ajuda</h2>
+      <Link to='/Cadastro'>
+      <div className="image-wrapper">
+        <img src="old.png" className="background-image" alt="Idoso Fundo" />
+        <img src="old-fundoremovido.png" className="foreground-image" alt="Idoso Sem Fundo" />
+      </div></Link>
+      <p className="paragrafo_cd">Obtenha suporte tecnológico personalizado <br />
+        e gratuito para suas necessidades.
+      </p>
+      <Link to='/Cadastro'><button className="button-cad">Clique aqui</button></Link>
+    </div>
+  </div> 
+</div>
 
                 {/*--------FeedBack--------*/}
 
