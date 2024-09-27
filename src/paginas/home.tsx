@@ -72,14 +72,43 @@ function Home() {
         </div>
       </div>
 
-      <br />
+     
 
       {/*--------Tela Como Funciona--------*/}
 
-      <section id="comofunciona">
+
+    <section id="comofunciona">
+   <div className="container-comofunfa">
+    <div className="titulo-comofunfa">Como Funciona</div>
+      <div className="comofunfa">
+         <div className="icone-voluntario">
+    <img src="/voluntario_animado.gif" alt="Voluntário animado" className="imagem-voluntario" />
+    <h3 className="titulo2-comofunfa">Cadastro De Voluntários</h3>
+    <p className="descricao-comofunfa">Pessoas com conhecimentos em tecnologia se inscrevem em nossa plataforma, prontas para compartilhar suas habilidades e fazer a diferença.</p>
+  </div>
+
+  <div className="solicite-assistencia">
+    <img src="/solicite-assistencia.gif" alt="Solicitação de Assistência" className="imagem-assistencia" />
+    <h3 className="titulo2-comofunfa">Solicitação De Assistência</h3>
+    <p className="descricao-comofunfa">Usuários que precisam de suporte tecnológico descrevem suas necessidades em nossa plataforma, seja para solucionar problemas com dispositivos, aprender a usar novos softwares ou configurar equipamentos.</p>
+  </div>
+
+  <div className="match-inteligente">
+    <img src="/match-inteligente.gif" alt="Match Inteligente" className="imagem-match" />
+    <h3 className="titulo2-comofunfa">Match Inteligente</h3>
+    <p className="descricao-comofunfa">Utilizamos um sistema de pareamento que conecta os usuários aos voluntários mais qualificados e disponíveis, garantindo um atendimento personalizado e eficaz.</p>
+  </div>
+</div>
+
+</div>
+</section>
+
+
+
+      {/*<section id="comofunciona">
         <div className="como_funciona1">
           <h1 className="titulo_cf"> Como Funciona? </h1> <br />
-          {/* Adicionando o Painel de Vídeo */}
+          {/* Adicionando o Painel de Vídeo
           <div className="video-panel">
             <iframe
               width="560"
@@ -93,7 +122,7 @@ function Home() {
             ></iframe>
           </div>
         </div>
-      </section>
+      </section>  */}
 
       {/*--------Tela Ranking--------*/}
       <div className="container-ranking">

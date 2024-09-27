@@ -130,6 +130,65 @@ a:visited {
 }
 
 /*--------Como Funciona--------*/
+
+/*--------VINI--------*/
+
+
+.container-comofunfa{
+  text-align: center;
+  margin-bottom: 20px;
+  
+
+}
+
+
+.titulo-comofunfa{
+  font-size: 2rem; 
+  font-weight: bold;
+  margin: 25px;
+}
+
+.comofunfa {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.icone-voluntario,
+.solicite-assistencia,
+.match-inteligente {
+  flex: 1;
+  padding: 0 15px;
+}
+
+.imagem-voluntario,
+.imagem-assistencia,
+.imagem-match {
+  max-width: 150px; /* Ajuste o tamanho desejado aqui */
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.titulo2-comofunfa {
+  color: #0783C0; /* Cor do título */
+  margin: 10px 0;
+}
+
+.descricao-comofunfa {
+  font-size: 17px;
+  line-height: 1.5;
+  color: black;
+  
+}
+
+
+/*--------VINI--------*/
+
+
 /* Seletor para a seção contendo o vídeo */
 #comofunciona {
   display: flex;
