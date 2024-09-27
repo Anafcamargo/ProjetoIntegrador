@@ -137,7 +137,7 @@ a:visited {
 .container-comofunfa{
   text-align: center;
   margin-bottom: 20px;
-  
+ 
 
 }
 
@@ -185,6 +185,21 @@ a:visited {
   
 }
 
+.imagem-seta-comofunfa{
+position: absolute;
+width: 20%;
+margin-left: 22%;
+margin-top: -17%; 
+}
+
+
+.imagem-seta-comofunfa-curva{
+position: absolute;
+width: 20%;
+margin-left: 54%;
+margin-top: -8%;
+
+}
 
 /*--------VINI--------*/
 

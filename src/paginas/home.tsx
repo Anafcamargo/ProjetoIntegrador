@@ -80,9 +80,12 @@ function Home() {
     <section id="comofunciona">
    <div className="container-comofunfa">
     <div className="titulo-comofunfa">Como Funciona</div>
-      <div className="comofunfa">
+          <div className="comofunfa">
+          <img src="/seta-comofunfa.png" alt="Seta ComoFunfa" className="imagem-seta-comofunfa"/>
+          <img src="/seta-comofunfa-curva.png" alt="Seta ComoFunfa-Curva" className="imagem-seta-comofunfa-curva"/>
          <div className="icone-voluntario">
     <img src="/voluntario_animado.gif" alt="Voluntário animado" className="imagem-voluntario" />
+    
     <h3 className="titulo2-comofunfa">Cadastro De Voluntários</h3>
     <p className="descricao-comofunfa">Pessoas com conhecimentos em tecnologia se inscrevem em nossa plataforma, prontas para compartilhar suas habilidades e fazer a diferença.</p>
   </div>
