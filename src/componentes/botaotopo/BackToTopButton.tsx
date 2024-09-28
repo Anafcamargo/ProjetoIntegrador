@@ -10,6 +10,7 @@ const scrollToTop = () => {
 
 const BackToTopButton: React.FC = () => {
   return (
+    <body className='corpo-botao-topo'>
     <button 
       onClick={scrollToTop} className="botaotopo"
       // style={{
@@ -25,9 +26,10 @@ const BackToTopButton: React.FC = () => {
       //   fontSize: '16px',
       // }}
     >
-      <img src="./seta4.png" alt="" width="30px"  />
+      <img className='seta-cima-img' src="./seta-cima.gif" alt="" width="30px"  />
     
     </button>
+    </body>
   );
 };
 

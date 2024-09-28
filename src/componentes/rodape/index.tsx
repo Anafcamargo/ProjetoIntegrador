@@ -1,18 +1,18 @@
-
+import { Link } from "react-router-dom";
 
 function Rodape(){
     return(
         <footer >
         <div className="Rodape">
     
-            <img src="logo2.png" alt="" 
-            width= '60px' height='60px'/>
+            
+            
 
-        <p className="rodapeT">Entre em contato pelo e-mail: chamaki@exemplo.com</p>
-        <p className="rodapeT">&copy; 2024 - Todos os direitos reservados</p> 
-       
         
-    
+        <p className="rodapeT">© 2024 Chamaki | Todos os direitos reservados</p> 
+       
+        <div className="icone-ig"> <a href="https://www.instagram.com/" target={"_blank"}><img className="img-ig" src="Instagram.png" height={25}></img></a></div>
+        <div className="icone-wpp"> <a href="https://www.whatsapp.com/" target={"_blank"}><img className="img-wpp" src="img-wpp.png" height={25}></img></a></div>
     
 
         </div>
