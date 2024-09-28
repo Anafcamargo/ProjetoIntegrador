@@ -516,7 +516,7 @@ margin-bottom: 100px;
     color: black;
     font-family: 'Arial', sans-serif;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
-    height: 100vh;
+    height: 120vh;
   }
   
   .title {
@@ -616,6 +616,49 @@ background-color: #013066;
   margin: 20px;
 
 }
+
+.back-button-cad{
+  position: absolute;
+  width: 20%;
+  margin-bottom: -7%; 
+  background-color: white;
+  color: black;
+  padding: 10px 50px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: medium;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  margin-top: 20px;
+  align-self: center; /* Adiciona essa linha para centralizar o botão */
+  position: absolute;
+  bottom: 40px; /* Alinha na parte inferior, ajustando conforme necessário */
+  left: 50%; /* Move o botão para o centro horizontal */
+  transform: translateX(-50%); /* Centraliza o botão corretamente */
+}
+
+.back-button-cad2{
+  position: absolute;
+  width: 20%;
+  margin-bottom: -22%; 
+  background-color: white;
+  color: black;
+  padding: 10px 50px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: medium;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  margin-top: 20px;
+  align-self: center; /* Adiciona essa linha para centralizar o botão */
+  position: absolute;
+  bottom: 40px; /* Alinha na parte inferior, ajustando conforme necessário */
+  left: 50%; /* Move o botão para o centro horizontal */
+  transform: translateX(-50%); /* Centraliza o botão corretamente */
+}
+
 
 /*---------Rodape-----------*/
 
@@ -724,7 +767,7 @@ footer {
   text-decoration: underline; /* Adicionar sublinhado ao passar o mouse */
 }
 
-.back-button:hover {
+.back-button:hover, .back-button-cad:hover,.back-button-cad2:hover {
   background-color: #b4b4b4;
 }
 
