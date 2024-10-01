@@ -131,7 +131,7 @@ function Home() {
       <div className="container-ranking">
         <br />
               Ranking de Voluntários
-         <p className="descricao-ranking">Abaixo estão os voluntários que realizaram o maior número de atendimentos e receberam as melhores avaliações em nossa plataforma.</p>
+         <p className="descricao-ranking">Voluntários que se destacam por seus atendimentos receberão destaque em nossa página inicial.</p>
               
       
         <Swiper
