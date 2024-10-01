@@ -131,7 +131,7 @@ function Home() {
       <div className="container-ranking">
         <br />
               Ranking de Voluntários
-         <p className="descricao-ranking">Voluntários que se destacam por seus atendimentos receberão destaque em nossa página inicial.</p>
+         <p className="descricao-ranking">Voluntários que se destacaram por seus atendimentos são reconhecidos em nossa página inicial.</p>
               
       
         <Swiper
