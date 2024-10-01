@@ -189,7 +189,7 @@ function Home() {
                   Aos 23 anos, iniciou no curso de Desenvolver Full-Stack no
                   Senac na cidade de Bauru, com o intuito de entrar na carreira
                   de T.I, onde participou na criação dese projeto para auxiliar
-                  pobremas na área de TI para idosos e outros.
+                  problemas na área de TI para idosos e outros.
                 </p>
               </div>
             </div>
