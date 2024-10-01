@@ -131,6 +131,8 @@ function Home() {
       <div className="container-ranking">
         <br />
               Ranking de Voluntários
+         <p className="descricao-ranking">Abaixo estão os voluntários que realizaram o maior número de atendimentos e receberam as melhores avaliações em nossa plataforma.</p>
+              
       
         <Swiper
               slidesPerView={2}
