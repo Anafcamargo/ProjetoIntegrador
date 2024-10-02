@@ -63,7 +63,7 @@ function Cadastro() {
 
               <div className="formGroup">
                 <label className="label">Senha</label>
-                <input type= "text" placeholder="Digite sua nova senha" className="input" />
+                <input type= "text" placeholder="Digite sua senha" className="input" />
               </div>
 
               <button type="submit" className="button">
@@ -121,7 +121,7 @@ function Cadastro() {
 
               <div className="formGroup">
                 <label className="label">Senha</label>
-                <input type="text" placeholder="Digite sua nova senha" className="input" />
+                <input type="text" placeholder="Digite sua senha" className="input" />
               </div>
 
               <button type="submit" className="button">
