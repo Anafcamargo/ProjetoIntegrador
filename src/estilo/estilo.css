@@ -1351,8 +1351,24 @@ position: absolute;
   border-radius: 5px; /* Bordas arredondadas */
 }
 
+.botãoverchamado{
+  background-color: #02972f; /* Cor de fundo azul */
+  color: white; /* Cor do texto */
+  border: none; /* Remove borda */
+  padding: 10px 15px; /* Espaçamento interno */
+  font-size: 1.1em; /* Tamanho da fonte */
+  cursor: pointer; /* Cursor muda para mãozinha */
+  border-radius: 5px; /* Bordas arredondadas */ 
+  margin-left: 1%; 
+ 
+}
+
 .botãovoluntario:hover {
   background-color: #2980b9; /* Cor mais escura ao passar o mouse */
+}
+
+.botãoverchamado:hover{
+background-color: #65d46e; 
 }
 
 /* Estilo do botão de aceitar e devolver chamado */
@@ -1369,3 +1385,5 @@ position: absolute;
 .botãovoluntario:hover {
   background-color: #2980b9; /* Cor mais escura ao passar o mouse */
 }
+
+

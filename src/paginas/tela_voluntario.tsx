@@ -59,6 +59,7 @@ function TelaVoluntario() {
           <p>Endereço: R. vista</p>
           <p>Número: 54-86</p>
           <p>Bairro: Jardim Boa vista</p>
+          <button>Configurações</button>
         </div>
         <br />
         
@@ -74,6 +75,7 @@ function TelaVoluntario() {
               <h3>{ticket.title}</h3>
               <p>{ticket.description}</p>
               <button className='botãovoluntario' onClick={() => handleAcceptTicket(ticket)}>Aceitar Chamado</button>
+              
             </div>
           ))
         ) : (
@@ -90,6 +92,7 @@ function TelaVoluntario() {
               <h3>{ticket.title}</h3>
               <p className="ptelausuario">{ticket.description}</p>
               <button className='botãovoluntario' onClick={() => handleReturnTicket(ticket)}>Devolver Chamado</button>
+              <button className='botãoverchamado'>Abrir</button>
             </div>
           ))
         ) : (
