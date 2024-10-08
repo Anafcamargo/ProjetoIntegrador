@@ -54,7 +54,6 @@ a:visited {
 .buttoncadastro:hover,
 .botao_cad2:hover,
 .buttoncadastro2:hover,
-.button_notfound:hover,
 .button-cad:hover {
   color: rgb(255, 174, 0);
   transform: scale(1.1);
@@ -281,7 +280,7 @@ margin-bottom: 100px;
   transition: transform 0.5s ease; /* Animação suave */
 }
 
-.slide-ranking-item:hover {
+.slide-ranking-item:hover, .button_notfound:hover {
   transform: scale(1.1); /* Zoom de 10% */
 }
 
@@ -482,21 +481,32 @@ font-weight: lighter;
   align-items: center;
   width: 100%;
   height: 80vh;
+ 
+}
+
+.imgnotfound{
+width: 100%;
+height: auto;  
 }
 
 .button_notfound {
-  background-color: black;
-  border-radius: 5px;
-  color: white;
-  text-align: center;
-  padding: 10px 20px 10px 20px;
-  font-size: medium;
+  background-color: #034ea3; /* Cor de fundo azul */
+  color: white; /* Cor do texto */
+  border: none; /* Remove borda */
+  padding: 10px 15px; /* Espaçamento interno */
+  font-size: 1.1em; /* Tamanho da fonte */
+  cursor: pointer; /* Cursor muda para mãozinha */
+  border-radius: 5px; /* Bordas arredondadas */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
 .divbutton {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-right: -45%;
+  margin-top: -7%;
+  
 }
 
 /* ------------CADASTRO---------*/

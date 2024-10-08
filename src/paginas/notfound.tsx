@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 
 function Notfound(){
@@ -5,10 +6,10 @@ function Notfound(){
         <div>
 
       <div className="notfound-container">
-<img src="notfound.png" />
+<img className="imgnotfound" src="not_found.png" />
 </div>
     <div className="divbutton">
-    <button className="button_notfound">Voltar</button>
+    <Link to='/'><button className="button_notfound">Voltar ao Início</button></Link>
     </div>
 
         </div>
