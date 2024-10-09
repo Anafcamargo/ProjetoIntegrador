@@ -85,6 +85,7 @@ function TelaVoluntario() {
             <p>Número: 54-86</p>
             <p>Bairro: Jardim Boa vista</p>
             <button>Configurações</button>
+            <button>Chamados Concluídos</button>
           </div>
           <br />
         </div>
@@ -138,7 +139,7 @@ function TelaVoluntario() {
 
         {/* Modal para concluir chamado */}
         {isConclusionModalOpen && (
-          <div className="modal-overlay" onClick={closeConclusionModal}>
+          <div className="modal-overlay2" onClick={closeConclusionModal}>
             <div className="modal-content-conclude" onClick={(e) => e.stopPropagation()}>
               <h2>Descrição da Conclusão</h2>
               <textarea
@@ -146,7 +147,7 @@ function TelaVoluntario() {
                 onChange={(e) => setConclusionText(e.target.value)}
                 rows={15}
                 placeholder="Descreva a conclusão do chamado aqui..."
-                style={{ width: '100%' }}
+                style={{ width: '95%' }}
               />
               <button onClick={handleSubmitConclusion}>Enviar</button>
               <button onClick={closeConclusionModal}>Fechar</button>
