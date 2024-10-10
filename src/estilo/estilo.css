@@ -479,35 +479,52 @@ font-weight: lighter;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  height: 80vh;
- 
-}
-
-.imgnotfound{
-width: 100%;
-height: auto;  
-}
-
-.button_notfound {
-  background-color: #034ea3; /* Cor de fundo azul */
-  color: white; /* Cor do texto */
-  border: none; /* Remove borda */
-  padding: 10px 15px; /* Espaçamento interno */
-  font-size: 1.1em; /* Tamanho da fonte */
-  cursor: pointer; /* Cursor muda para mãozinha */
-  border-radius: 5px; /* Bordas arredondadas */
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  height: 100vh; /* Defina a altura para preencher a tela */
+  margin: 0; /* Remova margens se houver */
 }
 
 .divbutton {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-right: -45%;
-  margin-top: -7%;
-  
+  margin-top: -15%; /* Ajuste ou remova margens */
+  margin-left: 700px;
 }
+
+
+/* .notfound-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+  
+ 
+} */
+
+.imgnotfound{
+width: 100%;
+height:100%;  
+}
+
+.button_notfound {
+  background-color: #034ea3; /* Cor de fundo azul */
+  color: white; /* Cor do texto */
+  border: none; /* Remove borda */
+   padding: 10px 15px;/* Espaçamento interno */
+  font-size: 1.1em; /* Tamanho da fonte */
+  cursor: pointer; /* Cursor muda para mãozinha */
+  border-radius: 5px; /* Bordas arredondadas */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* .divbutton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 100vh;
+  margin-top: -18%;
+  
+} */
 
 /* ------------CADASTRO---------*/
 

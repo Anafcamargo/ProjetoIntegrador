@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 function Notfound(){
     return(
-        <div>
+        <div className="notfound-pai">
 
       <div className="notfound-container">
 <img className="imgnotfound" src="not_found.png" />
@@ -16,4 +16,4 @@ function Notfound(){
     )
 }
 
-export default Notfound; 
+export default Notfound;  
