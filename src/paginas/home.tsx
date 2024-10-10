@@ -57,10 +57,12 @@ function Home() {
               voluntários engajados.{" "}
             </p>
             <br />
-            <Link to="/Cadastro">
+            <Link to="/cadastro">
               {" "}
               <button className="buttoncadastro"> Cadastre-se </button>{" "}
             </Link>
+
+            
           </div>
 
           <div className="imagem-apresentacao">
@@ -272,7 +274,7 @@ function Home() {
   <div className="Facaseucadastro">   
     <div className="Qrservoluntario">
       <h2>Quero ser Voluntário</h2>
-      <Link to='/Cadastro'>
+      <Link to='/cadastro'>
       <div className="image-wrapper">
         <img src="volunter.png" className="background-image" alt="Voluntário Fundo" />
         <img src="volunter-fundoremovido.png" className="foreground-image" alt="Voluntário Sem Fundo" />
@@ -281,12 +283,12 @@ function Home() {
       <p className="paragrafo_cd">Compartilhe seu conhecimento tecnológico <br />
         para fazer a diferença na comunidade.
       </p>
-      <Link to='/Cadastro'><button className="button-cad">Clique aqui</button></Link>
+      <Link to='/cadastro'><button className="button-cad">Clique aqui</button></Link>
     </div>
 
     <div className="Obtajuda">
       <h2>Solicitar ajuda</h2>
-      <Link to='/Cadastro'>
+      <Link to='/cadastro'>
       <div className="image-wrapper">
         <img src="old.png" className="background-image" alt="Idoso Fundo" />
         <img src="old-fundoremovido.png" className="foreground-image" alt="Idoso Sem Fundo" />
@@ -294,7 +296,7 @@ function Home() {
       <p className="paragrafo_cd">Obtenha suporte tecnológico personalizado <br />
         e gratuito para suas necessidades.
       </p>
-      <Link to='/Cadastro'><button className="button-cad">Clique aqui</button></Link>
+      <Link to='/cadastro'><button className="button-cad">Clique aqui</button></Link>
     </div>
   </div> 
 </div>

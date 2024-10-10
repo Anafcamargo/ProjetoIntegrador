@@ -70,7 +70,7 @@ function Cadastro() {
                 Criar conta
               </button>
               
-             <Link to='/Login'><button className="back-button-cad">Voltar</button></Link>
+             <Link to='/login'><button className="back-button-cad">Voltar</button></Link>
             </div>
           </div>
         )}
@@ -127,7 +127,7 @@ function Cadastro() {
               <button type="submit" className="button">
                 Criar conta
               </button>
-              <Link to='/Login'><button className="back-button-cad2">Voltar</button></Link>
+              <Link to='/login'><button className="back-button-cad2">Voltar</button></Link>
             </div>
             
           </div>

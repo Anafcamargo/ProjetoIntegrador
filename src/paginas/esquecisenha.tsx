@@ -12,7 +12,7 @@ const EsqueciSenha: React.FC = () => {
      <div className='paies'>
         
         <div className="esqueciasenha">
-            <h1>Esqueci a Senha</h1>
+          <h1>Esqueci a Senha</h1>
             <p>Para recuperar sua senha, insira seu e-mail abaixo e clique em "Enviar".</p>
             <form action="/reset-password" method="post">
                 <label htmlFor="email">E-mail:</label>
@@ -21,7 +21,7 @@ const EsqueciSenha: React.FC = () => {
             </form>
 
             
-            <Link to='/Login'><button className='button-back-password'>Voltar</button></Link>
+            <Link to='/login'><button className='button-back-password'>Voltar</button></Link>
             
         </div>
         

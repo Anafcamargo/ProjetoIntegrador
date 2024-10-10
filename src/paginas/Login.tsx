@@ -36,8 +36,8 @@ function Login(){
       </form>
 
           <div className="login-footer">
-          <a href = " Esqueciasenha " className = "forgot-password" > Esqueci minha senha </ a>
-          <p>Não tem uma conta? <Link to='/Cadastro' className="register-link">Cadastre-se</Link></p>
+          <Link to='/Esqueciasenha' className = "forgot-password" > Esqueci minha senha</Link>
+          <p>Não tem uma conta? <Link to='/cadastro' className="register-link">Cadastre-se</Link></p>
           </div>     
          
          

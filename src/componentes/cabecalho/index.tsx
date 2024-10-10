@@ -17,10 +17,10 @@ function Cabecalho(){
          
            <div className="ComoFunciona"> <a href="#comofunciona">Como Funciona</a> </div> 
             <div className="QuemSomos"> <a href="#quemsomos">Quem Somos</a> </div>
-            <div className="Cadastro"> <Link to='/Cadastro'>Cadastre-se</Link> </div>
+            <div className="Cadastro"> <Link to='/cadastro'>Cadastre-se</Link> </div>
             
          </div>   
-         <Link to='/Login'><button className="Login"> Login </button></Link>
+         <Link to='/login'><button className="Login"> Login </button></Link>
         
     
  
