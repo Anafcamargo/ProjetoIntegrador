@@ -16,12 +16,30 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 
+import { HashRouter as Router } from "react-router-dom";
 
+export function App2() {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/login/Cadastro" element={<Cadastro />} />
+        <Route path="*" element={<Notfound />} />
+        <Route path="/cadastro" element={<Cadastro />} />
+        <Route path="/usuario" element={<Tela_Usuario />} />
+        <Route path="/voluntario" element={<Tela_Voluntario />} />
+        <Route path="/esqueciasenha" element={<EsqueciSenha />} />
+        <Route path="/chamado" element={<Chamado />} />
+        <Route path="/telavoluntario" element={<Tela_Voluntario />} />
+      </Routes>
+    </Router>
+  );
+}
 
 register();
 
 function App() {
- 
   return (
     <div>
       <Routes>
@@ -32,12 +50,10 @@ function App() {
         <Route path="/cadastro" element={<Cadastro />} />
         <Route path="/usuario" element={<Tela_Usuario />} />
         <Route path="/voluntario" element={<Tela_Voluntario />} />
-        <Route path = '/esqueciasenha' element={ <EsqueciSenha /> } />
-        <Route path = '/chamado' element={ <Chamado/> } />
-        <Route path = '/telavoluntario' element={ <Tela_Voluntario/> } />  
-        
+        <Route path="/esqueciasenha" element={<EsqueciSenha />} />
+        <Route path="/chamado" element={<Chamado />} />
+        <Route path="/telavoluntario" element={<Tela_Voluntario />} />
       </Routes>
-   
     </div>
   );
 }
