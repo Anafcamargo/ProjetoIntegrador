@@ -2,7 +2,7 @@ export const Moduloapi = {
 
     CarregarUsuarios: async () => {
         try {
-            let response = await fetch(""); 
+            let response = await fetch("http://localhost:3000/usuarios/listar"); 
             if (!response.ok) {
                 throw new Error(`Erro ao carregar usuários: ${response.statusText}`);
             }
@@ -16,7 +16,7 @@ export const Moduloapi = {
 
     CadastroUsuarios: async (title: string, body: string, userID: number) => {
         try {
-            let response = await fetch("", {
+            let response = await fetch("http://localhost:3000/usuarios", {
                 method: 'POST',
                 body: JSON.stringify({
                     title,
@@ -41,7 +41,7 @@ export const Moduloapi = {
 
     RemoverUsuario: async (userID: number) => {
         try {
-            let response = await fetch("", {
+            let response = await fetch("http://localhost:3000/usuarios/remove-:id", {
                 method: 'DELETE'
             });
             if (!response.ok) {
@@ -56,7 +56,7 @@ export const Moduloapi = {
 
     AlterarUsuario: async (userID: number, dadosAtualizados: { title?: string, body?: string }) => {
         try {
-            let response = await fetch("", {
+            let response = await fetch("http://localhost:3000/usuarios/:id", {
                 method: 'PUT',
                 body: JSON.stringify(dadosAtualizados),
                 headers: {
@@ -73,6 +73,8 @@ export const Moduloapi = {
             throw error;
         }
     },
+
+        /* Chamado */
 
     AbrirChamado: async (title: string, description: string) => {
         try {
@@ -98,6 +100,21 @@ export const Moduloapi = {
     },
 
     /* Voluntario */
+
+    CarregarVoluntarios: async () => {
+        try {
+            let response = await fetch(""); 
+            if (!response.ok) {
+                throw new Error(`Erro ao carregar usuários: ${response.statusText}`);
+            }
+            let json = await response.json();
+            return json;
+        } catch (error) {
+            console.error('Erro:', error);
+            throw error;
+        }
+    },
+
 
     CadastroVoluntario: async (dados: { nome: string, email: string }) => {
         try {
