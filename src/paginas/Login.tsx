@@ -81,6 +81,7 @@ import '../estilo/estilo2.css';
 const Login = () => {
   const [isActive, setIsActive] = useState(false);
   const [telefone, setTelefone] = useState('');
+  const [email, setEmail] = useState('');
   const [senha, setSenha] = useState('');
   const [error, setError] = useState('');
   const navigate = useNavigate();
@@ -96,7 +97,7 @@ const Login = () => {
   const handleLogin = async (event: { preventDefault: () => void; }) => {
     event.preventDefault();
 
-    if (!telefone || !senha) {
+    if (!telefone || !senha || !email) {
       setError('Por favor, preencha todos os campos.');
       return;
     }
@@ -105,7 +106,7 @@ const Login = () => {
       const response = await fetch('/api/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ telefone, senha }),
+        body: JSON.stringify({ telefone, senha, email }),
       });
 
       if (!response.ok) {
@@ -113,8 +114,8 @@ const Login = () => {
       }
 
       const data = await response.json();
-      localStorage.setItem('token', data.token); // Armazena o token
-      navigate('/chamado'); // Redireciona para a página desejada
+      localStorage.setItem('token', data.token); 
+      navigate('/chamado'); 
     } catch (Error) {
       setError(error); // Define a mensagem de erro
     }
@@ -133,8 +134,8 @@ const Login = () => {
               <input
                 type="email"
                 placeholder="Digite seu e-mail"
-                value={telefone}
-                onChange={(e) => setTelefone(e.target.value)}
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
               />
               <input
                 type="password"

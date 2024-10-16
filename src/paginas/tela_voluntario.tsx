@@ -34,7 +34,13 @@ function TelaVoluntario() {
   const handleReturnTicket = (ticket: Ticket) => {
     setAvailableTickets(prev => [...prev, ticket]);
     setAcceptedTickets(prev => prev.filter(t => t.id !== ticket.id));
+    setSuccessMessage(`Chamado "${ticket.title}" aceito com sucesso!`);
+    setTimeout(() => {
+        setSuccessMessage('');
+  }, 
+    1000); // 3000 ms = 3 seconds
   };
+  
 
   const openModal = (ticket: Ticket) => {
     setSelectedTicket(ticket);
