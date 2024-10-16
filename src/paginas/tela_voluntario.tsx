@@ -3,17 +3,15 @@ import Cabecalho2 from '../componentes/cabecalho2';
 import Rodape from '../componentes/rodape';
 import '../estilo/estilo.css';
 
-// Interface do chamado
 interface Ticket {
   id: number;
   title: string;
   description: string;
-  requesterName: string; // Nome do solicitante
-  requesterPhone: string; // Telefone do solicitante
+  requesterName: string;
+  requesterPhone: string;
 }
 
 function TelaVoluntario() {
-  // Chamados disponíveis e aceitos
   const [availableTickets, setAvailableTickets] = useState<Ticket[]>([
     { id: 1, title: 'Problema com conexão', description: 'Cliente não consegue se conectar à internet.', requesterName: 'Maria', requesterPhone: '11 99999-0000' },
     { id: 2, title: 'Impressora não funciona', description: 'Cliente reporta problemas na impressão de documentos.', requesterName: 'João', requesterPhone: '11 98888-1111' },
@@ -24,21 +22,17 @@ function TelaVoluntario() {
   const [isConclusionModalOpen, setIsConclusionModalOpen] = useState(false);
   const [selectedTicket, setSelectedTicket] = useState<Ticket | null>(null);
   const [conclusionText, setConclusionText] = useState('');
+  const [successMessage, setSuccessMessage] = useState('');
 
-  // Função para aceitar um chamado
   const handleAcceptTicket = (ticket: Ticket) => {
-    setAcceptedTickets((prevAcceptedTickets) => [...prevAcceptedTickets, ticket]);
-    setAvailableTickets((prevAvailableTickets) =>
-      prevAvailableTickets.filter((t) => t.id !== ticket.id)
-    );
+    setAcceptedTickets(prev => [...prev, ticket]);
+    setAvailableTickets(prev => prev.filter(t => t.id !== ticket.id));
+    setSuccessMessage(`Chamado "${ticket.title}" aceito com sucesso!`);
   };
 
-  // Função para devolver/cancelar o aceite de um chamado
   const handleReturnTicket = (ticket: Ticket) => {
-    setAvailableTickets((prevAvailableTickets) => [...prevAvailableTickets, ticket]);
-    setAcceptedTickets((prevAcceptedTickets) =>
-      prevAcceptedTickets.filter((t) => t.id !== ticket.id)
-    );
+    setAvailableTickets(prev => [...prev, ticket]);
+    setAcceptedTickets(prev => prev.filter(t => t.id !== ticket.id));
   };
 
   const openModal = (ticket: Ticket) => {
@@ -61,7 +55,7 @@ function TelaVoluntario() {
   };
 
   const handleSubmitConclusion = () => {
-    console.log('Conclusão do chamado:', conclusionText); // Aqui você pode fazer algo com a conclusão
+    console.log('Conclusão do chamado:', conclusionText);
     closeConclusionModal();
   };
 
@@ -69,7 +63,6 @@ function TelaVoluntario() {
     <>
       <Cabecalho2 />
       <div className="suporte-container">
-        {/* Perfil do usuário à esquerda */}
         <div className="profile-section">
           <h2>Perfil</h2>
           <br />
@@ -90,11 +83,10 @@ function TelaVoluntario() {
           <br />
         </div>
 
-        {/* Chamados disponíveis */}
         <div className="tickets-section">
           <h2>Chamados Disponíveis</h2>
           {availableTickets.length > 0 ? (
-            availableTickets.map((ticket) => (
+            availableTickets.map(ticket => (
               <div key={ticket.id} className="ticket-card">
                 <h3>{ticket.title}</h3>
                 <p>{ticket.description}</p>
@@ -106,11 +98,10 @@ function TelaVoluntario() {
           )}
         </div>
 
-        {/* Chamados aceitos */}
         <div className="accepted-section">
           <h2 className="tesxtoinicalusuario">Chamados Aceitos</h2>
           {acceptedTickets.length > 0 ? (
-            acceptedTickets.map((ticket) => (
+            acceptedTickets.map(ticket => (
               <div key={ticket.id} className="ticket-card">
                 <h3>{ticket.title}</h3>
                 <p className="ptelausuario">{ticket.description}</p>
@@ -122,6 +113,8 @@ function TelaVoluntario() {
             <p>Você ainda não aceitou nenhum chamado.</p>
           )}
         </div>
+
+        {successMessage && <p className="success-message">{successMessage}</p>}
 
         {/* Modal para visualizar chamado */}
         {isModalOpen && (
