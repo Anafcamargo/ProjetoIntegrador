@@ -26,8 +26,9 @@ const EsqueciSenha: React.FC = () => {
         </div>
         
     </div>
+    <Link to="/*"> .</Link>
     <Rodape/>
-   
+    
     </div>
     
     );

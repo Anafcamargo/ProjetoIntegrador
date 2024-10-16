@@ -416,6 +416,7 @@ function Cadastro() {
             )}
           </form>
         </div>
+        <Link to="/*"> .</Link>
       </div>
       <Rodape />
     </>

@@ -23,6 +23,7 @@
 // }
 
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 const AlterarPerfilVoluntario: React.FC = () => {
   const [perfil, setPerfil] = useState({
@@ -145,7 +146,9 @@ const AlterarPerfilVoluntario: React.FC = () => {
           <p><strong>Bairro:</strong> {perfil.bairro}</p>
           <button onClick={toggleEditing}>Editar</button>
         </div>
+        
       )}
+     
     </div>
   );
 };

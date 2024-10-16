@@ -201,6 +201,7 @@ import React, { useState } from 'react';
 import Cabecalho2 from "../componentes/cabecalho2";
 import Rodape from "../componentes/rodape";
 import '../estilo/estilo.css';
+import { Link } from 'react-router-dom';
 
 interface FormData {
   name: string;
@@ -330,7 +331,9 @@ function Chamado() {
               <p className="ptelausuario">Seu chamado foi registrado com sucesso. Em breve um de nossos voluntários entrará em contato com você.</p>
             </div>
           )}
+          
         </div>
+        <Link to="/*"> .</Link>
         <Rodape />
       </div>
     </>

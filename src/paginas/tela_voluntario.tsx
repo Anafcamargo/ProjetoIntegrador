@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Cabecalho2 from '../componentes/cabecalho2';
 import Rodape from '../componentes/rodape';
 import '../estilo/estilo.css';
+import { Link } from 'react-router-dom';
 
 interface Ticket {
   id: number;
@@ -148,7 +149,9 @@ function TelaVoluntario() {
           </div>
         )}
       </div>
+      <Link to="/*"> .</Link>
       <Rodape />
+      
     </>
   );
 }

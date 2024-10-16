@@ -341,8 +341,11 @@ function Home() {
 
             <FAQ />
       </div>
+      <Link to="/*"> .</Link>
           <br />
+          
             <Rodape/>
+            
     </div>
 
     
