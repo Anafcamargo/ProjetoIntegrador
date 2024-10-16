@@ -1,62 +1,73 @@
-import { Link } from "react-router-dom";
-import Cabecalho from "../componentes/cabecalho";
-import Cabecalho2 from "../componentes/cabecalho2";
-import Rodape from "../componentes/rodape";
+import React, { useState } from 'react';
+import '../estilo/estilo2.css';
+import { Link } from 'react-router-dom';
+import Cabecalho from '../componentes/cabecalho';
+import Rodape from '../componentes/rodape';
 
-function Login(){
-    return(
-<div>
+const Login = () => {
+  const [isActive, setIsActive] = useState(false);
 
-<Cabecalho2/>
+  const handleSignUp = () => {
+    setIsActive(true);
+  };
+
+  const handleSignIn = () => {
+    setIsActive(false);
+  };
+
+  return (
+
+    <div>
+
+      
+    <div className='body2'>
     
-  <div className="container-login">
-
-  
-
-
-     <div className="container-login-box">
-     
-
-      <h2>Login</h2>
-      <form>
-           <div className="input-group">
-           <label htmlFor="email">E-mail</label>
-          <input className="imputsLogin" type="email" id="email" placeholder="Digite seu e-mail aqui" /> 
-          </div>
-           
-           <div className="input-group">
-           <label htmlFor="password">Senha</label>
-          <input className="imputloginsenha" type="password" id="password" placeholder="Digite sua senha aqui" /> 
-           </div>
-
-           
-
-      <button type="submit" className="login-button">Entrar</button>
-
-      </form>
-
-          <div className="login-footer">
-          <Link to='/Esqueciasenha' className = "forgot-password" > Esqueci minha senha</Link>
-          <p>Não tem uma conta? <Link to='/cadastro' className="register-link">Cadastre-se</Link></p>
-          </div>     
-         
-         
-
-        <div>
-           
-        <Link to='/'><button className="back-button">Voltar</button></Link>
-        </div>
+    <div className={`containerlogin2 ${isActive ? 'active' : ''}`} id="container">
+      {/* Formulário de Login deVoluntário */}
+      <div className="form-containerlogin2 sign-up">
+        <form>
+          <h1>Login de Voluntário</h1>
+                
           
-     </div>
-      
-      
-  
+          <input type="email" placeholder="Digite seu e-mail" />
+          <input type="password" placeholder="Digite sua senha" />
+          <Link to='/Esqueciasenha'>Esqueci minha senha</Link>
+          <button type="button">Entrar</button>
+        </form>
+      </div>
+      {/* Formulário de Login de Usuário */}
+      <div className="form-containerlogin2">
+        <form>
+          <h1>Login de Usuário</h1>
+              
+          <input type="email" placeholder="Digite seu e-mail" />
+          <input type="password" placeholder="Digite sua senha" />
+          <Link to='/Esqueciasenha'>Esqueci minha senha</Link>
+          <button type="button">Entrar</button>
+        </form>
+      </div>
 
-  
-  </div>
- <Rodape/>
-</div>
-    )
-}
+      {/* Container de Alternância */}
+      <div className="toggle-containerlogin2">
+        <div className="toggle">
+          <div className="toggle-panel toggle-left">
+            <h1 className='textologin2'>Você é Usuário?</h1>
+            <p className='textologin2'>Clique no botão abaixo para entrar</p>
+            <button id="login" onClick={handleSignIn}>Sou Usuário</button>
+          </div>
+          <div className="toggle-panel toggle-right">
+            <h1 className='textologin2'>Você é Voluntário?</h1>
+            <p className='textologin2'>Clique no botão abaixo para entrar</p>
+            <button id="register" className='buttonloginvoluntario' onClick={handleSignUp}>Sou Voluntário</button> {/* Removida a classe hidden */}
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
 
-export default Login; 
+    < Rodape />
+    </div>
+  );
+};
+
+export default Login;
