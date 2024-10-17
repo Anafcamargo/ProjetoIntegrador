@@ -144,6 +144,7 @@ const Login = () => {
                 onChange={(e) => setSenha(e.target.value)}
               />
               <Link to='/Esqueciasenha'>Esqueci minha senha</Link>
+              <p>Não tem uma conta? <Link to='/cadastro'>Cadastre-se</Link></p>
               <Link to='/telavoluntario'> <button type="submit">Entrar</button> </Link>
             </form>
           </div>
@@ -166,6 +167,7 @@ const Login = () => {
                 onChange={(e) => setSenha(e.target.value)}
               />
               <Link to='/Esqueciasenha'>Esqueci minha senha</Link>
+              <p>Não tem uma conta? <Link to='/cadastro'>Cadastre-se</Link></p>
               <Link to='/chamado'> <button type="submit">Entrar</button> </Link>
             </form>
           </div>
