@@ -303,10 +303,11 @@ export function Chamado() {
                   value={formData.urgency}
                   onChange={handleChange}
                 >
-                  <option value="alta">Celular</option>
-                  <option value="media">Computador</option>
-                  <option value="baixa">Tablet</option>
-                  <option value="media">Notebook/Laptop</option>
+                  <option value="alta">Problema com o celular</option>
+                  <option value="media">Problema com o computador</option>
+                  <option value="baixa">Problema com o tablet</option>
+                  <option value="media">Problema com o notebook</option>
+                  <option value="media">Outro problema</option>
                 </select>
                 <br />
                 <button type="submit" className="botãoEnviarChamado">Enviar Chamado</button>

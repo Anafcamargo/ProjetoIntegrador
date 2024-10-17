@@ -1260,7 +1260,7 @@ position: absolute;
 }
 
 .botãoEnviarChamado {
-  background-color: #3498db;
+  background-color: #013066;
   color: white;
   padding: 15px 20px;
   font-size: 1.5em;
@@ -1271,7 +1271,7 @@ position: absolute;
 }
 
 .botãoEnviarChamado:hover {
-  background-color: #555;
+  background-color: #033a79;
 }
 
 .hidden {
