@@ -541,8 +541,8 @@ height:100%;
     
     flex-direction: column;
     background-color: #fff;
-    padding: 40px;
-    border-radius: 10px;
+    padding: 50px;
+    border-radius: 50px;
     width: 350px;
     margin: 15px auto;
     color: black;
@@ -587,14 +587,14 @@ height:100%;
 
 .title {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   font-size: 24px;
 }
 
 .radioGroup {
   display: flex;
   justify-content: center;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .radioLabel {
@@ -607,11 +607,11 @@ height:100%;
 }
 
 .formContainer {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .formGroup {
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 .label {

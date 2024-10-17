@@ -84,6 +84,7 @@ function TelaVoluntario() {
             <p>Endereço: R. vista</p>
             <p>Número: 54-86</p>
             <p>Bairro: Jardim Boa vista</p>
+            <p>Cidade: Bauru</p>
             <button>Configurações</button>
             <button>Chamados Concluídos</button>
           </div>

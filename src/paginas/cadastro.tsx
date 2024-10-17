@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Cabecalho2 from "../componentes/cabecalho2";
 import Rodape from "../componentes/rodape";
 import "../estilo/estilo.css";
@@ -11,14 +11,16 @@ function Cadastro() {
     nome: "",
     telefone: "",
     cpf: "",
-    dataNascimento: number,
+    Nascimento: "", 
     email: "",
     endereco: "",
     numero: "",
     bairro: "",
+    cidade: "",
     senha: "",
   });
   const [error, setError] = useState("");
+  const navigate = useNavigate(); // Para redirecionar após o sucesso
 
   const handleTipoChange = (event: { target: { value: React.SetStateAction<string>; }; }) => {
     setTipoCadastro(event.target.value);
@@ -26,11 +28,12 @@ function Cadastro() {
       nome: "",
       telefone: "",
       cpf: "",
-      Nascimento: Number,
+      Nascimento: "",
       email: "",
       endereco: "",
       numero: "",
       bairro: "",
+      cidade: "",
       senha: "",
     });
   };
@@ -40,49 +43,58 @@ function Cadastro() {
     setFormData({ ...formData, [name]: value });
   };
 
-
-                //*USUÁRIO*//
-
-  const HandleAddUsuario = async() => {
-
+  const HandleAddUsuario = async () => {
     let json = await Moduloapi.CadastrarUsuario(formData.nome, formData.telefone, formData.senha);
 
     if (json.id) {
-       alert('Usuário Criado com sucesso ' + json.id)
+      alert('Usuário Criado com sucesso ' + json.id);
+      navigate('/login'); // Redireciona após sucesso
     } else {
-       alert('Falha ao inserir usuário. ' + json.message)
+      alert('Falha ao inserir usuário. ' + json.message);
     }
+  };
 
-  }
+  const HandleAddVoluntario = async () => {
+    const Nascimento = new Date(formData.Nascimento); // Converte aqui
 
-  //*VOLUNTARIO*//
+    if (isNaN(Nascimento.getTime())) {
+      alert("Data de nascimento inválida.");
+      return;
+    }
+    const NascimentoTimestamp = Nascimento.getTime();
 
-  const HandleAddVoluntario = async() => {
-
-    let json = await Moduloapi.CadastrarVoluntario(formData.nome, formData.cpf,formData.dataNascimento,formData.email, formData.telefone,formData.endereco,formData.numero,formData.bairro, formData.senha);
+    let json = await Moduloapi.CadastrarVoluntario(
+      formData.nome,
+      formData.cpf,
+      NascimentoTimestamp,
+      formData.email,
+      formData.telefone,
+      formData.endereco,
+      formData.numero,
+      formData.bairro,
+      formData.cidade,
+      formData.senha,
+    );
 
     if (json.id) {
-       alert('Voluntário Criado com sucesso ' + json.id)
+      alert('Voluntário Criado com sucesso ' + json.id);
+      navigate('/login'); 
     } else {
-       alert('Falha ao inserir voluntário. ' + json.message)
+      alert('Falha ao inserir voluntário. ' + json.message);
     }
-
-  }
-
+  };
 
   const handleSubmit = async (event: { preventDefault: () => void; }) => {
     event.preventDefault();
 
     // Validação básica
     if (!formData.nome || !formData.telefone || !formData.senha || 
-        (tipoCadastro === "voluntario" && (!formData.cpf || !formData.email || !formData.endereco || !formData.numero || !formData.bairro))) {
+        (tipoCadastro === "voluntario" && (!formData.cpf || !formData.email || !formData.endereco || !formData.numero || !formData.bairro || !formData.cidade))) {
       setError("Por favor, preencha todos os campos obrigatórios.");
       return;
     }
 
-    // Requisição para a API de cadastro
     try { 
-
       const response = await fetch('http://localhost:3000/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -171,12 +183,9 @@ function Cadastro() {
                   />
                 </div>
                 
-                
-                <Link to='/login'>
-                <button onClick={HandleAddUsuario} className="button">
+                <button type="submit" onClick={HandleAddUsuario} className="button">
                   Criar conta
                 </button>
-                </Link>
                 <button type="button" className="back-button-cad">Voltar</button>
               </div>
             )}
@@ -211,9 +220,9 @@ function Cadastro() {
                   <label className="label">Data de Nascimento</label>
                   <input
                     type="date"
-                    name="dataNascimento"
+                    name="Nascimento"
                     className="input"
-                    value={formData.dataNascimento}
+                    value={formData.Nascimento}
                     onChange={handleChange}
                     required
                   />
@@ -279,6 +288,18 @@ function Cadastro() {
                   />
                 </div>
                 <div className="formGroup">
+                  <label className="label">Cidade</label>
+                  <input
+                    type="text"
+                    name="cidade"
+                    placeholder="Digite seu cidade"
+                    className="input"
+                    value={formData.cidade}
+                    onChange={handleChange}
+                    required
+                  />
+                </div>
+                <div className="formGroup">
                   <label className="label">Senha</label>
                   <input
                     type="password"
@@ -290,21 +311,17 @@ function Cadastro() {
                     required
                   />
                 </div>
-                
-                
-                <Link to='/login'>
-                <button onClick={HandleAddVoluntario} className="button">
+
+                <button type="submit" onClick={HandleAddVoluntario} className="button">
                   Criar conta
                 </button>
-                </Link>
                 <button type="button" className="back-button-cad2">Voltar</button>
               </div>
             )}
           </form>
         </div>
-        <Link to="/*"> .</Link>
+        <Rodape />
       </div>
-      <Rodape />
     </>
   );
 }

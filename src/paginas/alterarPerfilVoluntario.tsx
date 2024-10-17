@@ -35,6 +35,7 @@ const AlterarPerfilVoluntario: React.FC = () => {
     endereco: "",
     numero: "",
     bairro: "",
+    cidade: "",
   });
 
   const [isEditing, setIsEditing] = useState(false);
@@ -132,6 +133,10 @@ const AlterarPerfilVoluntario: React.FC = () => {
             <strong>Bairro:</strong>
             <input type="text" name="bairro" value={perfil.bairro} onChange={handleChange} />
           </p>
+          <p>
+            <strong>Cidade:</strong>
+            <input type="text" name="cidade" value={perfil.cidade} onChange={handleChange} />
+          </p>
           <button type="submit">Salvar</button>
         </form>
       ) : (
@@ -144,6 +149,7 @@ const AlterarPerfilVoluntario: React.FC = () => {
           <p><strong>Endereço:</strong> {perfil.endereco}</p>
           <p><strong>Número:</strong> {perfil.numero}</p>
           <p><strong>Bairro:</strong> {perfil.bairro}</p>
+          <p><strong>Cidade:</strong> {perfil.cidade}</p>
           <button onClick={toggleEditing}>Editar</button>
         </div>
         

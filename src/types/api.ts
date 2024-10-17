@@ -8,9 +8,31 @@ export const Moduloapi = {
             }
             let json = await response.json();
             return json;
-        } catch (error) {
+        } catch (error) { 
             console.error('Erro:', error);
             throw error;
+        }
+    },
+
+     LoginUsuario: async (NOME: string, SENHA: string) => {
+        try {
+            const response = await fetch("http://localhost:3000/usuarios/login", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({ NOME, SENHA }), // Enviando telefone e senha
+            });
+    
+            if (!response.ok) {
+                throw new Error(`Erro ao fazer login: ${response.statusText}`);
+            }
+    
+            const json: Response = await response.json();
+            return json; // Retorna os dados do usuário ou um token
+        } catch (error) {
+            console.error('Erro:', error);
+            throw error; // Re-throw para lidar no chamador
         }
     },
 
@@ -75,28 +97,34 @@ export const Moduloapi = {
 
         /* Chamado */
 
-    AbrirChamado: async (title: string, description: string) => {
-        try {
-            let response = await fetch("", { 
+        CadastrarChamado: async (cNome: string, cTelefone: string, cDescricao: string, cCategoria: string, usuarioId: string, voluntarioId: string) => {
+            try {
+                
+              const response = await fetch("http://localhost:3000/chamados/cadastro", { 
                 method: 'POST',
                 body: JSON.stringify({
-                    title,
-                    description
+                  NOME: cNome,
+                  TELEFONE: cTelefone,
+                  DESCRICAO: cDescricao,
+                  CATEGORIA: cCategoria,
+                  IDUSUARIO: usuarioId, // Enviando o ID do usuário
+                  IDVOLUNTARIO: voluntarioId // Enviando o ID do voluntário
                 }),
                 headers: {
-                    'Content-Type': 'application/json'
+                  'Content-Type': 'application/json'
                 }
-            });
-            if (!response.ok) {
-                throw new Error(`Erro ao abrir chamado: ${response.statusText}`);
+              });
+          
+              // Aqui, você pode retornar o JSON ou o status da resposta
+              const jsonResponse = await response.json();
+              return jsonResponse; // Retorna a resposta da API
+            } catch (error) {
+              throw new Error('Erro ao cadastrar chamado');
             }
-            let json = await response.json();
-            return json;
-        } catch (error) {
-            console.error('Erro:', error);
-            throw error;
-        }
-    },
+          },
+          
+          
+    
 
     /* Voluntario */
 
@@ -115,19 +143,20 @@ export const Moduloapi = {
     },
 
 
-    CadastrarVoluntario: async ( nome: string, CPF: string,Nascimento:Number,email: string, telefone: string, Endereco: string, numero: string, bairro: string, senha: string ) => {
+    CadastrarVoluntario: async (nome: string, CPF: string, NASCIMENTO: number, email: string, telefone: string, Endereco: string, numero: string, bairro: string, cidade: string, senha: string) => {
         try {
             let response = await fetch("http://localhost:3000/voluntarios/cadastro", { 
                 method: 'POST',
                 body: JSON.stringify({
                     NOME: nome,
                     CPF: CPF,
-                    NASCIMENTO: Nascimento,
+                    NASCIMENTO: NASCIMENTO,
                     EMAIL: email,
                     TELEFONE: telefone,
                     ENDERECO: Endereco,
                     NUMEROCASA: numero,
                     BAIRRO: bairro,
+                    CIDADE: cidade,
                     SENHA: senha
 
                 }),
