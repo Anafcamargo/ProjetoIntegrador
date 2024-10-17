@@ -80,9 +80,9 @@ import '../estilo/estilo2.css';
 
 const Login = () => {
   const [isActive, setIsActive] = useState(false);
-  const [telefone, setTelefone] = useState('');
-  const [email, setEmail] = useState('');
-  const [senha, setSenha] = useState('');
+  const [NOME, setNOME] = useState('');
+  const [EMAIL, setEmail] = useState('');
+  const [SENHA, setSenha] = useState('');
   const [error, setError] = useState('');
   const navigate = useNavigate();
 
@@ -97,29 +97,30 @@ const Login = () => {
   const handleLogin = async (event: { preventDefault: () => void; }) => {
     event.preventDefault();
 
-    if (!telefone || !senha || !email) {
-      setError('Por favor, preencha todos os campos.');
-      return;
+    if (!NOME || !SENHA || !EMAIL) {
+        setError('Por favor, preencha todos os campos.');
+        return;
     }
 
     try {
-      const response = await fetch('/api/login', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ telefone, senha, email }),
-      });
+        const response = await fetch('http://localhost:3000/login', { // Ajuste o endpoint
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ NOME, SENHA, EMAIL }),
+        });
 
-      if (!response.ok) {
-        throw new Error('Credenciais inválidas');
-      }
+        if (!response.ok) {
+            throw new Error('Credenciais inválidas');
+        }
 
-      const data = await response.json();
-      localStorage.setItem('token', data.token); 
-      navigate('/chamado'); 
+        const data = await response.json();
+        localStorage.setItem('token', data.token); // Armazena o token
+        navigate('/chamado'); // Redireciona após login
     } catch (Error) {
-      setError(error); // Define a mensagem de erro
+        setError(error); // Define a mensagem de erro
     }
-  };
+};
+
 
   return (
     <div>
@@ -134,13 +135,13 @@ const Login = () => {
               <input
                 type="email"
                 placeholder="Digite seu e-mail"
-                value={email}
+                value={EMAIL}
                 onChange={(e) => setEmail(e.target.value)}
               />
               <input
                 type="password"
                 placeholder="Digite sua senha"
-                value={senha}
+                value={SENHA}
                 onChange={(e) => setSenha(e.target.value)}
               />
               <Link to='/Esqueciasenha'>Esqueci minha senha</Link>
@@ -155,15 +156,15 @@ const Login = () => {
               <h1>Login de Usuário</h1>
               {error && <p className="error">{error}</p>}
               <input
-                type="Telefone"
-                placeholder="Digite seu telefone"
-                value={telefone}
-                onChange={(e) => setTelefone(e.target.value)}
+                type="NOME"
+                placeholder="Digite seu Nome"
+                value={NOME}
+                onChange={(e) => setNOME(e.target.value)}
               />
               <input
                 type="password"
                 placeholder="Digite sua senha"
-                value={senha}
+                value={SENHA}
                 onChange={(e) => setSenha(e.target.value)}
               />
               <Link to='/Esqueciasenha'>Esqueci minha senha</Link>

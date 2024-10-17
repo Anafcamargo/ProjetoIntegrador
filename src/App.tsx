@@ -15,7 +15,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
-
+import ProtectedRoute from './componentes/ProtectedRoute';
 import { HashRouter as Router } from "react-router-dom";
 import Configuracao from "./paginas/configuracao";
 
@@ -55,6 +55,8 @@ function App() {
         <Route path="/chamado" element={<Chamado />} />
         <Route path="/telavoluntario" element={<Tela_Voluntario />} />
         <Route path="/configuracao" element={<Configuracao />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/chamado" element={<ProtectedRoute> <Chamado /> </ProtectedRoute>} />
       </Routes>
     </div>
   );

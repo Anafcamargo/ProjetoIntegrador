@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import { BrowserRouter, HashRouter } from 'react-router-dom';
-
+import { UserProvider } from './componentes/UserContext';
 
 
 
@@ -13,7 +13,10 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <BrowserRouter>
+    <UserProvider>
     <App />
+    </UserProvider>
+    
    </BrowserRouter>
   </React.StrictMode>
 );
