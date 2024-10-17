@@ -123,7 +123,7 @@ const Login = () => {
 
   return (
     <div>
-      <Cabecalho />
+      
       <div className='body2'>
         <div className={`containerlogin2 ${isActive ? 'active' : ''}`} id="container">
           {/* Formulário de Login de Voluntário */}
