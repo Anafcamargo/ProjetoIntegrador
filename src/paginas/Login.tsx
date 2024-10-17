@@ -77,6 +77,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import Cabecalho from '../componentes/cabecalho';
 import Rodape from '../componentes/rodape';
 import '../estilo/estilo2.css';
+import Cabecalho2 from '../componentes/cabecalho2';
 
 const Login = () => {
   const [isActive, setIsActive] = useState(false);
@@ -124,7 +125,7 @@ const Login = () => {
 
   return (
     <div>
-      
+      < Cabecalho2 />
       <div className='body2'>
         <div className={`containerlogin2 ${isActive ? 'active' : ''}`} id="container">
           {/* Formulário de Login de Voluntário */}
@@ -157,7 +158,7 @@ const Login = () => {
               {error && <p className="error">{error}</p>}
               <input
                 type="NOME"
-                placeholder="Digite seu Nome"
+                placeholder="Digite seu nome"
                 value={NOME}
                 onChange={(e) => setNOME(e.target.value)}
               />

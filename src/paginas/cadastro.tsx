@@ -186,7 +186,7 @@ function Cadastro() {
                 <button type="submit" onClick={HandleAddUsuario} className="button">
                   Criar conta
                 </button>
-                <button type="button" className="back-button-cad">Voltar</button>
+                <Link to='/'><button type="button" className="back-button-cad">Voltar</button></Link>
               </div>
             )}
 
@@ -315,7 +315,7 @@ function Cadastro() {
                 <button type="submit" onClick={HandleAddVoluntario} className="button">
                   Criar conta
                 </button>
-                <button type="button" className="back-button-cad2">Voltar</button>
+                <Link to='/'><button type="button" className="back-button-cad2">Voltar</button></Link>
               </div>
             )}
           </form>
