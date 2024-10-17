@@ -17,6 +17,7 @@ import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 
 import { HashRouter as Router } from "react-router-dom";
+import Configuracao from "./paginas/configuracao";
 
 export function App2() {
   return (
@@ -53,6 +54,7 @@ function App() {
         <Route path="/esqueciasenha" element={<EsqueciSenha />} />
         <Route path="/chamado" element={<Chamado />} />
         <Route path="/telavoluntario" element={<Tela_Voluntario />} />
+        <Route path="/configuracao" element={<Configuracao />} />
       </Routes>
     </div>
   );

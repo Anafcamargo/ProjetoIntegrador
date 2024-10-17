@@ -1483,3 +1483,64 @@ background-color: #65d46e;
   border-radius: 5px; /* Bordas arredondadas */
   margin-left: 1%;
 }
+
+
+/* CONFIGURAÇÕES PERFIL VOLUNTÁRIO */
+.container-config {
+  display: flex;
+  justify-content: center; /* Centraliza o box horizontalmente */
+  align-items: center;     /* Centraliza o box verticalmente */
+  height: 100vh;
+  background-color: #c9d6ff;
+  background: linear-gradient(to right, #e2e2e2, #c9d6ff);
+  
+}
+
+.box-config {
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  width: 400px; /* Reduzi a largura para diminuir as laterais */
+  max-width: 100%;
+  padding: 20px;
+  text-align: center;
+  height: 700px; /* Altura fixa para a box */
+  overflow-y: auto; /* Scroll vertical quando o conteúdo ultrapassar a altura */
+
+}
+
+.input-group-config {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;  /* Centraliza os inputs */
+}
+
+.input-config {
+  width: 100%;
+  max-width: 300px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.button-save-config {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button-save-config:hover {
+  background-color: #45a049;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center; /* Centraliza os botões horizontalmente */
+  gap: 10px; /* Espaçamento entre os botões */
+}
