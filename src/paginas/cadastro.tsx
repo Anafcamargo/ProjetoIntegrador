@@ -1,154 +1,9 @@
-// import React, { useState } from "react";
-// import { Link } from "react-router-dom";
-// import { text } from "stream/consumers";
-// import Cabecalho2 from "../componentes/cabecalho2";
-// import Rodape from "../componentes/rodape";
-// import "../estilo/estilo.css"
-
-  
-
-// function Cadastro() {
-
-  
-//   const [tipoCadastro, setTipoCadastro] = useState("usuario");
-
-//   const handleTipoChange = (event: { target: { value: React.SetStateAction<string>; }; }) => {
-//     setTipoCadastro(event.target.value);
-//   };
-
-//   return (
-//     <><body className=" bodyCadastro">
-//       <Cabecalho2/>
-
-      
-//       <div className="containerCadastro">
-        
-//         <h2 className="title">Cadastre-se</h2>
-
-//         <div className="radioGroup">
-          
-//           <label className="radioLabel">
-//             <input
-//               type="radio"
-//               value="usuario"
-//               checked={tipoCadastro === "usuario"}
-//               onChange={handleTipoChange}
-//               className="radioInput" />
-//             Usuário
-//           </label>
-//           <label className="radioLabelUsuario">
-//             <input
-//               type="radio"
-//               value="voluntario"
-//               checked={tipoCadastro === "voluntario"}
-//               onChange={handleTipoChange}
-//               className="radioInput" />
-//             Voluntário
-//           </label>
-//         </div>
-
-//         {tipoCadastro === "usuario" && (
-//           <div className="formContainerUsuario">
-//             <div>
-              
-//               <div className="formGroup">
-//                 <label className="label">Nome Completo</label>
-//                 <input type="text" placeholder="Digite seu nome completo" className="input" />
-//               </div>
-              
-//               <div className="formGroup">
-//                 <label className="label">Telefone</label>
-//                 <input type="text" placeholder="Digite seu número de WhatsApp" className="input" />
-//               </div>
-
-//               <div className="formGroup">
-//                 <label className="label">Senha</label>
-//                 <input type= "text" placeholder="Digite sua senha" className="input" />
-//               </div>
-
-//               <button type="submit" className="button">
-//                 Criar conta
-//               </button>
-              
-//              <Link to='/login'><button className="back-button-cad">Voltar</button></Link>
-//             </div>
-//           </div>
-//         )}
-
-//         {tipoCadastro === "voluntario" && (
-//           <div className="formContainer">
-//             <div>
-              
-//               <div className="formGroup">
-//                 <label className="label">Nome Completo</label>
-//                 <input type="text" placeholder="Digite seu nome completo" className="input" />
-//               </div>
-              
-//               <div className="formGroup">
-//                 <label className="label">CPF</label>
-//                 <input type="text" placeholder="Digite seu CPF" className="input" />
-//               </div>
-              
-//               <div className="formGroup">
-//                 <label className="label">Data de nascimento</label>
-//                 <input type="date" className="input" />
-//               </div>
-              
-//               <div className="formGroup">
-//                 <label className="label">E-mail</label>
-//                 <input type="email" placeholder="Digite seu e-mail" className="input" />
-//               </div>
-              
-//               <div className="formGroup">
-//                 <label className="label">Telefone</label>
-//                 <input type="text" placeholder="Digite seu telefone" className="input" />
-//               </div>
-              
-//               <div className="formGroup">
-//                 <label className="label">Endereço</label>
-//                 <input type="text" placeholder="Digite seu endereço" className="input" />
-//               </div>
-              
-//               <div className="formGroup">
-//                 <label className="label">Número</label>
-//                 <input type="text" placeholder="Número" className="input" />
-//               </div>
-              
-//               <div className="formGroup">
-//                 <label className="label">Bairro</label>
-//                 <input type="text" placeholder="Digite seu bairro" className="input" />
-//               </div>
-
-//               <div className="formGroup">
-//                 <label className="label">Senha</label>
-//                 <input type="text" placeholder="Digite sua senha" className="input" />
-//               </div>
-
-//               <button type="submit" className="button">
-//                 Criar conta
-//               </button>
-//               <Link to='/login'><button className="back-button-cad2">Voltar</button></Link>
-//             </div>
-            
-//           </div>
-//         )}
-
-//       </div> <br />
-//       <br />
-
-
-//     </body><Rodape /></>
-    
-    
-//   );
-// }
-// export default Cadastro;
-
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Cabecalho2 from "../componentes/cabecalho2";
 import Rodape from "../componentes/rodape";
 import "../estilo/estilo.css";
+import { Moduloapi } from "../types/api";
 
 function Cadastro() {
   const [tipoCadastro, setTipoCadastro] = useState("usuario");
@@ -156,7 +11,7 @@ function Cadastro() {
     nome: "",
     telefone: "",
     cpf: "",
-    dataNascimento: "",
+    dataNascimento: number,
     email: "",
     endereco: "",
     numero: "",
@@ -171,7 +26,7 @@ function Cadastro() {
       nome: "",
       telefone: "",
       cpf: "",
-      dataNascimento: "",
+      Nascimento: Number,
       email: "",
       endereco: "",
       numero: "",
@@ -185,6 +40,36 @@ function Cadastro() {
     setFormData({ ...formData, [name]: value });
   };
 
+
+                //*USUÁRIO*//
+
+  const HandleAddUsuario = async() => {
+
+    let json = await Moduloapi.CadastrarUsuario(formData.nome, formData.telefone, formData.senha);
+
+    if (json.id) {
+       alert('Usuário Criado com sucesso ' + json.id)
+    } else {
+       alert('Falha ao inserir usuário. ' + json.message)
+    }
+
+  }
+
+  //*VOLUNTARIO*//
+
+  const HandleAddVoluntario = async() => {
+
+    let json = await Moduloapi.CadastrarVoluntario(formData.nome, formData.cpf,formData.dataNascimento,formData.email, formData.telefone,formData.endereco,formData.numero,formData.bairro, formData.senha);
+
+    if (json.id) {
+       alert('Voluntário Criado com sucesso ' + json.id)
+    } else {
+       alert('Falha ao inserir voluntário. ' + json.message)
+    }
+
+  }
+
+
   const handleSubmit = async (event: { preventDefault: () => void; }) => {
     event.preventDefault();
 
@@ -196,8 +81,9 @@ function Cadastro() {
     }
 
     // Requisição para a API de cadastro
-    try {
-      const response = await fetch('http://localhost:3000/cadastro', {
+    try { 
+
+      const response = await fetch('http://localhost:3000/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),
@@ -287,7 +173,7 @@ function Cadastro() {
                 
                 
                 <Link to='/login'>
-                <button type="submit" className="button">
+                <button onClick={HandleAddUsuario} className="button">
                   Criar conta
                 </button>
                 </Link>
@@ -407,7 +293,7 @@ function Cadastro() {
                 
                 
                 <Link to='/login'>
-                <button type="submit" className="button">
+                <button onClick={HandleAddVoluntario} className="button">
                   Criar conta
                 </button>
                 </Link>

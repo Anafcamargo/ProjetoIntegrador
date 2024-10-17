@@ -14,22 +14,21 @@ export const Moduloapi = {
         }
     },
 
-    CadastroUsuarios: async (title: string, body: string, userID: number) => {
+    
+    CadastrarUsuario: async (sNome: string, sTelefone: string, sSenha: string) => {
         try {
-            let response = await fetch("http://localhost:3000/usuarios", {
+            let response = await fetch("http://localhost:3000/usuarios/cadastro", {
                 method: 'POST',
                 body: JSON.stringify({
-                    title,
-                    body,
-                    userID
+                    NOME: sNome,
+                    TELEFONE: sTelefone,
+                    SENHA: sSenha
                 }),
                 headers: {
                     'Content-Type': 'application/json'
                 }
             });
-            if (!response.ok) {
-                throw new Error(`Erro ao cadastrar usuário: ${response.statusText}`);
-            }
+        
             let json = await response.json();
             console.log(json);
             return json;
@@ -105,7 +104,7 @@ export const Moduloapi = {
         try {
             let response = await fetch(""); 
             if (!response.ok) {
-                throw new Error(`Erro ao carregar usuários: ${response.statusText}`);
+                throw new Error(`Erro ao carregar voluntários: ${response.statusText}`);
             }
             let json = await response.json();
             return json;
@@ -116,18 +115,27 @@ export const Moduloapi = {
     },
 
 
-    CadastroVoluntario: async (dados: { nome: string, email: string }) => {
+    CadastrarVoluntario: async ( nome: string, CPF: string,Nascimento:Number,email: string, telefone: string, Endereco: string, numero: string, bairro: string, senha: string ) => {
         try {
-            let response = await fetch("", { 
+            let response = await fetch("http://localhost:3000/voluntarios/cadastro", { 
                 method: 'POST',
-                body: JSON.stringify(dados),
+                body: JSON.stringify({
+                    NOME: nome,
+                    CPF: CPF,
+                    NASCIMENTO: Nascimento,
+                    EMAIL: email,
+                    TELEFONE: telefone,
+                    ENDERECO: Endereco,
+                    NUMEROCASA: numero,
+                    BAIRRO: bairro,
+                    SENHA: senha
+
+                }),
                 headers: {
                     'Content-Type': 'application/json'
                 }
             });
-            if (!response.ok) {
-                throw new Error(`Erro ao cadastrar voluntário: ${response.statusText}`);
-            }
+           
             let json = await response.json();
             return json;
         } catch (error) {
