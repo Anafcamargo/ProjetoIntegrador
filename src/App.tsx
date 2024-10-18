@@ -18,6 +18,7 @@ import "swiper/css/scrollbar";
 import ProtectedRoute from './componentes/ProtectedRoute';
 import { HashRouter as Router } from "react-router-dom";
 import Configuracao from "./paginas/configuracao";
+import AlterarPerfilVoluntario from "./paginas/alterarPerfilVoluntario";
 
 export function App2() {
   return (
@@ -33,6 +34,7 @@ export function App2() {
         <Route path="/esqueciasenha" element={<EsqueciSenha />} />
         <Route path="/chamado" element={<Chamado />} />
         <Route path="/telavoluntario" element={<Tela_Voluntario />} />
+    
       </Routes>
     </Router>
   );
@@ -57,6 +59,7 @@ function App() {
         <Route path="/configuracao" element={<Configuracao />} />
         <Route path="/login" element={<Login />} />
         <Route path="/chamado" element={<ProtectedRoute> <Chamado /> </ProtectedRoute>} />
+        <Route path="/alterarPerfilV" element={<AlterarPerfilVoluntario />} />
       </Routes>
     </div>
   );

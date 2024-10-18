@@ -79,7 +79,7 @@ function TelaVoluntario() {
 
             
  
-            <Link to='/configuracao'><button className='button-cfg'>Configurações</button></Link>
+            <Link to='/alterarPerfilV'><button className='button-cfg'>Configurações</button></Link>
             <button className='button-chamadoconcluido'>Chamados Concluídos</button>
             <Link to='/Login'><button className='sairvoluntario'>Sair</button></Link>
           </div>
