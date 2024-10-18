@@ -42,17 +42,22 @@ function Cadastro() {
     const { name, value } = event.target;
     setFormData({ ...formData, [name]: value });
   };
-
   const HandleAddUsuario = async () => {
-    let json = await Moduloapi.CadastrarUsuario(formData.nome, formData.telefone, formData.senha);
+    try {
+        const json = await Moduloapi.CadastrarUsuario(formData.nome, formData.telefone, formData.senha);
 
-    if (json.id) {
-      alert('Usuário Criado com sucesso ' + json.id);
-      navigate('/login'); // Redireciona após sucesso
-    } else {
-      alert('Falha ao inserir usuário. ' + json.message);
+        // Verifica se a resposta contém um ID
+        if (json.id) {
+            alert('Usuário criado com sucesso: ' + json.id);
+            navigate('/login'); // Redireciona após sucesso
+        } else {
+            alert('Falha ao inserir usuário: ' + json.message);
+        }
+    } catch (error) {
+        alert('Erro: ' + (error instanceof Error ? error.message : 'Erro desconhecido'));
     }
-  };
+};
+
 
   const HandleAddVoluntario = async () => {
     const Nascimento = new Date(formData.Nascimento); // Converte aqui

@@ -37,9 +37,9 @@ export const Moduloapi = {
     },
 
     
-    CadastrarUsuario: async (sNome: string, sTelefone: string, sSenha: string) => {
+    async CadastrarUsuario(sNome: string, sTelefone: string, sSenha: string): Promise<{ id: string; message: string }> {
         try {
-            let response = await fetch("http://localhost:3000/usuarios/cadastro", {
+            const response = await fetch("http://localhost:3000/usuarios/cadastro", {
                 method: 'POST',
                 body: JSON.stringify({
                     NOME: sNome,
@@ -50,15 +50,22 @@ export const Moduloapi = {
                     'Content-Type': 'application/json'
                 }
             });
-        
-            let json = await response.json();
-            console.log(json);
-            return json;
+    
+            if (!response.ok) {
+                const errorText = await response.text();
+                throw new Error('Erro ao cadastrar usuário: ' + errorText);
+            }
+    
+            const json = await response.json();
+            return { id: json.id, message: json.message }; // Retorna o ID e a mensagem
+    
         } catch (error) {
             console.error('Erro:', error);
             throw error;
         }
     },
+    
+    
 
     RemoverUsuario: async (userID: number) => {
         try {

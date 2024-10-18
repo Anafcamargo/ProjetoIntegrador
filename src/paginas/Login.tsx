@@ -81,7 +81,7 @@ import Cabecalho2 from '../componentes/cabecalho2';
 
 const Login = () => {
   const [isActive, setIsActive] = useState(false);
-  const [NOME, setNOME] = useState('');
+  const [TELEFONE, setTELEFONE] = useState('');
   const [EMAIL, setEmail] = useState('');
   const [SENHA, setSenha] = useState('');
   const [error, setError] = useState('');
@@ -98,7 +98,7 @@ const Login = () => {
   const handleLogin = async (event: { preventDefault: () => void; }) => {
     event.preventDefault();
 
-    if (!NOME || !SENHA || !EMAIL) {
+    if (!TELEFONE || !SENHA || !EMAIL) {
         setError('Por favor, preencha todos os campos.');
         return;
     }
@@ -107,7 +107,7 @@ const Login = () => {
         const response = await fetch('http://localhost:3000/login', { // Ajuste o endpoint
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ NOME, SENHA, EMAIL }),
+            body: JSON.stringify({ TELEFONE, SENHA, EMAIL }),
         });
 
         if (!response.ok) {
@@ -157,10 +157,10 @@ const Login = () => {
               <h1>Login de Usuário</h1>
               {error && <p className="error">{error}</p>}
               <input
-                type="NOME"
-                placeholder="Digite seu nome"
-                value={NOME}
-                onChange={(e) => setNOME(e.target.value)}
+                type="TELEFONE"
+                placeholder="Digite seu telefone"
+                value={TELEFONE}
+                onChange={(e) => setTELEFONE(e.target.value)}
               />
               <input
                 type="password"
