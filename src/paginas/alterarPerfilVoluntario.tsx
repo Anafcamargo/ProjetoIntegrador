@@ -88,8 +88,9 @@ const AlterarPerfilVoluntario: React.FC = () => {
   };
 
   return (
+<div className='container-section2'>
     <div className="profile-section">
-      <h2>Perfil Voluntário</h2>
+      <h2>Configurações de Perfil</h2>
       {error && <p className="error">{error}</p>}
       <img 
         className="fotoperfil" 
@@ -100,45 +101,52 @@ const AlterarPerfilVoluntario: React.FC = () => {
       />
       
       {isEditing ? (
+        
         <form onSubmit={handleSubmit} className="profile-details">
           <p>
-            <strong>Nome:</strong>
-            <input type="text" name="nome" value={perfil.nome} onChange={handleChange} />
+            <div className='titulo-profile-section'>Nome</div>
+            <input type="text" name="nome" value={perfil.nome} onChange={handleChange}className='input-personalizado' placeholder='Digite seu nome completo' />
           </p>
           <p>
-            <strong>CPF:</strong>
-            <input type="text" name="cpf" value={perfil.cpf} onChange={handleChange} />
+            <div className='titulo-profile-section'>CPF</div>
+            <input type="text" name="cpf" value={perfil.cpf} onChange={handleChange} className='input-personalizado' placeholder='Digite seu CPF' />
           </p>
           <p>
-            <strong>Data de Nascimento:</strong>
-            <input type="date" name="dataNascimento" value={perfil.dataNascimento} onChange={handleChange} />
+            <div className='titulo-profile-section'>Data de Nascimento</div>
+            <input type="date" name="dataNascimento" value={perfil.dataNascimento} onChange={handleChange} className='input-personalizado' />
           </p>
           <p>
-            <strong>Email:</strong>
-            <input type="email" name="email" value={perfil.email} onChange={handleChange} />
+            <div className='titulo-profile-section'>Email</div>
+            <input type="email" name="email" value={perfil.email} onChange={handleChange} className='input-personalizado' placeholder='Digite seu e-mail' />
           </p>
           <p>
-            <strong>Telefone:</strong>
-            <input type="text" name="telefone" value={perfil.telefone} onChange={handleChange} />
+            <div className='titulo-profile-section'>Telefone</div>
+            <input type="text" name="telefone" value={perfil.telefone} onChange={handleChange} className='input-personalizado' placeholder='Digite seu telefone' />
           </p>
           <p>
-            <strong>Endereço:</strong>
-            <input type="text" name="endereco" value={perfil.endereco} onChange={handleChange} />
+            <div className='titulo-profile-section'>Endereço</div>
+            <input type="text" name="endereco" value={perfil.endereco} onChange={handleChange} className='input-personalizado' placeholder='Digite seu endereço' />
           </p>
           <p>
-            <strong>Número:</strong>
-            <input type="text" name="numero" value={perfil.numero} onChange={handleChange} />
+            <div className='titulo-profile-section'>Número</div>
+            <input type="text" name="numero" value={perfil.numero} onChange={handleChange} className='input-personalizado' placeholder='Digite o número da casa' />
           </p>
           <p>
-            <strong>Bairro:</strong>
-            <input type="text" name="bairro" value={perfil.bairro} onChange={handleChange} />
+            <div className='titulo-profile-section'>Bairro</div>
+            <input type="text" name="bairro" value={perfil.bairro} onChange={handleChange} className='input-personalizado' placeholder='Digite o bairro' />
           </p>
           <p>
-            <strong>Cidade:</strong>
-            <input type="text" name="cidade" value={perfil.cidade} onChange={handleChange} />
+            <div className='titulo-profile-section'>Cidade</div>
+            <input type="text" name="cidade" value={perfil.cidade} onChange={handleChange} className='input-personalizado' placeholder='Digite sua cidade' />
+            
+
           </p>
-          <button type="submit">Salvar</button>
+        <div className='button-box'>
+          <button className='salvarperfilvoluntario' type="submit">Salvar</button>
+          <Link to='/Voluntario'><button className='sairperfilvoluntario' type="submit">Sair</button></Link>
+        </div>
         </form>
+        
       ) : (
         <div className="profile-details">
           <p><strong>Nome:</strong> {perfil.nome}</p>
@@ -156,6 +164,7 @@ const AlterarPerfilVoluntario: React.FC = () => {
       )}
      
     </div>
+</div>
   );
 };
 
