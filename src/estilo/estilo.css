@@ -1210,8 +1210,10 @@ position: absolute;
   color: #333;
   text-align: center;
   margin: 0;
-  padding: 20px;
+  padding: 80px;
   align-items: center;
+  
+
 }
 
 .containerTelaUsuario {
@@ -1219,7 +1221,7 @@ position: absolute;
   flex-direction: column;
   align-items: center;
   text-align: center;
-
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
   max-width: 100%;
   background-color: #fff;
   padding: 20px;
@@ -1293,15 +1295,19 @@ position: absolute;
   height: 100vh; /* Ocupa toda a altura da janela */
   width: 100vw;  /* Ocupa toda a largura da janela */
   background-color: #f0f0f0;
+  
 }
 
 /* Estilo da seção de perfil à esquerda */
 .profile-section {
   width: 20%;  /* Ocupará 20% da largura da tela */
-  background-color: #3498db; /* Cor de fundo azul */
+  background-color: #0e4d94; /* Cor de fundo azul */
+  background: linear-gradient(to right, #376ba7, #0e4d94);
   color: white; /* Cor do texto */
   padding: 20px; /* Espaçamento interno */
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Sombra leve */
+  text-align: center;
+ 
 }
 
 .profile-section h2 {
@@ -1313,12 +1319,13 @@ position: absolute;
   font-size: 1.2em;
   margin: 10px 0;
   font-family:"Poppins-extralight";
-}
-
-.fotoperfil{
+  flex-direction: column;
   display: flex;
   align-items: center;
+  justify-content: bottom;
+  
 }
+
 
 /* Estilo da seção de chamados */
 .tickets-section, .accepted-section {
@@ -1483,6 +1490,105 @@ background-color: #65d46e;
   border-radius: 5px; /* Bordas arredondadas */
   margin-left: 1%;
 }
+
+.button-chamadoconcluido {
+  background-color: #228339; /* Verde de sucesso */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.button-chamadoconcluido:hover {
+  background-color: #163d1e; /* Verde mais escuro ao passar o mouse */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Aumenta a sombra ao passar o mouse */
+  transform: scale(1.05); /* Leve aumento ao passar o mouse */
+}
+
+.button-chamadoconcluido:active {
+  background-color: #1e7e34; /* Verde ainda mais escuro ao clicar */
+  transform: scale(0.98); /* Leve redução ao clicar */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Diminui a sombra ao clicar */
+}
+
+.button-chamadoconcluido i {
+  margin-right: 8px;
+}
+
+.button-cfg,
+.button-chamadoconcluido
+
+ {
+  margin: 10px; /* Espaço de 10px em todas as direções */
+}
+
+
+.sairvoluntario{
+  background-color: #a30b0b; /* Cinza médio */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease; 
+  width: auto; /* Faz com que o botão tenha o tamanho do conteúdo */
+  max-width: 100px; /* Define uma largura máxima */
+  padding: 10px 20px; /* Adiciona espaçamento interno para os botões */
+  
+ 
+}
+
+.sairvoluntario:hover{
+  background-color: #720808; /* Cinza mais escuro ao passar o mouse */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Aumenta a sombra ao passar o mouse */
+  transform: scale(1.05); /* Leve aumento ao passar o mouse */  
+}
+
+.sairvoluntario:active{
+  background-color: #495057; /* Cinza ainda mais escuro ao clicar */
+  transform: scale(0.98); /* Leve redução ao clicar */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Diminui a sombra ao clicar */  
+}
+
+
+
+
+
+.button-cfg {
+  background-color: #43474b; /* Cinza médio */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.button-cfg:hover {
+  background-color: #5a6268; /* Cinza mais escuro ao passar o mouse */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Aumenta a sombra ao passar o mouse */
+  transform: scale(1.05); /* Leve aumento ao passar o mouse */
+}
+
+.button-cfg:active {
+  background-color: #495057; /* Cinza ainda mais escuro ao clicar */
+  transform: scale(0.98); /* Leve redução ao clicar */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Diminui a sombra ao clicar */
+}
+
+.button-cfg i {
+  margin-right: 8px;
+}
+
+
 
 
 /* CONFIGURAÇÕES PERFIL VOLUNTÁRIO */

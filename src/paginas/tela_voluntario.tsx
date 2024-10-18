@@ -68,25 +68,20 @@ function TelaVoluntario() {
 
   return (
     <>
-      <Cabecalho2 />
+      
       <div className="suporte-container">
         <div className="profile-section">
-          <h2>Perfil</h2>
+          
           <br />
-          <img className='fotoperfil' src="OIP.png" alt="" width='70px' height='70px' />
+          <div>Oi, João! Estamos felizes em tê-lo aqui! </div>
           <br />
           <div className="profile-details">
-            <p>Nome: João da Silva</p>
-            <p>CPF: 123.456.789-01</p>
-            <p>Data de nascimento: 01/12/2001</p>
-            <p>Email: joao.silva@suporte.com</p>
-            <p>Telefone: 14 98888-9999</p>
-            <p>Endereço: R. vista</p>
-            <p>Número: 54-86</p>
-            <p>Bairro: Jardim Boa vista</p>
-            <p>Cidade: Bauru</p>
-            <button>Configurações</button>
-            <button>Chamados Concluídos</button>
+
+            
+ 
+            <Link to='/configuracao'><button className='button-cfg'>Configurações</button></Link>
+            <button className='button-chamadoconcluido'>Chamados Concluídos</button>
+            <Link to='/Login'><button className='sairvoluntario'>Sair</button></Link>
           </div>
           <br />
         </div>

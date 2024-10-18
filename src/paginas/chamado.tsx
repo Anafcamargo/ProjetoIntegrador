@@ -310,7 +310,7 @@ export function Chamado() {
                   <option value="media">Outro problema</option>
                 </select>
                 <br />
-                <button type="submit" className="botãoEnviarChamado">Enviar Chamado</button>
+                <button type="submit" className="botãoEnviarChamado">Registrar Chamado</button>
               </form>
             </>
           ) : (
