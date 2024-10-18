@@ -1296,18 +1296,39 @@ position: absolute;
   width: 100vw;  /* Ocupa toda a largura da janela */
   background-color: #f0f0f0;
   
+ 
+  
 }
 
 /* Estilo da seção de perfil à esquerda */
+
+.container-section2{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: #c9d6ff;
+  background: linear-gradient(to right, #e2e2e2, #c9d6ff);
+  
+  
+  }
+
+
 .profile-section {
-  width: 20%;  /* Ocupará 20% da largura da tela */
+  width: 25%;  /* Ocupará 20% da largura da tela */
   background-color: #0e4d94; /* Cor de fundo azul */
   background: linear-gradient(to right, #376ba7, #0e4d94);
   color: white; /* Cor do texto */
-  padding: 20px; /* Espaçamento interno */
-  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Sombra leve */
+  padding: 50px; /* Espaçamento interno */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
   text-align: center;
- 
+  border-radius: 50px;
+
+   
+}
+
+.titulo-profile-section{
+font-weight: bold;
+color: white;
 }
 
 .profile-section h2 {
@@ -1325,6 +1346,71 @@ position: absolute;
   justify-content: bottom;
   
 }
+
+
+.button-box{
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+text-align: center;
+
+}
+
+.button-box button {
+  margin-right: 10px; /* Adiciona espaço à direita de cada botão */
+}
+
+.sairperfilvoluntario{
+  background-color: #a30b0b; /* Cinza médio */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease; 
+  width: auto; /* Faz com que o botão tenha o tamanho do conteúdo */
+  max-width: 100px; /* Define uma largura máxima */
+  padding: 10px 20px; /* Adiciona espaçamento interno para os botões */
+
+}
+.salvarperfilvoluntario{
+  background-color: #228339; /* Verde de sucesso */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease; 
+}
+
+.salvarperfilvoluntario:hover{
+background-color: #163d1e; /* Verde mais escuro ao passar o mouse */
+box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Aumenta a sombra ao passar o mouse */
+transform: scale(1.05); /* Leve aumento ao passar o mouse */
+}
+
+.input-personalizado {
+  max-width: 100%;
+  width: 300px;
+  padding: 10px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+.input-personalizado:focus {
+  border-color: #007BFF;
+  outline: none;
+}
+
 
 
 /* Estilo da seção de chamados */
