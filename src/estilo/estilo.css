@@ -1305,7 +1305,7 @@ position: absolute;
 .container-section2{
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: left;
   background-color: #c9d6ff;
   background: linear-gradient(to right, #e2e2e2, #c9d6ff);
   
@@ -1321,7 +1321,7 @@ position: absolute;
   padding: 50px; /* Espaçamento interno */
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
   text-align: center;
-  border-radius: 50px;
+  border-radius: 2%;
 
    
 }
