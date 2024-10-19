@@ -59,6 +59,7 @@ function Cadastro() {
 };
 
 
+
   const HandleAddVoluntario = async () => {
     const Nascimento = new Date(formData.Nascimento); // Converte aqui
 

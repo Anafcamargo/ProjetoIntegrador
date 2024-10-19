@@ -1,165 +1,4 @@
-// import React, { useState } from 'react';
-// import Cabecalho2 from "../componentes/cabecalho2";
-// import Rodape from "../componentes/rodape";
-// import '../estilo/estilo.css';
-// import { Link } from 'react-router-dom';
-// import { Moduloapi } from '../types/api';
-
-// interface FormData {
-//   cNome(cNome: any, cTelefone: any, cDescricao: any, cCategoria: any): unknown;
-//   cTelefone(cNome: any, cTelefone: any, cDescricao: any, cCategoria: any): unknown;
-//   cDescricao(cNome: any, cTelefone: any, cDescricao: any, cCategoria: any): unknown;
-//   cCategoria(cNome: any, cTelefone: any, cDescricao: any, cCategoria: any): unknown;
-//   name: string;
-//   contact: string;
-//   issue: string;
-//   urgency: string;
-// }
-
-// function Chamado() {
-//   const [formData, setFormData] = useState<FormData>({
-//     nome: '',
-//     Telefone: '',
-//     Descricao: '',
-//     Categoria: 'baixa',
-//   });
-//   const [formSubmitted, setFormSubmitted] = useState(false);
-//   const [error, setError] = useState('');
-
-//   const handleChange = (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-//     const { name, value } = event.target;
-//     setFormData({ ...formData, [name]: value });
-//   };
-
-//   const HandleAddChamado = async () => {
-//     let json = await Moduloapi.CadastrarChamado(formData.cNome, formData.cTelefone, formData.cDescricao, formData.cCategoria);
-
-//     if (json.id) {
-//       alert('Usuário Criado com sucesso ' + json.id);
-//       navigate('/login'); // Redireciona após sucesso
-//     } else {
-//       alert('Falha ao inserir usuário. ' + json.message);
-//     }
-//   };
-
-//   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
-//     event.preventDefault();
-
-//     try {
-//       const response = await fetch('http://localhost:3000/chamados/cadastro', {
-//         method: 'POST',
-//         headers: {
-//           'Content-Type': 'application/json',
-//         },
-//         body: JSON.stringify(formData),
-//       });
-
-//       console.log('Response:', response); // Verifica a resposta da API
-
-//       if (!response.ok) {
-//         throw new Error('Erro ao enviar o chamado. Tente novamente.');
-//       }
-
-//       // Se a resposta for bem-sucedida, atualize o estado
-//       setFormSubmitted(true);
-//       setError(''); // Limpa qualquer erro anterior
-//       setFormData({ name: '', contact: '', issue: '', urgency: 'baixa' }); // Limpa o formulário
-//     } catch (error: any) {
-//       setError(error.message);
-//     }
-//   };
-
-//   return (
-//     <>
-//       <Cabecalho2 />
-//       <div className="BodyUsuario">
-//         <div className="containerTelaUsuario">
-//           {!formSubmitted ? (
-//             <>
-//               <h1 className="tesxtoinicalusuario">Bem-vindo ao Suporte Técnico</h1>
-//               <p className="ptelausuario">Preencha as informações abaixo para abrir um chamado:</p>
-
-//               {error && <p className="error">{error}</p>} {/* Mensagem de erro */}
-
-//               <form onSubmit={handleSubmit}>
-//                 <h2 className="tesxtoinicalusuario">
-//                   <label htmlFor="name" className="labelUsuario">Nome:</label>
-//                 </h2>
-//                 <input
-//                   type="text"
-//                   id="name"
-//                   name="name"
-//                   required
-//                   placeholder="Nome Completo"
-//                   className="inputsUsuario"
-//                   value={formData.name}
-//                   onChange={handleChange}
-//                 />
-
-//                 <h2 className="tesxtoinicalusuario">
-//                   <label htmlFor="contact" className="labelUsuario">Telefone:</label>
-//                 </h2>
-//                 <input
-//                   type="text"
-//                   id="contact"
-//                   name="contact"
-//                   required
-//                   placeholder="( ) 99999-9999"
-//                   className="inputsUsuario"
-//                   value={formData.contact}
-//                   onChange={handleChange}
-//                 />
-
-//                 <h2 className="tesxtoinicalusuario">
-//                   <label htmlFor="issue" className="labelUsuario">Descreva o seu Problema:</label>
-//                 </h2>
-//                 <textarea
-//                   id="issue"
-//                   name="issue"
-//                   rows={5}
-//                   required
-//                   placeholder="Descreva o seu problema técnico de maneira simples e direta"
-//                   onChange={handleChange}
-//                   value={formData.issue}
-//                 />
-
-//                 <h2 className="tesxtoinicalusuario">
-//                   <label htmlFor="urgency" className="labelUsuario">Categorias:</label>
-//                 </h2>
-//                 <select
-//                   id="urgency"
-//                   name="urgency"
-//                   className="inputsUsuario"
-//                   value={formData.urgency}
-//                   onChange={handleChange}
-//                 >
-//                   <option value="alta">Celular</option>
-//                   <option value="media">Computador</option>
-//                   <option value="baixa">Tablet</option>
-//                   <option value="media">Notebook/Laptop</option>
-//                 </select>
-//                 <br />
-//                 <button type="submit" className="botãoEnviarChamado">Enviar Chamado</button>
-//               </form>
-//             </>
-//           ) : (
-//             <div id="confirmationMessage">
-//               <h2>Obrigado!</h2>
-//               <p className="ptelausuario">Seu chamado foi registrado com sucesso. Em breve um de nossos voluntários entrará em contato com você.</p>
-//             </div>
-//           )}
-          
-//         </div>
-//         <Link to="/*"> .</Link>
-//         <Rodape />
-//       </div>
-//     </>
-//   );
-// }
-
-// export default Chamado;
-
-import React, { useState } from 'react';
+import React, { FormEvent, useState } from 'react';
 import Cabecalho2 from "../componentes/cabecalho2";
 import Rodape from "../componentes/rodape";
 import '../estilo/estilo.css';
@@ -172,6 +11,12 @@ interface FormData {
   contact: string;
   issue: string;
   urgency: string;
+  
+}
+
+interface ChamadoResponse {
+  id: string; // ou o tipo apropriado
+  message: string;
 }
 
 export function Chamado() {
@@ -220,7 +65,7 @@ export function Chamado() {
         formData.issue,
         formData.urgency,
         usuarioId,
-        voluntarioId
+        
       );
 
       if (json.id) {
@@ -234,10 +79,44 @@ export function Chamado() {
     }
   };
 
-  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    await HandleAddChamado(); // Chama a função para adicionar o chamado
-  };
+  async function CadastrarChamado(
+    nome: string,
+    telefone: string,
+    descricao: string,
+    categoria: string,
+    usuarioId: string
+): Promise<{ id: string; message: string }> {
+    try {
+        const response = await fetch("http://localhost:3000/chamados/cadastro", {
+            method: 'POST',
+            body: JSON.stringify({
+                NOME: nome,
+                TELEFONE: telefone,
+                DESCRICAO: descricao,
+                CATEGORIA: categoria,
+                IDUSUARIO: usuarioId,
+            }),
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        });
+
+        if (!response.ok) {
+            throw new Error('Erro ao cadastrar chamado');
+        }
+
+        const jsonResponse = await response.json();
+        return jsonResponse; // Espera que a resposta tenha { id, message }
+    } catch (error) {
+        throw new Error('Erro ao cadastrar chamado: ' + error);
+    }
+}
+
+
+
+  function handleSubmit(event: FormEvent<HTMLFormElement>): void {
+    throw new Error('Function not implemented.');
+  }
 
   return (
     <>
@@ -329,4 +208,8 @@ export function Chamado() {
 
 export default Chamado;
 
+
+function CadastrarChamado(_dados: { NOME: string; TELEFONE: string; DESCRICAO: string; CATEGORIA: string;usuarioId:string; }) {
+  throw new Error('Function not implemented.');
+}
 
