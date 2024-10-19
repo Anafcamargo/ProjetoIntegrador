@@ -145,8 +145,8 @@ function TelaVoluntario() {
                 placeholder="Descreva a conclusão do chamado aqui..."
                 style={{ width: '95%' }}
               />
-              <button onClick={handleSubmitConclusion}>Enviar</button>
-              <button onClick={closeConclusionModal}>Fechar</button>
+              <button onClick={handleSubmitConclusion} className='enviarchamado'>Enviar</button>
+              <button onClick={closeConclusionModal} className='sairmodal'>Fechar</button>
             </div>
           </div>
         )}

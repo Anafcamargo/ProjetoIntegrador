@@ -143,22 +143,22 @@ const AlterarPerfilVoluntario: React.FC = () => {
           </p>
         <div className='button-box'>
           <button className='salvarperfilvoluntario' type="submit">Salvar</button>
-          <Link to='/Voluntario'><button className='sairperfilvoluntario' type="submit">Sair</button></Link>
+          <Link to='/telavoluntario'><button className='sairperfilvoluntario' type="submit">Sair</button></Link>
         </div>
         </form>
         
       ) : (
         <div className="profile-details">
-          <p><strong>Nome:</strong> {perfil.nome}</p>
-          <p><strong>CPF:</strong> {perfil.cpf}</p>
-          <p><strong>Data de Nascimento:</strong> {perfil.dataNascimento}</p>
-          <p><strong>Email:</strong> {perfil.email}</p>
-          <p><strong>Telefone:</strong> {perfil.telefone}</p>
-          <p><strong>Endereço:</strong> {perfil.endereco}</p>
-          <p><strong>Número:</strong> {perfil.numero}</p>
-          <p><strong>Bairro:</strong> {perfil.bairro}</p>
-          <p><strong>Cidade:</strong> {perfil.cidade}</p>
-          <button onClick={toggleEditing}>Editar</button>
+          <p><div className='titulo-profile-section'>Nome</div> {perfil.nome}</p>
+          <p><div className='titulo-profile-section'>CPF</div> {perfil.cpf}</p>
+          <p><div className='titulo-profile-section'>Data de Nascimento</div> {perfil.dataNascimento}</p>
+          <p><div className='titulo-profile-section'>Email</div> {perfil.email}</p>
+          <p><div className='titulo-profile-section'>Telefone</div> {perfil.telefone}</p>
+          <p><div className='titulo-profile-section'>Endereço</div> {perfil.endereco}</p>
+          <p><div className='titulo-profile-section'>Número</div> {perfil.numero}</p>
+          <p><div className='titulo-profile-section'>Bairro</div> {perfil.bairro}</p>
+          <p><div className='titulo-profile-section'>Cidade</div> {perfil.cidade}</p>
+          <button onClick={toggleEditing} className='button-cfg'>Editar</button>
         </div>
         
       )}
