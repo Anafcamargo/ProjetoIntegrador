@@ -1347,6 +1347,27 @@ color: white;
   
 }
 
+.enviarchamado{
+  background-color: #02972f; /* Cor de fundo */
+  color: white; /* Cor do texto */
+  border: none; /* Remove borda */
+  padding: 10px 15px; /* Espaçamento interno */
+  font-size: 1.1em; /* Tamanho da fonte */
+  cursor: pointer; /* Cursor muda para mãozinha */
+  border-radius: 5px; /* Bordas arredondadas */
+  margin-left: 1%;  
+}
+
+.sairmodal{
+  background-color: rgb(255, 255, 255);
+  color: rgb(255, 0, 0);
+  text-align: center;
+  padding: 5px 10px;
+  border-radius: 50%;
+  border: none;
+  font-weight: bold;  
+
+}
 
 .button-box{
 display: flex;
