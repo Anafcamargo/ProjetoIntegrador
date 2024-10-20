@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Cabecalho2 from '../componentes/cabecalho2';
 import Rodape from '../componentes/rodape';
 import '../estilo/estilo.css';
@@ -10,6 +10,11 @@ interface Ticket {
   description: string;
   requesterName: string;
   requesterPhone: string;
+}
+
+interface Voluntario {
+  id: number;
+  nome: string;
 }
 
 function TelaVoluntario() {
@@ -24,6 +29,24 @@ function TelaVoluntario() {
   const [selectedTicket, setSelectedTicket] = useState<Ticket | null>(null);
   const [conclusionText, setConclusionText] = useState('');
   const [successMessage, setSuccessMessage] = useState('');
+  const [voluntario, setVoluntario] = useState<Voluntario | null>(null); // Adicionando estado para o voluntário
+
+  useEffect(() => {
+    const fetchVoluntario = async () => {
+      try {
+        const response = await fetch('http://localhost:3000/voluntarios/me'); // Altere para a URL correta da API
+        if (!response.ok) {
+          throw new Error('Erro ao buscar dados do voluntário');
+        }
+        const data: Voluntario = await response.json();
+        setVoluntario(data);
+      } catch (error) {
+        console.error(error);
+      }
+    };
+
+    fetchVoluntario();
+  }, []);
 
   const handleAcceptTicket = (ticket: Ticket) => {
     setAcceptedTickets(prev => [...prev, ticket]);
@@ -73,7 +96,7 @@ function TelaVoluntario() {
         <div className="profile-section">
           
           <br />
-          <div>Oi, João! Estamos felizes em tê-lo aqui! </div>
+          <div>Oi, {voluntario ? voluntario.nome : 'Carregando...'}! Estamos felizes em tê-lo aqui!</div>
           <br />
           <div className="profile-details">
 

@@ -1,18 +1,16 @@
-import React, { ReactNode } from 'react';
+import React from 'react';
 import { Navigate } from 'react-router-dom';
+import { useUser } from './UserContext';
 
-interface ProtectedRouteProps {
-    children: ReactNode;
-}
 
-const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ children }) => {
-    const token = localStorage.getItem('token');
-
-    if (!token) {
-        return <Navigate to="/login" />; // Redireciona para login se não estiver autenticado
+const ProtectedRoute: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+    const { user } = useUser();
+    
+    if (!user.token) {
+        return <Navigate to="/login" />;
     }
 
-    return <>{children}</>; // Renderiza o conteúdo protegido
+    return <>{children}</>;
 };
 
 export default ProtectedRoute;

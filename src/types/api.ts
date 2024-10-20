@@ -260,14 +260,14 @@ export const Moduloapi = {
         }
     },
 
-    LoginUsuario: async (NOME: string, SENHA: string) => {
+    LoginUsuario: async (TELEFONE: string, SENHA: string) => {
         try {
             const response = await fetch("http://localhost:3000/usuarios/login", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
                 },
-                body: JSON.stringify({ NOME, SENHA }),
+                body: JSON.stringify({ TELEFONE, SENHA }),
             });
 
             if (!response.ok) {
@@ -342,18 +342,13 @@ export const Moduloapi = {
     },
 
     CadastrarChamado: async (
-        cNome: string,
-        cTelefone: string,
-        cDescricao: string,
-        cCategoria: string,
-        usuarioId: string
-    ): Promise<ChamadoResponse> => {
+NOME: string, TELEFONE: string, DESCRICAO: string, CATEGORIA: string, usuarioId: string, urgency: string, IDUSUARIO: any, userId: string    ): Promise<ChamadoResponse> => {
         try {
             const requestBody = {
-                NOME: cNome,
-                TELEFONE: cTelefone,
-                DESCRICAO: cDescricao,
-                CATEGORIA: cCategoria,
+                NOME: NOME,
+                TELEFONE: TELEFONE,
+                DESCRICAO: DESCRICAO,
+                CATEGORIA: CATEGORIA,
                 IDUSUARIO: usuarioId,
             };
 
@@ -389,6 +384,29 @@ export const Moduloapi = {
             throw error;
         }
     },
+
+    LoginVoluntario: async (EMAIL: string, SENHA: string): Promise<any> => {
+        try {
+            const response = await fetch("http://localhost:3000/voluntarios/login", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({ EMAIL, SENHA }),
+            });
+    
+            if (!response.ok) {
+                const errorData = await response.json();
+                throw new Error(errorData.message || `Erro ao fazer login: ${response.statusText}`);
+            }
+    
+            return await response.json();
+        } catch (error) {
+            console.error('Erro:', error);
+            throw error;
+        }
+    },
+    
 
     CadastrarVoluntario: async (nome: string, CPF: string, NASCIMENTO: number, email: string, telefone: string, Endereco: string, numero: string, bairro: string, cidade: string, senha: string) => {
         try {

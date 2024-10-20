@@ -2,6 +2,7 @@ import axios from "axios";
 
 
 
+
 export class AuthService {
     async login(dados: { telefone: string; senha: string }): Promise<void> {
         try {
