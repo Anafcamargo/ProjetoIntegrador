@@ -19,7 +19,7 @@ export const VoluntarioProvider: React.FC<{ children: React.ReactNode }> = ({ ch
     useEffect(() => {
         const fetchVoluntario = async () => {
             try {
-                const response = await fetch('http://localhost:3000/voluntario/login', {
+                const response = await fetch('http://localhost:3000/voluntario/me', {
                     headers: {
                         Authorization: `Bearer ${localStorage.getItem('token')}`,
                     },
