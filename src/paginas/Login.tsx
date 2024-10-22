@@ -232,7 +232,7 @@ const Login: React.FC = () => {
           setError('Por favor, preencha todos os campos.');
           return;
       }
-
+      
       try {
           const response = await fetch('http://localhost:3000/usuarios/login', {
               method: 'POST',
@@ -257,29 +257,35 @@ const Login: React.FC = () => {
     event.preventDefault();
 
     if (!EMAIL || !SENHA) {
-      setError('Por favor, preencha todos os campos.');
-      return;
+        setError('Por favor, preencha todos os campos.');
+        return;
     }
+
+    console.log('EMAIL:', EMAIL);
+    console.log('SENHA:', SENHA);
 
     try {
-      const response = await fetch('http://localhost:3000/voluntarios/login', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ EMAIL, SENHA }),
-      });
+        const response = await fetch('http://localhost:3000/voluntarios/login', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ EMAIL, SENHA }),
+        });
 
-      if (!response.ok) {
-        const errorData = await response.json();
-        throw new Error(errorData.message || 'Credenciais inválidas');
-      }
+        if (!response.ok) {
+            const errorData = await response.json();
+            throw new Error(errorData.message || 'Credenciais inválidas');
+        }
 
-      const data = await response.json();
-      login(data.token, data.IDVOLUNTARIO); // Altere conforme a estrutura do seu token
-      navigate('/telavoluntario');
+        const data = await response.json();
+        console.log('Dados do login:', data); // Adicione isto para ver a resposta
+        login(data.token, data.voluntario.ID); // Use o ID do voluntário
+        navigate('/telavoluntario');
     } catch (error: any) {
-      setError(error.message);
+        console.error('Erro no login:', error);
+        setError(error.message);
     }
-  };
+};
+
 
 
   return (
@@ -305,7 +311,7 @@ const Login: React.FC = () => {
                 onChange={(e) => setSenha(e.target.value)}
               />
               <Link to='/Esqueciasenha'>Esqueci minha senha</Link>
-              <p>Não tem uma conta? <Link to='/cadastro' className='cadlinklogin'>Cadastre-se</Link></p>
+              <p>Não tem uma conta? <Link to='/cadastro'>Cadastre-se</Link></p>
               <button type="submit">Entrar</button>
             </form>
           </div>
@@ -328,7 +334,7 @@ const Login: React.FC = () => {
                 onChange={(e) => setSenha(e.target.value)}
               />
               <Link to='/Esqueciasenha'>Esqueci minha senha</Link>
-              <p>Não tem uma conta? <Link to='/cadastro' className='cadlinklogin'>Cadastre-se</Link></p>
+              <p>Não tem uma conta? <Link to='/cadastro'>Cadastre-se</Link></p>
               <button type="submit">Entrar</button>
             </form>
           </div>
