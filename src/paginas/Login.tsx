@@ -305,7 +305,7 @@ const Login: React.FC = () => {
                 onChange={(e) => setSenha(e.target.value)}
               />
               <Link to='/Esqueciasenha'>Esqueci minha senha</Link>
-              <p>Não tem uma conta? <Link to='/cadastro'>Cadastre-se</Link></p>
+              <p>Não tem uma conta? <Link to='/cadastro' className='cadlinklogin'>Cadastre-se</Link></p>
               <button type="submit">Entrar</button>
             </form>
           </div>
@@ -328,7 +328,7 @@ const Login: React.FC = () => {
                 onChange={(e) => setSenha(e.target.value)}
               />
               <Link to='/Esqueciasenha'>Esqueci minha senha</Link>
-              <p>Não tem uma conta? <Link to='/cadastro'>Cadastre-se</Link></p>
+              <p>Não tem uma conta? <Link to='/cadastro' className='cadlinklogin'>Cadastre-se</Link></p>
               <button type="submit">Entrar</button>
             </form>
           </div>

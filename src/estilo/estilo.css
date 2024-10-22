@@ -804,14 +804,18 @@ margin-left: 85%;
 
 .forgot-password,
 .login-footer, 
-.register-link {
+.register-link, .cadlinklogin {
   color: #034EA3;
   text-decoration: none;
   font-weight: lighter;
 }
 
-.register-link:visited {
+.register-link:visited, .cadlinklogin:visited {
   color: #034EA3; /* Mantém a cor original mesmo após o clique */
+}
+
+.cadlinklogin{
+font-weight: bold;  
 }
 
 .forgot-password:hover, .login-footer .register-link:hover {
@@ -1321,7 +1325,7 @@ position: absolute;
   padding: 50px; /* Espaçamento interno */
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
   text-align: center;
-  border-radius: 2%;
+  
 
    
 }
