@@ -52,18 +52,23 @@ function TelaVoluntario() {
     setAcceptedTickets(prev => [...prev, ticket]);
     setAvailableTickets(prev => prev.filter(t => t.id !== ticket.id));
     setSuccessMessage(`Chamado "${ticket.title}" aceito com sucesso!`);
+
+    // Mostrar a mensagem e removê-la após 3 segundos
+    setTimeout(() => {
+      setSuccessMessage('');
+    }, 3000);
   };
 
   const handleReturnTicket = (ticket: Ticket) => {
     setAvailableTickets(prev => [...prev, ticket]);
     setAcceptedTickets(prev => prev.filter(t => t.id !== ticket.id));
-    setSuccessMessage(`Chamado "${ticket.title}" aceito com sucesso!`);
+    setSuccessMessage(`Chamado "${ticket.title}" devolvido com sucesso!`);
+    
+    // Mostrar a mensagem e removê-la após 3 segundos
     setTimeout(() => {
-        setSuccessMessage('');
-  }, 
-    1000); // 3000 ms = 3 seconds
+      setSuccessMessage('');
+    }, 3000);
   };
-  
 
   const openModal = (ticket: Ticket) => {
     setSelectedTicket(ticket);
@@ -91,17 +96,12 @@ function TelaVoluntario() {
 
   return (
     <>
-      
       <div className="suporte-container">
         <div className="profile-section">
-          
           <br />
           <div>Oi, {voluntario ? voluntario.nome : 'Carregando...'}! Estamos felizes em tê-lo aqui!</div>
           <br />
           <div className="profile-details">
-
-            
- 
             <Link to='/alterarPerfilV'><button className='button-cfg'>Configurações</button></Link>
             <button className='button-chamadoconcluido'>Chamados Concluídos</button>
             <Link to='/Login'><button className='sairvoluntario'>Sair</button></Link>
@@ -140,7 +140,12 @@ function TelaVoluntario() {
           )}
         </div>
 
-        {successMessage && <p className="success-message">{successMessage}</p>}
+        {/* Mensagem de sucesso */}
+        {successMessage && (
+          <p className={`success-message ${successMessage ? 'show' : ''}`}>
+            {successMessage}
+          </p>
+        )}
 
         {/* Modal para visualizar chamado */}
         {isModalOpen && (
@@ -176,7 +181,6 @@ function TelaVoluntario() {
       </div>
       <Link to="/*"> .</Link>
       <Rodape />
-      
     </>
   );
 }
