@@ -58,7 +58,7 @@ function App() {
         <Route path="/telavoluntario" element={<Tela_Voluntario />} />
         <Route path="/configuracao" element={<Configuracao />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/chamado" element={<ProtectedRoute> <Chamado /> </ProtectedRoute>} />
+        <Route path="/chamado" element={ <Chamado /> } />
         <Route path="/alterarPerfilV" element={<AlterarPerfilVoluntario />} />
       </Routes>
     </div>

@@ -95,29 +95,21 @@ function Cadastro() {
 
     // Validação básica
     if (!formData.nome || !formData.telefone || !formData.senha || 
-        (tipoCadastro === "voluntario" && (!formData.cpf || !formData.email || !formData.endereco || !formData.numero || !formData.bairro || !formData.cidade))) {
-      setError("Por favor, preencha todos os campos obrigatórios.");
-      return;
+      (tipoCadastro === "voluntario" && (!formData.cpf || !formData.email || !formData.endereco || !formData.numero || !formData.bairro || !formData.cidade))) {
+    setError("Por favor, preencha todos os campos obrigatórios.");
+    return;
+  }
+
+  try {
+    if (tipoCadastro === "usuario") {
+      await HandleAddUsuario();
+    } else {
+      await HandleAddVoluntario();
     }
-
-    try { 
-      const response = await fetch('http://localhost:3000/', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
-      });
-
-      if (!response.ok) {
-        throw new Error('Erro ao criar conta');
-      }
-
-      const data = await response.json();
-      console.log('Cadastro bem-sucedido:', data);
-      // Redirecionar ou exibir uma mensagem de sucesso
-    } catch (Error) {
-      setError(error);
-    }
-  };
+  } catch (error) {
+    setError(error instanceof Error ? error.message : 'Erro desconhecido');
+  }
+};
 
   return (
     <>
