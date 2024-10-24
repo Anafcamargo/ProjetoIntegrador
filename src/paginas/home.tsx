@@ -140,7 +140,7 @@ function Home() {
               slidesPerView={2}
               pagination={{ clickable: true }}
               navigation
-              autoplay={{ delay: 4000, disableOnInteraction: false }} // Autoplay a cada 4 segundos
+              autoplay={{ delay: 8000, disableOnInteraction: false }} // Autoplay a cada 4 segundos
               loop={true}>
             {ranking.map((item) => (
               <SwiperSlide key={item.id}>
