@@ -307,7 +307,7 @@ export const Moduloapi = {
         }
     },
 
-    RemoverUsuario: async (userID: number) => {
+    RemoverUsuario: async (userID: string) => {
         try {
             const response = await fetch(`http://localhost:3000/usuarios/remove-${userID}`, {
                 method: 'DELETE'
@@ -342,16 +342,21 @@ export const Moduloapi = {
     },
 
     CadastrarChamado: async (
-NOME: string, TELEFONE: string, DESCRICAO: string, CATEGORIA: string, usuarioId: string, urgency: string, IDUSUARIO: any, userId: string    ): Promise<ChamadoResponse> => {
+        NOME: string,
+        TELEFONE: string,
+        DESCRICAO: string,
+        CATEGORIA: string,
+        usuarioId: string
+    ): Promise<ChamadoResponse> => {
         try {
             const requestBody = {
-                NOME: NOME,
-                TELEFONE: TELEFONE,
-                DESCRICAO: DESCRICAO,
-                CATEGORIA: CATEGORIA,
+                NOME,
+                TELEFONE,
+                DESCRICAO,
+                CATEGORIA,
                 IDUSUARIO: usuarioId,
             };
-
+    
             const response = await fetch("http://localhost:3000/chamados/cadastro", {
                 method: 'POST',
                 body: JSON.stringify(requestBody),
@@ -359,18 +364,18 @@ NOME: string, TELEFONE: string, DESCRICAO: string, CATEGORIA: string, usuarioId:
                     'Content-Type': 'application/json',
                 },
             });
-
+    
             if (!response.ok) {
                 const errorResponse = await response.json();
                 throw new Error(errorResponse.message || 'Erro ao cadastrar chamado');
             }
-
+    
             return await response.json();
         } catch (error) {
             throw new Error('Erro ao cadastrar chamado: ' + (error instanceof Error ? error.message : 'Erro desconhecido'));
         }
     },
-
+    
     // Voluntários
     CarregarVoluntarios: async () => {
         try {
@@ -382,6 +387,25 @@ NOME: string, TELEFONE: string, DESCRICAO: string, CATEGORIA: string, usuarioId:
         } catch (error) {
             console.error('Erro:', error);
             throw error;
+        }
+    },
+
+    CarregarVoluntarioLogado: async () => {
+        try {
+            const userId = localStorage.getItem('userId'); // Recupera o ID do usuário logado
+            if (!userId) {
+                throw new Error('Usuário não está logado.');
+            }
+    
+            const response = await fetch(`http://localhost:3000/voluntarios/${userId}`); // Ajustar URL conforme necessário
+            if (!response.ok) {
+                throw new Error(`Erro ao carregar voluntário: ${response.statusText}`);
+            }
+    
+            return await response.json(); // Retorna os dados do voluntário
+        } catch (error) {
+            console.error('Erro:', error);
+            throw error; // Lança erro para tratamento posterior
         }
     },
 

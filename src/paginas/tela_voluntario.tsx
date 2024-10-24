@@ -4,6 +4,7 @@ import Rodape from '../componentes/rodape';
 import '../estilo/estilo.css';
 import { Link } from 'react-router-dom';
 
+
 interface Ticket {
   id: number;
   title: string;
@@ -13,8 +14,8 @@ interface Ticket {
 }
 
 interface Voluntario {
-  id: number;
-  nome: string;
+  ID: string;
+  NOME: string;
 }
 
 function TelaVoluntario() {
@@ -31,22 +32,60 @@ function TelaVoluntario() {
   const [successMessage, setSuccessMessage] = useState('');
   const [voluntario, setVoluntario] = useState<Voluntario | null>(null); // Adicionando estado para o voluntário
 
-  useEffect(() => {
-    const fetchVoluntario = async () => {
-      try {
-        const response = await fetch('http://localhost:3000/voluntarios/me'); // Altere para a URL correta da API
-        if (!response.ok) {
-          throw new Error('Erro ao buscar dados do voluntário');
-        }
-        const data: Voluntario = await response.json();
-        setVoluntario(data);
-      } catch (error) {
-        console.error(error);
-      }
-    };
 
-    fetchVoluntario();
-  }, []);
+  // useEffect(() => {
+  //   const fetchVoluntario = async () => {
+  //     try {
+  //       const response = await fetch('http://localhost:3000/voluntarios/voluntario/me'); // Altere para a URL correta da API
+  //       if (!response.ok) {
+  //         throw new Error('Erro ao buscar dados do voluntário');
+  //       }
+  //       const data: Voluntario = await response.json();
+  //       console.log(data);
+  //       setVoluntario(data);
+  //     } catch (error) {
+  //       console.error(error);
+  //     }
+  //   };
+
+  //   fetchVoluntario();
+  // }, []);
+
+  const CarregarVoluntarioLogado = async () => {
+    try {
+        const userId = localStorage.getItem('userId');
+        if (!userId) {
+            throw new Error('Usuário não está logado.');
+        }
+
+        const response = await fetch(`http://localhost:3000/voluntarios/${userId}`);
+        if (!response.ok) {
+            throw new Error(`Erro ao carregar voluntário: ${response.statusText}`);
+        }
+
+        return await response.json();
+    } catch (error) {
+        console.error('Erro:', error);
+        throw error;
+    }
+};
+
+
+    
+
+    useEffect(() => {
+        const buscarVoluntario = async () => {
+            try {
+                const voluntarioData = await CarregarVoluntarioLogado();
+                setVoluntario(voluntarioData); // Atualiza o estado com os dados do voluntário
+            } catch (error) {
+                console.error('Erro ao carregar voluntário logado:', error);
+            }
+        };
+
+        buscarVoluntario();
+    }, []);
+
 
   const handleAcceptTicket = (ticket: Ticket) => {
     setAcceptedTickets(prev => [...prev, ticket]);
@@ -99,7 +138,7 @@ function TelaVoluntario() {
       <div className="suporte-container">
         <div className="profile-section">
           <br />
-          <div>Oi, {voluntario ? voluntario.nome : 'Carregando...'}! Estamos felizes em tê-lo aqui!</div>
+          <div>Oi, {voluntario ? voluntario.NOME : 'Carregando...'}! Estamos felizes em tê-lo aqui!</div>
           <br />
           <div className="profile-details">
             <Link to='/alterarPerfilV'><button className='button-cfg'>Configurações</button></Link>
