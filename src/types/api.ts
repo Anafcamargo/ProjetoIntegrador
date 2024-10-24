@@ -349,6 +349,8 @@ export const Moduloapi = {
         usuarioId: string
     ): Promise<ChamadoResponse> => {
         try {
+            
+            const token = localStorage.getItem('token'); // Obtém o token do localStorage
             const requestBody = {
                 NOME,
                 TELEFONE,
@@ -356,12 +358,15 @@ export const Moduloapi = {
                 CATEGORIA,
                 IDUSUARIO: usuarioId,
             };
-    
+            
+            console.log('RequestBody enviado para a API:', requestBody);
+
             const response = await fetch("http://localhost:3000/chamados/cadastro", {
                 method: 'POST',
                 body: JSON.stringify(requestBody),
                 headers: {
                     'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${token}`, // Inclui o token no cabeçalho
                 },
             });
     
@@ -375,6 +380,9 @@ export const Moduloapi = {
             throw new Error('Erro ao cadastrar chamado: ' + (error instanceof Error ? error.message : 'Erro desconhecido'));
         }
     },
+
+    
+      
     
     // Voluntários
     CarregarVoluntarios: async () => {
@@ -492,5 +500,8 @@ export const Moduloapi = {
             console.error('Erro:', error);
             throw error;
         }
-    }
+    },
+
+    
+      
 };
