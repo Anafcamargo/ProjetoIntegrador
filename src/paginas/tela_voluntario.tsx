@@ -33,24 +33,6 @@ function TelaVoluntario() {
   const [voluntario, setVoluntario] = useState<Voluntario | null>(null); // Adicionando estado para o voluntário
 
 
-  // useEffect(() => {
-  //   const fetchVoluntario = async () => {
-  //     try {
-  //       const response = await fetch('http://localhost:3000/voluntarios/voluntario/me'); // Altere para a URL correta da API
-  //       if (!response.ok) {
-  //         throw new Error('Erro ao buscar dados do voluntário');
-  //       }
-  //       const data: Voluntario = await response.json();
-  //       console.log(data);
-  //       setVoluntario(data);
-  //     } catch (error) {
-  //       console.error(error);
-  //     }
-  //   };
-
-  //   fetchVoluntario();
-  // }, []);
-
   const CarregarVoluntarioLogado = async () => {
     try {
         const userId = localStorage.getItem('userId');
@@ -138,11 +120,11 @@ function TelaVoluntario() {
       <div className="suporte-container">
         <div className="profile-section">
           <br />
-          <div>Oi, {voluntario ? voluntario.NOME : 'Carregando...'}! Estamos felizes em tê-lo aqui!</div>
+          <div>Oi, {voluntario ? voluntario.NOME : 'Voluntário '}! Estamos felizes em tê-lo aqui!</div>
           <br />
           <div className="profile-details">
             <Link to='/alterarPerfilV'><button className='button-cfg'>Configurações</button></Link>
-            <button className='button-chamadoconcluido'>Chamados Concluídos</button>
+            {/* <button className='button-chamadoconcluido'>Chamados Concluídos</button> */}
             <Link to='/Login'><button className='sairvoluntario'>Sair</button></Link>
           </div>
           <br />

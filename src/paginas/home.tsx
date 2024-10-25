@@ -109,27 +109,7 @@ function Home() {
 </section>
 
 
-
-      {/*<section id="comofunciona">
-        <div className="como_funciona1">
-          <h1 className="titulo_cf"> Como Funciona? </h1> <br />
-          {/* Adicionando o Painel de Vídeo
-          <div className="video-panel">
-            <iframe
-              width="560"
-              height="315"
-              src="https://www.youtube.com/embed/ygLM6jZ4pFY?si=_bG41fjANQOnBIzo"
-              title="YouTube video player"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerPolicy="strict-origin-when-cross-origin"
-              allowFullScreen
-            ></iframe>
-          </div>
-        </div>
-      </section>  */}
-
-      {/*--------Tela Ranking--------*/}
+    {/*--------Tela Ranking--------*/}
       <div className="container-ranking">
         <br />
               Ranking de Voluntários

@@ -12,20 +12,7 @@ const BackToTopButton: React.FC = () => {
   return (
     
     <button 
-      onClick={scrollToTop} className="botaotopo"
-      // style={{
-      //   position: 'fixed',
-      //   bottom: '20px',
-      //   right: '10px',
-      //   padding: '10px 20px',
-      //   border: 'none',
-      //   // borderRadius: '5px',
-      //   // backgroundColor: '#007bff',
-      //   // color: '#fff',
-      //   cursor: 'pointer',
-      //   fontSize: '16px',
-      // }}
-    >
+      onClick={scrollToTop} className="botaotopo">
       <img className='seta-cima-img' src="./seta-cima.gif" alt="" width="30px"  />
     
     </button>
