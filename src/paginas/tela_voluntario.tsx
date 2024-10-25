@@ -11,6 +11,7 @@ interface Ticket {
   description: string;
   requesterName: string;
   requesterPhone: string;
+  conclusionDescription?: string; // Novo campo para descrição da conclusão
 }
 
 interface Voluntario {
@@ -31,42 +32,44 @@ function TelaVoluntario() {
   const [conclusionText, setConclusionText] = useState('');
   const [successMessage, setSuccessMessage] = useState('');
   const [voluntario, setVoluntario] = useState<Voluntario | null>(null); // Adicionando estado para o voluntário
+  const [completedTickets, setCompletedTickets] = useState<Ticket[]>([]); // Novo estado para os chamados concluídos
+  const [isCompletedModalOpen, setIsCompletedModalOpen] = useState(false); // Modal para visualizar chamados concluídos
 
 
-  const CarregarVoluntarioLogado = async () => {
-    try {
-        const userId = localStorage.getItem('userId');
-        if (!userId) {
-            throw new Error('Usuário não está logado.');
-        }
+//   const CarregarVoluntarioLogado = async () => {
+//     try {
+//         const userId = localStorage.getItem('userId');
+//         if (!userId) {
+//             throw new Error('Usuário não está logado.');
+//         }
 
-        const response = await fetch(`http://localhost:3000/voluntarios/${userId}`);
-        if (!response.ok) {
-            throw new Error(`Erro ao carregar voluntário: ${response.statusText}`);
-        }
+//         const response = await fetch(`http://localhost:3000/voluntarios/${userId}`);
+//         if (!response.ok) {
+//             throw new Error(`Erro ao carregar voluntário: ${response.statusText}`);
+//         }
 
-        return await response.json();
-    } catch (error) {
-        console.error('Erro:', error);
-        throw error;
-    }
-};
+//         return await response.json();
+//     } catch (error) {
+//         console.error('Erro:', error);
+//         throw error;
+//     }
+// };
 
 
     
 
-    useEffect(() => {
-        const buscarVoluntario = async () => {
-            try {
-                const voluntarioData = await CarregarVoluntarioLogado();
-                setVoluntario(voluntarioData); // Atualiza o estado com os dados do voluntário
-            } catch (error) {
-                console.error('Erro ao carregar voluntário logado:', error);
-            }
-        };
+    // useEffect(() => {
+    //     const buscarVoluntario = async () => {
+    //         try {
+    //             const voluntarioData = await CarregarVoluntarioLogado();
+    //             setVoluntario(voluntarioData); // Atualiza o estado com os dados do voluntário
+    //         } catch (error) {
+    //             console.error('Erro ao carregar voluntário logado:', error);
+    //         }
+    //     };
 
-        buscarVoluntario();
-    }, []);
+    //     buscarVoluntario();
+    // }, []);
 
 
   const handleAcceptTicket = (ticket: Ticket) => {
@@ -101,19 +104,106 @@ function TelaVoluntario() {
     setSelectedTicket(null);
   };
 
-  const openConclusionModal = () => {
-    setIsConclusionModalOpen(true);
-  };
+  // const openConclusionModal = () => {
+  //   setIsConclusionModalOpen(true);
+  // };
 
-  const closeConclusionModal = () => {
-    setIsConclusionModalOpen(false);
-    setConclusionText('');
-  };
+  // const closeConclusionModal = () => {
+  //   setIsConclusionModalOpen(false);
+  //   setConclusionText('');
+  // };
 
-  const handleSubmitConclusion = () => {
-    console.log('Conclusão do chamado:', conclusionText);
-    closeConclusionModal();
-  };
+  
+//   const handleSubmitConclusion = () => {
+//     if (selectedTicket) {
+//         // Adiciona o chamado de volta para a lista de chamados disponíveis
+//         setAvailableTickets(prev => [...prev, selectedTicket]);
+        
+//         // Remove o chamado da lista de chamados aceitos
+//         setAcceptedTickets(prev => prev.filter(ticket => ticket.id !== selectedTicket.id));
+        
+//         // Limpa o texto da conclusão, fecha os modais e limpa o ticket selecionado
+//         setConclusionText('');
+//         setSelectedTicket(null);
+//         setIsModalOpen(false);
+//         closeConclusionModal();
+
+//         // Exibe uma mensagem de sucesso
+//         setSuccessMessage(`Chamado "${selectedTicket.title}" concluído com sucesso!`);
+
+//         // Remove a mensagem de sucesso após 3 segundos
+//         setTimeout(() => {
+//             setSuccessMessage('');
+//         }, 3000);
+//     }
+// console.log('Conclusão do chamado:', conclusionText);
+    // closeConclusionModal();
+// };
+
+  
+    
+
+          // const handleSubmitConclusion = () => {
+          //   if (selectedTicket) {
+          //     // Adiciona o chamado aos chamados concluídos
+          //     setCompletedTickets(prev => [...prev, selectedTicket]);
+              
+          //     // Remove o chamado da lista de chamados aceitos
+          //     setAcceptedTickets(prev => prev.filter(ticket => ticket.id !== selectedTicket.id));
+              
+          //     // Limpa o texto da conclusão e fecha os modais
+          //     setConclusionText('');
+          //     setSelectedTicket(null);
+          //     setIsModalOpen(false);
+          //     closeConclusionModal();
+        
+          //     setSuccessMessage(`Chamado "${selectedTicket.title}" concluído com sucesso!`);
+        
+          //     setTimeout(() => setSuccessMessage(''), 3000);
+          //   }
+          // };
+
+          const handleSubmitConclusion = () => {
+            if (selectedTicket) {
+              const ticketWithConclusion = {
+                ...selectedTicket,
+                conclusionDescription: conclusionText, // Adiciona a descrição da conclusão
+              };
+          
+              setCompletedTickets(prev => [...prev, ticketWithConclusion]);
+              setAcceptedTickets(prev => prev.filter(ticket => ticket.id !== selectedTicket.id));
+              setConclusionText('');
+              setSelectedTicket(null);
+              setIsModalOpen(false);
+              closeConclusionModal();
+              setSuccessMessage(`Chamado "${selectedTicket.title}" concluído com sucesso!`);
+              setTimeout(() => setSuccessMessage(''), 3000);
+            }
+          };
+        
+          const openConclusionModal = () => {
+            setIsConclusionModalOpen(true);
+          };
+        
+          const closeConclusionModal = () => {
+            setIsConclusionModalOpen(false);
+            setConclusionText('');
+          };
+        
+          // // Abre o modal para visualizar chamados concluídos
+          // const openCompletedModal = (ticket: Ticket) => {
+          //   setSelectedTicket(ticket);
+          //   setIsCompletedModalOpen(true);
+          // };
+
+          const openCompletedModal = () => {
+            setIsCompletedModalOpen(true);
+          };
+        
+          const closeCompletedModal = () => {
+            setIsCompletedModalOpen(false);
+            setSelectedTicket(null);
+          };
 
   return (
     <>
@@ -124,7 +214,7 @@ function TelaVoluntario() {
           <br />
           <div className="profile-details">
             <Link to='/alterarPerfilV'><button className='button-cfg'>Configurações</button></Link>
-            {/* <button className='button-chamadoconcluido'>Chamados Concluídos</button> */}
+            <button className="button-chamadoconcluido" onClick={() => openCompletedModal()}>Chamados Concluídos</button>
             <Link to='/Login'><button className='sairvoluntario'>Sair</button></Link>
           </div>
           <br />
@@ -182,23 +272,48 @@ function TelaVoluntario() {
           </div>
         )}
 
-        {/* Modal para concluir chamado */}
-        {isConclusionModalOpen && (
-          <div className="modal-overlay2" onClick={closeConclusionModal}>
-            <div className="modal-content-conclude" onClick={(e) => e.stopPropagation()}>
-              <h2>Descrição da Conclusão</h2>
-              <textarea
-                value={conclusionText}
-                onChange={(e) => setConclusionText(e.target.value)}
-                rows={15}
-                placeholder="Descreva a conclusão do chamado aqui..."
-                style={{ width: '95%' }}
-              />
-              <button onClick={handleSubmitConclusion} className='enviarchamado'>Enviar</button>
-              <button onClick={closeConclusionModal} className='sairmodal'>Fechar</button>
-            </div>
-          </div>
-        )}
+              {isCompletedModalOpen && (
+                <div className="modal-overlay" onClick={closeCompletedModal}>
+                  <div className="modal-content-view" onClick={(e) => e.stopPropagation()}>
+                    <h2>Chamados Concluídos</h2>
+                    {completedTickets.length > 0 ? (
+                      completedTickets.map(ticket => (
+                        <div key={ticket.id} className="ticket-card">
+                          <h3>{ticket.title}</h3>
+                          <p>{ticket.description}</p>
+                          <p><strong>Nome do Solicitante:</strong> {ticket.requesterName}</p>
+                          <p><strong>Telefone (WhatsApp):</strong> {ticket.requesterPhone}</p>
+                          <p><strong>Descrição da Conclusão:</strong> {ticket.conclusionDescription}</p> {/* Exibe a descrição da conclusão */}
+                        </div>
+                      ))
+                    ) : (
+                      <p>Nenhum chamado concluído.</p>
+                    )}
+                    <button onClick={closeCompletedModal}>Fechar</button>
+                  </div>
+                </div>
+              )}
+
+              {isConclusionModalOpen && (
+                <div className="modal-overlay" onClick={closeConclusionModal}>
+                  <div className="modal-content-conclude" onClick={(e) => e.stopPropagation()}>
+                    <h2>Descrição da Conclusão</h2>
+                    <textarea
+                      value={conclusionText}
+                      onChange={(e) => setConclusionText(e.target.value)}
+                      rows={5}
+                      placeholder="Descreva a conclusão do chamado..."
+                    />
+                    <button onClick={handleSubmitConclusion}>Enviar</button>
+                    <button onClick={closeConclusionModal}>Fechar</button>
+                  </div>
+                </div>
+              )}
+
+              {successMessage && <p className="success-message">{successMessage}</p>}
+          
+            
+  
       </div>
       <Link to="/*"> .</Link>
       <Rodape />
