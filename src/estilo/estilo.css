@@ -1070,6 +1070,17 @@ input[type="submit"] {
   width: 30%; 
   transition: background-color 0.3s; 
 }
+.button-enviar{
+  background-color: #034EA3; 
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 18px;
+  width: 30%; 
+  transition: background-color 0.3s;
+}
 
 input[type="submit"]:hover {
   background-color: #013066; 
