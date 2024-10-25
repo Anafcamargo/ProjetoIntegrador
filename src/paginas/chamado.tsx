@@ -46,6 +46,13 @@ export function Chamado() {
       
         // Exibe o alerta
         alert('Seu chamado foi registrado com sucesso. Em breve um de nossos voluntários entrará em contato com você.');
+
+        setFormData({
+            name: '',
+            contact: '',
+            issue: '',
+            urgency: 'baixa',
+        });
         
       };
 

@@ -20,8 +20,8 @@ interface Voluntario {
 
 function TelaVoluntario() {
   const [availableTickets, setAvailableTickets] = useState<Ticket[]>([
-    { id: 1, title: 'Problema com conexão', description: 'Cliente não consegue se conectar à internet.', requesterName: 'Maria', requesterPhone: '11 99999-0000' },
-    { id: 2, title: 'Impressora não funciona', description: 'Cliente reporta problemas na impressão de documentos.', requesterName: 'João', requesterPhone: '11 98888-1111' },
+    { id: 1, title: 'Problema com conexão', description: 'Não consigo conectar meu notebook à internet.', requesterName: 'Maria', requesterPhone: '11 99999-0000' },
+    { id: 2, title: 'Impressora não funciona', description: 'Estou com problemas na impressora, não consigo imprimir meus documentos.', requesterName: 'João', requesterPhone: '11 98888-1111' },
   ]);
 
   const [acceptedTickets, setAcceptedTickets] = useState<Ticket[]>([]);
