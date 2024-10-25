@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import FAQ from "../componentes/faq.tsx";
 import { Swiper, SwiperSlide } from "swiper/react";
 import BackToTopButton from '../componentes/botaotopo/BackToTopButton';
+import Acessibilidade from "../componentes/acessibilidade";
 
 function Home() {
   const data = [
@@ -44,6 +45,7 @@ function Home() {
     <div>
        <BackToTopButton />
       <Cabecalho />
+      <Acessibilidade/>
       {/*--------Tela inicial--------*/}
       <div className="container-inicio">
         <div className="texto-apresentacao">

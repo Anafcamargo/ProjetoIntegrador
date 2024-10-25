@@ -1782,3 +1782,71 @@ background-color: #65d46e;
   gap: 10px; /* Espaçamento entre os botões */
 }
 
+/*ACESSIBILIDADE */
+
+
+/* Botão de acessibilidade compacto */
+.acessibilidade-container {
+  position: fixed;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  z-index: 1000;
+}
+
+.acessibilidade-btn {
+  background-color: #0057e7;
+  color: white;
+  font-size: 1.5em;
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.acessibilidade-btn:hover {
+  background-color: #0040c1;
+}
+
+/* Estilo do menu dropdown */
+.acessibilidade-dropdown {
+  position: absolute;
+  bottom: 50px;
+  right: 10px;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  transform: translateY(-5%);
+}
+
+.acessibilidade-dropdown button {
+  background-color: #fff;
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+  text-align: left;
+  font-size: 0.9em;
+  transition: background-color 0.3s;
+}
+
+.acessibilidade-dropdown button:hover {
+  background-color: #eee;
+}
+
+/* Contraste alto */
+.alto-contraste {
+  background-color: black;
+  color: yellow;
+}
+
+/* Modo leitura */
+.modo-leitura .cabecalho,
+.modo-leitura .rodape {
+  display: none;
+}
